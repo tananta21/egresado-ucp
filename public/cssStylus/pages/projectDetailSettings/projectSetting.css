@@ -1,0 +1,32 @@
+.navSetting {
+  background: #fff;
+}
+.sidebar-nav .navbar .navbar-collapse {
+  padding: 0;
+  max-height: none;
+}
+.sidebar-nav .navbar ul {
+  float: none;
+  display: block;
+  margin: 0px;
+}
+.sidebar-nav .navbar li {
+  display: block;
+  float: none;
+  border-bottom: 1px solid #e7e7e7;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover {
+  background: $blanco;
+  border-left: 2px solid $colorNaranja;
+  font-weight: bold;
+}
+.sidebar-nav .navbar li a {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: $colorTitleProject;
+}
+.sidebar-nav .navbar li a:hover {
+  color: $colorTitleProject;
+}

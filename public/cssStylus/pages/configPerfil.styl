@@ -1,0 +1,55 @@
+.headUlPerfil
+  border-bottom 1px solid $borderBtnStar
+  background $backgrondBtnStar
+  border-top none
+  border-right none
+  border-left none
+  font-weight bold
+  font-size 13px
+  color $colorText
+
+.contentPerfil
+  padding-right 0rem
+  padding-left 3rem
+  &__head
+    @extends .anulPadding
+  &__title
+    display inline-block
+    font-size 24px
+    margin-top 12px
+    margin-bottom 20px
+  &__boxBtn
+    float right
+    margin-top 10px
+  &__box
+    @extends .anulPadding
+    margin-top 20px
+    margin-bottom 40px
+  &__info
+    @extends .anulPadding
+    &__btn
+      margin-left 5px
+      width 100px
+      font-weight bold
+  &__boxPicture
+    @extends .anulPadding
+    text-align right
+    &__content
+      width 70%
+      float right
+    &__img
+      height 200px
+      width 100%
+      border-radius 4px
+    &__boxBtn
+      text-align center
+      margin-top 16px
+    &__btnSubir
+      background $backgrondBtnStar
+      color $colorText
+      font-weight bold
+      &:hover
+        background $backgrondBtnStar
+
+
+

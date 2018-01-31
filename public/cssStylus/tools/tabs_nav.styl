@@ -1,0 +1,49 @@
+.navProjectDetail {
+  border-bottom: 2px solid #DDD;
+}
+
+.navProjectDetail > li.active > a, .navProjectDetail > li.active > a:focus, .navProjectDetail > li.active > a:hover {
+  border-width: 0;
+}
+
+.navProjectDetail > li > a {
+  border: none;
+  color: #666;
+  cursor pointer !important
+}
+
+.navProjectDetail > li.active > a, .navProjectDetail > li > a:hover {
+  border: none;
+  font-weight bold;
+  background: transparent;
+}
+
+.navProjectDetail > li > a::after {
+  content: "";
+  background: $colorNaranja;
+  height: 2px;
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  bottom: -1px;
+  transition: all 250ms ease 0s;
+  transform: scale(0);
+}
+
+.navProjectDetail > li.active > a::after, .navProjectDetail > li:hover > a::after {
+  transform: scale(1);
+}
+
+.tab-nav > li > a::after {
+  background: #21527d none repeat scroll 0% 0%;
+  color: #fff;
+}
+
+.tab-pane {
+  padding: 15px 0;
+}
+
+.tab-content {
+  padding: 0px
+}
+

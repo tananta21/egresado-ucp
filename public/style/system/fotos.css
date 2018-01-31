@@ -1,0 +1,108 @@
+.atractivoInicio__boxImg {
+  height: 315px;
+}
+.atractivoInicio__input {
+  display: inline-block !important;
+  color: transparent;
+  width: 80%;
+  padding: 6px 20px;
+  border: 0rem;
+  margin-top: 10px;
+}
+.atractivoInicio__boxBtns {
+  display: none;
+  margin-top: 30px;
+  text-align: center;
+}
+.reco {
+  display: block;
+}
+.reco__boxTable {
+  margin-top: 15px;
+}
+.reco__table {
+  font-size: 13px;
+}
+.reco__btnAdd {
+  font-size: 12px;
+}
+.atractivos {
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+.atractivos__tittle {
+  margin-bottom: 40px;
+  color: #808080;
+  font-size: 16px;
+}
+.atractivos__btnAgregar {
+  float: right;
+  cursor: pointer;
+  width: 100%;
+}
+.atractivos__list {
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+.atractivos__list__link {
+  text-decoration: none;
+}
+.atractivos__list__link:hover {
+  text-decoration: none;
+}
+.atractivos__list__item {
+  display: block;
+  height: 300px;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.5);
+  margin-bottom: 20px;
+  border-radius: 2px;
+}
+.atractivos__list__img {
+  width: 100%;
+  height: 190px;
+}
+.atractivos__list__boxDescription {
+  padding: 10px;
+}
+.atractivos__list__nombre {
+  font-weight: bold;
+  font-size: 14px;
+  color: #000;
+  margin-top: 0rem;
+}
+.atractivos__list__categoria {
+  font-size: 13px;
+  color: #c2c2c2;
+}
+.atractivos__list__provincia {
+  font-size: 13px;
+  color: #c2c2c2;
+}
+.atractivos__form__boxInputFileImage {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+.atractivos__form__inputImage {
+  display: inline-block !important;
+  color: transparent;
+  width: 37%;
+}
+.atractivos__form__imagePreviewCreate {
+  height: 316px;
+  width: 90%;
+  float: right;
+  margin-bottom: 10px;
+}
+.atractivos__form__boxFormInfoGeneral {
+  margin-top: 20px;
+}
+.atractivos__labelInfoGeneral {
+  margin-bottom: 15px;
+  border-bottom: 2px dashed $grey;
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+.contentProjectList__boxContent {
+  margin-bottom: 50px;
+}

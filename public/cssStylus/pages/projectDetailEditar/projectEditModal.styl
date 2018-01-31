@@ -1,0 +1,133 @@
+.modal-lg
+  width 100% !important
+  margin 0px !important
+
+//mi css for my modal editar
+.boxBtnCloseModal
+  text-align left
+  padding-left 0rem
+  &__btn
+    border none
+    font-size 24px
+
+.descripcionHeadModal
+  text-align center
+  font-size 16px
+
+.boxBtnGuardaModal
+  text-align right
+  padding-right 0rem
+  &__btnGuardar
+    width 90px
+    font-weight bold
+    transition .3s
+  &__btnCancelar
+    width 90px
+    margin-right 10px
+    border 1px solid red
+    background $blanco
+    transition .3s
+    &:hover
+      color white
+      background red
+      font-weight bold
+
+//css  tooltip tabla criterios
+.criterio-tooltip
+  background white
+  border none
+  font-size 13px
+  font-weight bold
+
+.criterio-tooltip + .tooltip > .tooltip-inner {
+  text-align justify
+  color $colorText
+  background-color: $backgrondBtnStar;
+}
+
+.textCriterios
+  text-align center
+  color $colorText
+  font-size 14px
+
+//  contenido de criterios de evaluacion
+.boxCriterios
+  overflow-x auto
+  padding-bottom .4rem
+  margin-bottom 15px
+  display: inline-block
+  width 100%
+  white-space: nowrap
+  &__items
+    border: 1px solid grey;
+    padding: 0rem
+    display inline-block
+    width 35%
+    &__head
+      text-align: center;
+      border-bottom: 1px solid $borderBtnStar
+      margin-bottom: 0rem;
+      margin-top: 0rem
+    &__contentLeft
+      padding: 0rem;
+      border-right: 1px solid $borderBtnStar
+    &__contentRight
+      padding 0rem
+    &__titleItem
+      text-align: center;
+      border-bottom: 1px solid $borderBtnStar
+      font-size: 12px
+      margin-top 2px
+      margin-bottom 2px
+    &__numItem
+      text-align: center;
+      font-size: 12px
+.alertCamps
+  display none
+  font-size 12px
+  padding-top: 3px
+  padding-bottom: 3px
+  text-align: center
+  color: white
+  background: #D9534F
+  white-space normal
+  font-weight bold
+.alertAddEvaluacion
+  white-space normal
+  padding-top: 3px
+  padding-bottom: 3px
+  text-align: center
+  color: white
+  background: #5CB85C
+  font-size 12px
+  font-weight bold
+
+.boxformEvaluacion
+  padding-left 0rem
+  padding-right 0rem
+  &__boxInputObservacion
+    padding-right 0rem
+  &__textObservacion
+    display block
+  &__boxPuntaje
+    float: left;
+    width: 50%
+    display block
+  &__boxBtns
+    padding-top 15px
+    text-align right
+    padding-right 0rem
+    &__btns
+      margin-left 5px
+      font-weight bold
+
+@media (max-width: 449px)
+  .boxBtnGuardaModal
+    text-align center
+    margin-top 6px
+
+  .boxBtnGuardaModal__btnCancelar
+    font-size 11px
+
+  .boxBtnGuardaModal__btnGuardar
+    font-size 11px

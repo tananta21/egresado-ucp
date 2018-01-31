@@ -1,0 +1,47 @@
+.menuHorizontal
+  display inline-block
+  text-align center
+  &__ul
+    text-decoration none
+    list-style none
+    display flex
+    justify-content center
+    padding 0rem
+
+.menuHorizontal__ul > li
+  margin-top 10px
+  display inline-block
+  padding 10px 20px
+  border-top 1px solid lightgrey
+  border-bottom 1px solid lightgrey
+
+
+.menuHorizontal__ul > li >a
+  padding 0px 10px
+  cursor pointer
+  text-decoration none
+  font-size 14px
+  color darkgrey
+  transition .2s
+  &:hover
+    text-decoration none
+    color $backgrondInpSearchHeader
+    //border-bottom 2px solid deepskyblue
+    font-weight 500
+
+
+
+.menuHorizontal__ul > .active
+  border-bottom 0px !important
+
+.menuHorizontal__ul > .active > a
+  font-size 14px
+  color $backgrondInpSearchHeader !important
+  border-bottom 4px solid deepskyblue
+  font-weight bold
+  padding-bottom 9px
+  &:hover
+    color $backgrondInpSearchHeader !important
+    border-bottom 4px solid deepskyblue
+    font-weight bold
+

@@ -1,0 +1,22 @@
+.menuHorizontal {
+  display: inline-block;
+  text-align: center;
+}
+.menuHorizontal__ul {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+.menuHorizontal__ul > li {
+  display: inline-block;
+}
+.menuHorizontal__ul > li >a {
+  cursor: pointer;
+  color: $grey;
+  text-decoration: none;
+  font-size: 13px;
+}
+.menuHorizontal__ul > li >a:hover {
+  text-decoration: none;
+}

@@ -1,0 +1,61 @@
+.headerUcp
+  background $backgrondHeader
+  border none
+  border-radius 0px
+
+//.headerPemopi
+//  background #374C5E
+//  border none
+//  border-radius 0px
+.textHeader
+  color white !important
+  //color #bdbec0 !important
+  transition .5s
+  font-weight bold
+  &:hover
+    color $blanco !important
+
+.textHeaderactive
+  color #fcfdff !important
+  transition .5s
+  font-weight bold
+  &:hover
+    color $blanco !important
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover
+  background $backgrondHeader
+  color $blanco
+
+.inpSearchHeader
+  width 320px !important
+  height 31px !important
+  background $backgrondInpSearchHeader
+  color $colorInpSearchHeader
+  border none
+  &:focus
+    color $blanco
+    border-color none !important
+    box-shadow none
+
+
+.imgPerfilheader
+  width 20px
+  height 20px
+  border-radius 2px
+
+.spanShortName
+  font-weight bold
+
+.labelTipoUser
+  padding-left 20px
+  color $borderBtnStar
+
+//@media (max-width: 768px)
+//  .formInpHeader
+//    display none !important
+
+@media (max-width: 449px)
+  .formInpHeader
+    display none !important
+
+

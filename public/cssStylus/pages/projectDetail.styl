@@ -1,0 +1,153 @@
+.boxProjectDetail
+  @extends .anulPadding
+
+.projectDetailHead
+  @extends .anulPadding
+  &__iconName
+    color $backgrondInpSearchHeader
+    font-size 18px
+  &__boxBack
+    padding-left 0rem
+    margin-top 0px
+  &__backProyectos
+    font-size 18px
+    font-weight bold !important
+    color $colorText !important
+    text-decoration none !important
+    &:hover
+      text-decoration none !important
+      color $colorText !important
+  &__namePro
+    margin-top 5px
+    font-size 14px
+    text-align justify
+    color $colorTitleProject
+    line-height 20px
+    text-transform uppercase
+    @extends .anulPadding
+    &:focus
+      outline none
+  &__boxBtnStar
+    @extends .anulPadding
+    margin-top 5px
+  &__btnStar
+    float right
+    background $backgrondBtnStar
+    border 1px solid $borderBtnStar
+    &:hover
+      border 1px solid $borderHoverBtnStar
+  &__iconStar
+    margin-right 5px
+
+.projectDetailMenu
+  @extends .anulPadding
+  &__boxMenu
+    width 100%
+    margin-top 26px
+  &__icons
+    margin-right 7px
+
+//css  para el menu-horizontal de la vista project detail
+.navDetail li a
+  margin-right 0rem
+  color $colorText
+  font-weight 500
+  font-size 14px
+  border none
+  &:hover
+    background $blanco
+
+.navDetail li.active a
+  border-top 2px solid $colorNaranja
+  border-radius 4px
+  &:hover
+    border-top 2px solid $colorNaranja
+
+.contentProjectList
+  @extends .anulPadding
+  margin-top 26px
+  &__boxContent
+    padding-right 0rem
+
+//css para la vista de resumen del proyecto
+.boxHeadResumen
+  @extends .anulPadding
+  &__boxProgress
+    float right
+    @extends .anulPadding
+
+.boxContentResumen
+  @extends .anulPadding
+  margin-bottom 100px
+  &__box
+    @extends .anulPadding
+    margin-top 0px
+  &__span
+    margin-top 10px
+    font-weight bold
+    font-size 16px
+    color $colorText
+  &__boxCodeQR
+    padding: 0rem
+    position: absolute
+    right: 0
+    text-align: right
+    top: -10px
+    z-index 0
+    //z-index 1000
+  &__boxDescargar
+      display block
+      &__ancla
+        width 100%
+  &__imageQr
+    width 100%
+  &__name
+    margin-top 10px
+    font-size 14px
+    text-align justify
+    color $colorTitleProject
+    text-transform uppercase
+    line-height 20px
+  &__codigo
+    margin-top 10px
+    font-size 14px
+    font-weight bold
+    text-align justify
+    color $colorCodigoProject
+    text-transform uppercase
+    line-height 20px
+  &__textItem
+    display inline-block
+    margin-top 10px
+    font-size 14px
+    line-height 20px
+    font-weight 300
+    text-transform uppercase
+  &__boxTypeMember
+    display inline-block
+    font-size 9px
+    margin-left 20px
+    margin-bottom 0rem
+    padding-left 5px
+    padding-right 5px
+  &__ulMiembros
+    list-style none
+    padding-left 0rem
+  &__spanPendente
+    margin-left 10px
+    margin-top 5px
+    padding 5px
+  &__btnAgregar
+    width 140px
+    float right
+    font-size 13px
+    font-weight bold
+    margin-top 2px
+
+@import "projectDetailEditar/projectEdit.styl"
+@import "projectDetailSettings/projectSetting.styl"
+
+
+
+
+

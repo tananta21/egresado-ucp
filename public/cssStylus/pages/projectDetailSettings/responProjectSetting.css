@@ -1,0 +1,37 @@
+@media (max-width: 768px) {
+  .boxAsesor__boxList__btnCancelar {
+    text-indent: -9999px;
+    line-height: 0;
+  }
+  .boxAsesor__boxList__btnCancelar:after {
+    content: "Cancelar";
+    text-indent: 0;
+    display: block;
+    line-height: initial;
+  }
+}
+@media (max-width: 449px) {
+  .boxBtnAgregar {
+    float: right;
+  }
+  .boxPerfilMember {
+    text-align: left;
+  }
+  .boxFormList__inpSelect__member {
+    width: 95%;
+    font-size: 12px;
+  }
+  .boxAsesor__boxList__boxImg {
+    padding-right: 3px;
+  }
+  .boxAsesor__boxList__btnCancelar {
+    text-indent: -9999px;
+    line-height: 0;
+  }
+  .boxAsesor__boxList__btnCancelar:after {
+    content: "Cancelar";
+    text-indent: 0;
+    display: block;
+    line-height: initial;
+  }
+}

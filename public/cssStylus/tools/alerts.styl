@@ -1,0 +1,94 @@
+.boxAlerts
+  white-space: nowrap;
+  height: 30px
+  display flex
+  padding-top 12px
+  height 55px
+  &__items
+    margin-right 25px
+    &__a
+      text-decoration underline
+      margin-left 10px
+      color $colorText
+      transition .1s
+      font-weight 700
+      cursor pointer
+      &:hover
+        text-decoration underline
+
+
+//MODAL DE LISTAR PROYECTOS POR ASIGANR
+.titleListAsignar
+  font-weight bold
+  font-size 15px
+  text-align center
+
+//css desde el body del modal lista de proyectos por asignar
+.modalAsignar
+  height 500px
+  padding-top 0rem
+  &__content
+    height 450px
+    overflow-y auto
+  &__boxDocente
+    padding-top 10px
+  &__searchDocente
+    font-size 12px
+    height 30px
+  &__tblDocente
+    font-size 12px
+  &__item
+    width 100%
+    padding-top 10px
+    padding-bottom 10px
+    padding-right 15px
+    border-bottom 1px solid $borderBtnStar
+    &__contentName
+      text-align justify
+      margin-top 0rem
+      margin-bottom 3px
+      font-weight 500
+    &__nameProject
+      font-size 12px
+      margin-bottom 5px
+      cursor pointer
+      color $colorTitleProject
+      &:hover
+        text-decoration none
+    &__labels
+      font-size 12px
+      color $colorText
+      font-weight bold
+    &__text
+      margin-top 0px
+      margin-bottom 3px
+      display inline-block
+      font-size 12px
+
+
+@media (max-width: 1440px)
+  .modalAsignar
+    min-height 700px
+  .modalAsignar__content
+    height 650px
+
+@media (max-width: 1366px)
+  .modalAsignar
+    min-height 500px
+  .modalAsignar__content
+    height 450px
+
+@media (max-width: 1024px)
+  .modalAsignar
+    min-height 600px
+  .modalAsignar__content
+    height 550px
+
+
+@media (max-width: 449px)
+  .boxAlerts
+    height 60px
+  .boxAlerts__items__a
+    display block
+    margin-left 0rem
+

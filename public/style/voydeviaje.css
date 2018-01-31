@@ -1,0 +1,337 @@
+body {
+  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+}
+.atractivoInicio__boxImg {
+  height: 315px;
+}
+.atractivoInicio__input {
+  display: inline-block !important;
+  color: transparent;
+  width: 80%;
+  padding: 6px 20px;
+  border: 0rem;
+  margin-top: 10px;
+}
+.atractivoInicio__boxBtns {
+  display: none;
+  margin-top: 30px;
+  text-align: center;
+}
+.reco {
+  display: block;
+}
+.reco__boxTable {
+  margin-top: 15px;
+}
+.reco__table {
+  font-size: 13px;
+}
+.reco__btnAdd {
+  font-size: 13px;
+}
+.atractivos {
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+.atractivos__tittle {
+  margin-bottom: 40px;
+  color: #808080;
+  font-size: 16px;
+}
+.atractivos__btnAgregar {
+  float: right;
+  cursor: pointer;
+  width: 100%;
+}
+.atractivos__list {
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+.atractivos__list__link {
+  text-decoration: none;
+}
+.atractivos__list__link:hover {
+  text-decoration: none;
+}
+.atractivos__list__item {
+  display: block;
+  height: 280px;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.5);
+  margin-bottom: 20px;
+  border-radius: 2px;
+}
+.atractivos__list__img {
+  width: 100%;
+  height: 170px;
+}
+.atractivos__list__boxDescription {
+  padding: 10px;
+}
+.atractivos__list__codigo {
+  font-weight: bold;
+  font-size: 13px;
+  color: #000;
+  margin-top: 0rem;
+}
+.atractivos__list__nombres {
+  font-size: 12px;
+  color: #000;
+}
+.atractivos__list__carrera {
+  font-size: 12px;
+  color: #9f9f9f;
+}
+.atractivos__form__boxInputFileImage {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+.atractivos__form__inputImage {
+  display: inline-block !important;
+  color: transparent;
+  width: 37%;
+}
+.atractivos__form__imagePreviewCreate {
+  height: 316px;
+  width: 90%;
+  float: right;
+  margin-bottom: 10px;
+}
+.atractivos__form__boxFormInfoGeneral {
+  margin-top: 20px;
+}
+.atractivos__labelInfoGeneral {
+  margin-bottom: 15px;
+  border-bottom: 2px dashed #bfbfbf;
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+.atractivos__boxEmpty {
+  display: inline-block;
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+}
+.atractivos__boxEmpty__img {
+  width: 230px;
+  height: 230px;
+}
+.atractivos__boxEmpty__text {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+.contentProjectList__boxContent {
+  margin-bottom: 50px;
+}
+.foto__link {
+  text-decoration: none;
+}
+.foto__link:hover {
+  text-decoration: none;
+}
+.foto__item {
+  display: block;
+  height: 280px;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.5);
+  margin-bottom: 20px;
+  border-radius: 2px;
+}
+.foto__item__img {
+  width: 100%;
+  height: 190px;
+}
+.foto__item__boxDescription {
+  padding: 10px;
+  height: 60px;
+}
+.foto__item__nombre {
+  font-weight: bold;
+  font-size: 14px;
+  color: #616161;
+  margin-top: 0rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.foto__item__boxBtns {
+  padding: 0px;
+}
+.foto__modalImg {
+  display: block;
+}
+.foto__modalImg__boxInput {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+.foto__modalImg__boxInput__input {
+  display: inline-block !important;
+  height: auto;
+  width: 30%;
+  color: transparent;
+  padding: 0px;
+  border: 0rem;
+  margin-top: 10px;
+}
+#mainNav {
+  background: #2c3c4d !important;
+/*background #4A423F !important*/
+/*border-color #0000C2*/
+}
+#mainNav .navbar-brand {
+  color: #87ceeb !important;
+  font-weight: bold;
+}
+#mainNav .navbar-nav > li.nav-item > a.nav-link,
+#mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
+  color: #ececec !important;
+}
+input[type='text'] {
+  font-size: 13px;
+  height: 37px;
+}
+.DN {
+  display: none;
+}
+.light {
+  font-weight: 300;
+}
+.pointer {
+  cursor: pointer;
+}
+.mapaContainer {
+  width: 100%;
+  height: 65%;
+}
+.input_select {
+  font-size: 13px;
+  height: 37px;
+}
+.width_100 {
+  width: 100% !important;
+}
+.height_100 {
+  height: 100% !important;
+}
+.padding_lr_0 {
+  padding-left: 0rem;
+  padding-right: 0rem;
+}
+.padding_r_0 {
+  padding-right: 0rem;
+}
+.padding_l_0 {
+  padding-left: 0rem;
+}
+.padding_t_10 {
+  padding-top: 10px;
+}
+.padding_b_10 {
+  padding-bottom: 10px;
+}
+.marg_0 {
+  margin: 0rem !important;
+}
+.btn-guardar {
+  color: #fff;
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+  cursor: pointer;
+}
+.btn-guardar:hover {
+  color: #fff;
+  background-color: #1794aa;
+}
+.btn-cancelar {
+  color: #fff !important;
+  background-color: #c82333;
+  border-color: #bd2130;
+  cursor: pointer;
+}
+.btn-cancelar:hover {
+  background-color: #a7212d;
+}
+.menuHorizontal {
+  display: inline-block;
+  text-align: center;
+}
+.menuHorizontal__ul {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0rem;
+}
+.menuHorizontal__ul > li {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 10px 20px;
+  border-top: 1px solid #d3d3d3;
+  border-bottom: 1px solid #d3d3d3;
+}
+.menuHorizontal__ul > li >a {
+  padding: 0px 10px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  color: #a9a9a9;
+  transition: 0.2s;
+}
+.menuHorizontal__ul > li >a:hover {
+  text-decoration: none;
+  color: #3f4448;
+  font-weight: 500;
+}
+.menuHorizontal__ul > .active {
+  border-bottom: 0px !important;
+}
+.menuHorizontal__ul > .active > a {
+  font-size: 14px;
+  color: #3f4448 !important;
+  border-bottom: 4px solid #00bfff;
+  font-weight: bold;
+  padding-bottom: 9px;
+}
+.menuHorizontal__ul > .active > a:hover {
+  color: #3f4448 !important;
+  border-bottom: 4px solid #00bfff;
+  font-weight: bold;
+}
+.egresado__body {
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+.egresado__slider__img {
+  width: 100%;
+  height: 350px !important;
+}
+.egresado__nuevo {
+  display: block;
+}
+.egresado__nuevo__linkBack {
+  cursor: pointer;
+  text-decoration: none;
+}
+.egresado__nuevo__linkBack:hover {
+  text-decoration: none;
+}
+.egresado__nuevo__iconBack {
+  font-size: 20px;
+  margin-right: 7px;
+}
+.egresado__nuevo__textBack {
+  font-size: 16px;
+}
+.egresado__nuevo__boxImg {
+  height: 230px;
+  width: 90%;
+  float: right;
+}
+.egresado__nuevo__boxImg__img {
+  width: 100%;
+  height: 100%;
+}

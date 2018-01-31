@@ -1,0 +1,251 @@
+//css para el  menu_left settings
+.navSetting
+  background white
+
+.sidebar-nav .navbar .navbar-collapse {
+  padding: 0;
+  max-height: none;
+}
+
+.sidebar-nav .navbar ul {
+  float: none;
+  display: block;
+  margin 0px
+}
+
+.sidebar-nav .navbar li {
+  display: block;
+  float: none;
+  border-bottom 1px solid #E7E7E7
+
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover
+  background $blanco
+  border-left 2px solid $colorNaranja
+  font-weight bold
+
+.sidebar-nav .navbar li a
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color $colorTitleProject
+  &:hover
+    color $colorTitleProject
+
+.iconMenuLateral
+  padding-right 7px
+  font-size 16px
+
+//css para la vista de settigns content ==========================
+.boxAsesor
+  width 100%
+  border 1px solid $borderBtnStar
+  border-radius 2px
+  margin-bottom 50px
+  @extends .anulPadding
+  &__head
+    background $backgrondBtnStar
+    border-bottom 1px solid $borderBtnStar
+    padding 15px
+  &__titleHead
+    font-size 14px
+    font-weight bold
+    margin 0rem
+    font-weight bold
+    display inline-block
+    &--r
+      float right
+  &__nroResolucion
+    font-weight 500
+  &__btnModifyResolucion
+    padding: 3px 6px
+    border-radius: 50%
+    font-size: 12px
+    margin-left: 5px
+  &__description
+    width 100%
+    border-bottom 1px solid $borderBtnStar
+    &__text
+      font-weight normal
+      margin 0rem
+      padding 40px
+      text-align center !important
+      font-size 14px
+      color $colorText
+  &__boxList
+    padding 10px 15px 10px 15px
+    border-bottom 1px solid $borderBtnStar
+    &__boxItems
+      @extends .anulPadding
+    &__boxImg
+      padding 10px 10px 10px 0px
+      &__img
+        width 85%
+        height 45px
+        border-radius 4px
+    &__boxName
+      padding-left 0rem
+      &__name
+        font-weight bold
+      &__email
+        font-weight 500
+    &__CargoDescription
+      margin-top 15px
+      font-weight bold
+      text-align center
+      font-size 14px
+    &__btnCancelar
+      float right
+      color $colorRojo
+      font-weight bold
+      font-size 13px
+      cursor pointer
+      margin-top 10px
+      &:hover
+        color $colorRojo
+    &__btnEliminar
+      float right
+      margin-right 50px
+      margin-top 10px
+      border none
+      background $blanco
+      font-weight bold
+      font-size 18px
+      text-align center
+      cursor pointer
+      border none
+      &:active
+        border 1px solid white !important
+      &:hover
+        color $colorRojo
+      &:focus
+        border 1px solid white !important
+
+
+  &__boxForm
+    width 100%
+    padding 15px
+    &__title
+      margin 0rem
+      font-size 14px
+      font-weight bold
+      color $colorText
+    &__description
+      font-size 12px
+      font-weight normal
+      color $colorText
+    &__boxInputs
+      @extends .anulPadding
+      margin-right 10px
+      &__inpSearchColaborador
+        width 97%
+    &__btnAgregar
+      font-size 14px
+      font-weight bold
+      color $colorBtnAgregar
+      width 100%
+      background $backgrondBtnStar
+      transition .2s
+      &:hover
+        background $backgrondBtnStar
+    &__btnAgregar--colaborador
+      font-size 14px
+      font-weight bold
+      color $colorBtnAgregar
+      width 85%
+      background $backgrondBtnStar
+      transition .2s
+      &:hover
+        background $backgrondBtnStar
+
+.boxOptions
+  padding-top 10px
+  padding-bottom 20px
+  &__textArea
+    text-align justify
+    //text-transform uppercase
+  &__boxBtnRenombrar
+    float right
+  &__boxEliminarProyecto
+    padding-top 20px
+    padding-bottom 25px
+  &__descripcionEliminar
+    color $backgrondHeader
+    font-weight normal
+  &__btnEliminar
+    color $colorRojo
+    &:hover
+      color $blanco
+      background $colorRojo
+
+.boxFormList__inpSelect__member
+  width 90%
+
+
+.boxComision
+  width 100%
+  border 1px solid $borderBtnStar
+  border-radius 2px
+  margin-bottom 70px !important
+  &__vacio
+    border-bottom none
+    padding-top 30px
+  &__descripcion
+    font-size 14px
+    text-align center
+    color $colorText
+  &__boxForm
+    padding-bottom 30px
+    &__btnGuardar
+      float right
+      width 120px
+      font-weight bold
+
+
+//css para el div de busqueda de colaborador, miembro, asesor
+.select2-container
+  text-align left !important
+
+.select2-container .select2-selection--single
+  padding-top 2px !important
+  height 34px !important
+
+.select2-result-repository
+  display flex !important
+  padding-top 5px !important
+  padding-bottom 5px !important
+
+.select2-result-repository__avatar
+  display inline-block
+  &__img
+    height 35px
+    border-radius 4px
+
+.select2-result-repository__meta
+  display inline-block
+  padding-left 10px
+
+.resultFullName
+  font-weight bold
+  margin 0rem
+
+.resultIconEmail
+  margin-top 2px
+  margin-right 5px
+  font-size 14px
+
+.resultTextEmail
+  display inline-block
+  font-size 12px
+  margin-top 2px
+  margin-bottom 0rem
+
+
+@import "responProjectSetting.styl"
+
+
+
+
+
+
+

@@ -1,0 +1,47 @@
+$colorTextError = #979797
+
+body
+  font-family: 'Crimson Text', serif;
+
+.boxError
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  &__NumError
+    font-size 190px
+    color $colorTextError
+    font-weight 500
+    text-align center
+  &__textSorry
+    margin-top 70px
+    color $colorTextError
+    font-size 30px
+    font-weight bold
+  &__textPageNoFound
+    color $colorTextError
+    font-size 30px
+    text-transform uppercase
+  &__description
+    margin-top 0rem
+    text-align center
+    color $colorTextError
+    font-size 20px
+    font-weight 500
+  &__returnHome
+    font-weight bold
+    margin-top 10px
+    font-size 20px
+
+
+@media(max-width: 1024px)
+  .boxError
+    top 45%
+  .boxError__textSorry
+    margin-top 0rem
+    text-align center
+  .boxError__textPageNoFound
+    text-align center
+  .boxError__description
+    margin-top 6px

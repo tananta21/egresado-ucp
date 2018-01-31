@@ -1,0 +1,46 @@
+.menuHorizontal {
+  display: inline-block;
+  text-align: center;
+}
+.menuHorizontal__ul {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0rem;
+}
+.menuHorizontal__ul > li {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 10px 20px;
+  border-top: 1px solid #d3d3d3;
+  border-bottom: 1px solid #d3d3d3;
+}
+.menuHorizontal__ul > li >a {
+  padding: 0px 10px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 16px;
+  color: #a9a9a9;
+  transition: 0.2s;
+}
+.menuHorizontal__ul > li >a:hover {
+  text-decoration: none;
+  border-bottom: 2px solid #00bfff;
+  font-weight: 500;
+}
+.menuHorizontal__ul > .active {
+  border-bottom: 0px !important;
+}
+.menuHorizontal__ul > .active > a {
+  font-size: 16px;
+  color: $backgrondInpSearchHeader !important;
+  border-bottom: 4px solid #00bfff;
+  font-weight: bold;
+  padding-bottom: 9px;
+}
+.menuHorizontal__ul > .active > a:hover {
+  color: $backgrondInpSearchHeader !important;
+  border-bottom: 4px solid #00bfff;
+  font-weight: bold;
+}

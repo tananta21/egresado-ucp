@@ -1,0 +1,58 @@
+//@import "nib";
+
+body
+  font-size 14px
+  font-family: 'Lato', sans-serif
+
+.homeContent
+  padding-right 0rem
+  padding-left 0rem
+  padding-top 15px
+
+//css tools : colors and others utilities
+@import "tools/colores"
+@import "tools/loading_header.styl"
+@import "tools/utilities"
+@import "tools/alerts.styl"
+//@import "tools/errors_500_404.styl"
+
+//css menus: menu_header
+@import "menu/header.styl"
+
+//css pages of project
+@import "tools/tabs_nav.styl"
+@import "pages/admin"
+@import "pages/projectList.styl"
+@import "pages/projectCreate.styl"
+@import "pages/projectDetail.styl"
+@import "pages/configPerfil.styl"
+@import "report/report.styl"
+
+//css responsive pages projects
+@import "responsive/responProjectList.styl"
+@import "responsive/responProjectCreate.styl"
+@import "responsive/responProjectDetail.styl"
+@import "responsive/responConfigPerfil.styl"
+
+@media (max-width: 1440px)
+  .container
+    width 1000px
+
+@media (max-width: 768px)
+  .container
+    width 750px
+
+@media (max-width: 449px)
+  .container
+    width 100%
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+  
+
+
+
+
+

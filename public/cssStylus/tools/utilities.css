@@ -1,0 +1,21 @@
+input[type=checkbox] {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  font: 14px/1em sans-serif;
+  background-color: #0b0095;
+}
+input[type=checkbox]:after {
+  content: " ";
+  background-color: #fff;
+  color: $a_claro;
+  display: inline-block;
+  visibility: visible;
+  text-align: center;
+  border: 0.5px solid #d3d3d3;
+}
+input[type=checkbox]:checked:after {
+  content: "\2714";
+  height: 100%;
+  width: 100%;
+}
