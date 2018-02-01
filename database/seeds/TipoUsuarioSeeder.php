@@ -16,7 +16,7 @@ class TipoUsuarioSeeder extends Seeder
             'is_active' => true,
         ]);
         \DB::table('tipo_usuarios')->insert([
-            'nombre' => 'alumno',
+            'nombre' => 'egresado',
             'is_active' => true,
         ]);
 

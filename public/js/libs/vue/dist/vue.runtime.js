@@ -7108,7 +7108,7 @@ setTimeout(function () {
       devtools.emit('init', Vue$3);
     } else if ("development" !== 'production' && isChrome) {
       console[console.info ? 'info' : 'log'](
-        'Download the Vue Devtools extension for a better development experience:\n' +
+        'Download the Vue Devtools extension for a better development curriculum:\n' +
         'https://github.com/vuejs/vue-devtools'
       );
     }

@@ -8,9 +8,11 @@ use App\Core\Facultad\FacultadRepository;
 use App\Core\SemestreAcademico\SemestreAcademicoRepository;
 use App\Core\User\UserRepository;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Input;
 
-class EgresadoController extends Controller
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+
+class CurriculumController extends Controller
 {
     protected $repoUser;
     protected $repoEgresado;
@@ -27,33 +29,29 @@ class EgresadoController extends Controller
         $this->repoSemestre = new SemestreAcademicoRepository();
     }
 
+    public function datosPersonales()
+    {
+        return view('system.egresado.curriculum.datos_personales');
+    }
+
+    public function listaExperiencia()
+    {
+        return view('system.egresado.curriculum.experiencia.lista');
+    }
+
+
+
+
     public function index()
     {
-        $egresados = $this->repoEgresado->all();
-        return view('system.admin.lista_egresados',
-            compact('egresados'));
+        //
     }
 
-    public function nuevoEgresado(){
-        $facultad = $this->repoFacultad->all();
-        $escuela = $this->repoEscuela->all();
-        $semestre = $this->repoSemestre->all();
-        return View("system.admin.nuevo_egresado",
-            compact('facultad', 'escuela', 'semestre'));
-    }
-
-    public function crearEgresado()
-    {
-        $data = Input::all();
-        $url_imagen = "img/utils/empty_user.png";
-        $egresado = $this->repoEgresado->crearEgresado($data, $url_imagen);
-        $user = $this->repoUser->crearUsuario($data, $url_imagen);
-        session()->flash('msg', 'El egresado ha sido registrado satisfactoriamente');
-        return redirect()->route('lista_egresados');
-
-    }
-
-
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function create()
     {
         //

@@ -6,7 +6,7 @@
             <strong>Excelente! </strong>{!! Session::has('msg') ? Session::get("msg") : '' !!}.
         </div>
     @endif
-    <form action="" method="post" role="form">
+    <form action="{{route('crear_egresado')}}" method="post" role="form">
         {!! csrf_field() !!}
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding_lr_0">
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
@@ -26,8 +26,8 @@
             <div class="col-lg-8 col-md-8 padding_lr_0">
                 <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12 padding_lr_0">
                     <label>Cod. Matrícula:</label>
-                    <input type="text" class="form-control" placeholder="Ingrese nombre del atractivo"
-                           name="apellido" value="" required>
+                    <input type="number" class="form-control" placeholder="Ingrese nombre del atractivo"
+                           name="codigo" value="" required>
                 </div>
                 <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 padding_lr_0">
                     <label>Apellidos:</label>
@@ -37,23 +37,29 @@
                 <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 padding_lr_0">
                     <label>Nombres:</label>
                     <input type="text" class="form-control" placeholder="Ingrese nombre del atractivo"
-                           name="apellido" value="" required>
+                           name="nombre" value="" required>
                 </div>
-                <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 padding_lr_0">
-                    <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding_lr_0">
-                        Facultad:</label>
-                    <div class="col-lg-12 col-md-12 padding_lr_0">
-                        <select class="form-control input_select" name="categoria_id">
-                            <option>San Martín</option>
-                        </select>
-                    </div>
-                </div>
+                {{--<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 padding_lr_0">--}}
+                    {{--<label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding_lr_0">--}}
+                        {{--Facultad:</label>--}}
+                    {{--<div class="col-lg-12 col-md-12 padding_lr_0">--}}
+                        {{--<select class="form-control input_select" name="facultad_id">--}}
+                            {{--<option value="">Seleccione una facultad</option>--}}
+                            {{--@foreach($facultad as $item)--}}
+                                {{--<option value="{{$item->id}}">{{$item->nombre}}</option>--}}
+                            {{--@endforeach--}}
+                        {{--</select>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
                 <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 padding_lr_0">
                     <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding_lr_0">
                         Escuela:</label>
                     <div class="col-lg-12 col-md-12 padding_lr_0">
-                        <select class="form-control input_select" name="categoria_id">
-                            <option>San Martín</option>
+                        <select class="form-control input_select" name="escuela_id" required>
+                            <option value="">Seleccione una escuela</option>
+                            @foreach($escuela as $item)
+                                <option value="{{$item->id}}">{{$item->nombre}}</option>
+                            @endforeach
                         </select>
                     </div>
                 </div>
@@ -61,8 +67,11 @@
                     <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding_lr_0">
                         Semestre Egreso:</label>
                     <div class="col-lg-6 col-md-6 padding_lr_0">
-                        <select class="form-control input_select" name="categoria_id">
-                            <option>San Martín</option>
+                        <select class="form-control input_select" name="semestre_id" required>
+                            <option value="">Seleccione un semestre</option>
+                            @foreach($semestre as $item)
+                                <option value="{{$item->id}}">{{$item->semestre}}</option>
+                            @endforeach
                         </select>
                     </div>
                 </div>

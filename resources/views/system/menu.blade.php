@@ -9,11 +9,19 @@
         <li class="">
             <a href="">Ofertas Laborales</a>
         </li>
+        <li class="curriculum">
+            <a href="{{route('datos_personales')}}">Currículum</a>
+        </li>
+
         <li class="">
             <a href="">Seguimiento</a>
         </li>
         <li class="">
             <a href="">Reportes</a>
         </li>
+        <li class="">
+            <a href="">Administración</a>
+        </li>
+
     </ul>
 </div>

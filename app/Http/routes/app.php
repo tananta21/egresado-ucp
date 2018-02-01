@@ -13,6 +13,8 @@ Route::group(['prefix' => '/'], function () {
     ]);
 
     require_once app_path() .'/Http/routes/route_admin.php';
-    
+    require_once app_path() .'/Http/routes/route_alumno.php';
+    require_once app_path() .'/Http/routes/route_curriculum.php';
+
 
 });
