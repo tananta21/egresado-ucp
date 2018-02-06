@@ -1,8 +1,15 @@
 @extends('index')
 @section('content')
 
+    @if (Session::has('alert'))
+        <div class="alert alert-danger alert-dismissable">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+            <strong>{!! Session::has('alert') ? Session::get("alert") : '' !!} !!</strong>.
+        </div>
+    @endif
+
     <div>
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" style="display: none">
             <!-- Indicators -->
             <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>

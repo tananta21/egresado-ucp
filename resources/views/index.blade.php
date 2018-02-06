@@ -31,7 +31,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a class="textHeader " href="#">Nombre de usuario</a>
+                    <a class="textHeader " href="#">Usuario : {{Auth::user()->nombre}}</a>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle textHeader" data-toggle="dropdown" role="button"
@@ -41,7 +41,7 @@
                              alt=""><span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li role="separator" class="divider"></li>
-                        <li><a href="">Cerrar sesión</a></li>
+                        <li><a href="/logout">Cerrar sesión</a></li>
                     </ul>
                 </li>
             </ul>

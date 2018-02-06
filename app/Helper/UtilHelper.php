@@ -16,9 +16,9 @@ class UtilHelper
 
         if($image != null){
             $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
-            $destinationPath = public_path('dist/atractivos');
+            $destinationPath = public_path('dist/egresados');
             $image->move($destinationPath, $input['imagename']);
-            $url_imagen = 'dist/atractivos/'.time().'.'.$image->getClientOriginalExtension();
+            $url_imagen = 'dist/egresados/'.time().'.'.$image->getClientOriginalExtension();
         }
         else{
             $url_imagen = "img/utils/default_image.png";

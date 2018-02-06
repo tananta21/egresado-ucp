@@ -30,14 +30,14 @@
                            name="codigo" value="" required>
                 </div>
                 <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 padding_lr_0">
-                    <label>Apellidos:</label>
-                    <input type="text" class="form-control" placeholder="Ingrese nombre del atractivo"
-                           name="apellido" value="" required>
-                </div>
-                <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 padding_lr_0">
                     <label>Nombres:</label>
                     <input type="text" class="form-control" placeholder="Ingrese nombre del atractivo"
                            name="nombre" value="" required>
+                </div>
+                <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 padding_lr_0">
+                    <label>Apellidos:</label>
+                    <input type="text" class="form-control" placeholder="Ingrese nombre del atractivo"
+                           name="apellido" value="" required>
                 </div>
                 {{--<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 padding_lr_0">--}}
                     {{--<label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding_lr_0">--}}

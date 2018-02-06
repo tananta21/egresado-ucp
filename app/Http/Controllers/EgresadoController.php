@@ -47,7 +47,7 @@ class EgresadoController extends Controller
         $data = Input::all();
         $url_imagen = "img/utils/empty_user.png";
         $egresado = $this->repoEgresado->crearEgresado($data, $url_imagen);
-        $user = $this->repoUser->crearUsuario($data, $url_imagen);
+        $user = $this->repoUser->crearUsuario($egresado, $url_imagen);
         session()->flash('msg', 'El egresado ha sido registrado satisfactoriamente');
         return redirect()->route('lista_egresados');
 

@@ -5,6 +5,11 @@ Route::get('/curriculum/datos/personales', [
     'uses' => 'CurriculumController@datosPersonales'
 ]);
 
+Route::post('/curriculum/datos/personales/update', [
+    'as' => 'update_datos_personales',
+    'uses' => 'CurriculumController@updateDatosPersonales'
+]);
+
 
 //EXPERIENCIA LABORAL
 Route::get('/curriculum/experiencia/laboral', [

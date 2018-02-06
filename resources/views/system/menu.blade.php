@@ -9,19 +9,21 @@
         <li class="">
             <a href="">Ofertas Laborales</a>
         </li>
-        <li class="curriculum">
-            <a href="{{route('datos_personales')}}">Currículum</a>
-        </li>
-
-        <li class="">
-            <a href="">Seguimiento</a>
-        </li>
+        @if(Auth::user()->tipo_usuario_id == config('global.user_egresado'))
+            <li class="curriculum">
+                <a href="{{route('datos_personales')}}">Currículum</a>
+            </li>
+            <li class="">
+                <a href="">Seguimiento</a>
+            </li>
+        @endif
         <li class="">
             <a href="">Reportes</a>
         </li>
-        <li class="">
-            <a href="">Administración</a>
-        </li>
-
+        @if(Auth::user()->tipo_usuario_id == config('global.user_admin'))
+            <li class="">
+                <a href="">Administración</a>
+            </li>
+        @endif
     </ul>
 </div>

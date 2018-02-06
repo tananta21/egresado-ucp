@@ -29,6 +29,8 @@ class UserRepository implements BaseRepositoryInterface
     public function crearUsuario($attributes, $url_imagen)
     {
         $nuevo = $this->user;
+        $nuevo->tipo_usuario_id = config('global.user_egresado');
+        $nuevo->egresado_id = $attributes['id'];
         $nuevo->codigo = $attributes['codigo'];
         $nuevo->nombre = $attributes['nombre'];
         $nuevo->apellido = $attributes['apellido'];
@@ -38,7 +40,17 @@ class UserRepository implements BaseRepositoryInterface
         $nuevo->is_active = true;
         $nuevo->save();
         return $nuevo;
+    }
 
+    public function updatedUser($id, $attributes)
+    {
+        $user = $this->user->findOrFail($id);
+        $user->nombre = $attributes['nombre'];
+        $user->apellido = $attributes['apellido'];
+        $user->email = $attributes['email'];
+        $user->url_imagen = $attributes['url_imagen'];
+        $user->save();
+        return $user;
     }
 
     public function create(array $attributes)
@@ -46,10 +58,11 @@ class UserRepository implements BaseRepositoryInterface
         // TODO: Implement create() method.
     }
 
+
     public function updated($id, array $attributes)
     {
-        // TODO: Implement updated() method.
     }
+
 
     public function find($id)
     {

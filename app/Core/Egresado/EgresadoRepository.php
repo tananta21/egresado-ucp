@@ -46,15 +46,36 @@ class EgresadoRepository implements BaseRepositoryInterface
         // TODO: Implement create() method.
     }
 
+    public function updatedEgresado($id, $attributes, $url_imagen)
+    {
+
+        $egresado = $this->egresado->findOrFail($id);
+        $egresado->nombre = $attributes['nombre'];
+        $egresado->apellido = $attributes['apellido'];
+        $egresado->dni = $attributes['dni'];
+        $egresado->nacionalidad = $attributes['nacionalidad'];
+        $egresado->tel_fijo = $attributes['tel_fijo'];
+        $egresado->tel_celular = $attributes['tel_celular'];
+        $egresado->email = $attributes['email'];
+        $egresado->pagina_web = $attributes['pagina_web'];
+        $egresado->estado_civil = $attributes['estado_civil'];
+        $egresado->direccion = $attributes['direccion'];
+        $egresado->url_imagen = $url_imagen;
+        $egresado->save();
+        return $egresado;
+
+    }
     public function updated($id, array $attributes)
     {
-        // TODO: Implement updated() method.
     }
+
+
 
     public function find($id)
     {
-        // TODO: Implement find() method.
+        return $this->egresado->findOrFail($id);
     }
+
 
     public function deleted($id)
     {
