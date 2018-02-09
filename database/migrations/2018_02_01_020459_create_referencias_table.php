@@ -14,12 +14,12 @@ class CreateReferenciasTable extends Migration
     {
         Schema::create('referencias', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('egresado_id')->unsigned();
-            $table->string('empresa');
-            $table->string('nombre');
-            $table->string('puesto');
-            $table->string('telefono');
-            $table->string('email');
+            $table->integer('egresado_id')->unsigned()->nullable();
+            $table->string('empresa')->nullable();;
+            $table->string('nombre')->nullable();
+            $table->string('puesto')->nullable();
+            $table->string('telefono')->nullable();
+            $table->string('email')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

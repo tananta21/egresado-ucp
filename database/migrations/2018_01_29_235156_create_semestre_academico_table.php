@@ -14,9 +14,9 @@ class CreateSemestreAcademicoTable extends Migration
     {
         Schema::create('semestre_academico', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('semestre',20);
-            $table->string('year',20);
-            $table->boolean('is_active');
+            $table->string('semestre',20)->nullable();;
+            $table->string('year',20)->nullable();
+            $table->boolean('is_active')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

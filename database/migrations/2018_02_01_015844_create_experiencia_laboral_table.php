@@ -14,18 +14,18 @@ class CreateExperienciaLaboralTable extends Migration
     {
         Schema::create('experiencia_laboral', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('egresado_id')->unsigned();
-            $table->integer('tipo_experiencia')->unsigned();
-            $table->string('empresa');
-            $table->string('rubro');
-            $table->string('puesto');
-            $table->string('nivel_puesto');
-            $table->string('area_laboral');
-            $table->string('salario');
-            $table->date('inicio');
-            $table->date('fin');
-            $table->boolean('estado_trabajo');
-            $table->text('descripcion');
+            $table->integer('egresado_id')->unsigned()->nullable();
+            $table->integer('tipo_experiencia_id')->unsigned()->nullable();
+            $table->string('empresa')->nullable();
+            $table->string('rubro')->nullable();
+            $table->string('puesto')->nullable();
+            $table->string('nivel_puesto')->nullable();
+            $table->string('area_laboral')->nullable();
+            $table->string('salario')->nullable();
+            $table->date('inicio')->nullable();
+            $table->date('fin')->nullable();
+            $table->text('descripcion')->nullable();
+            $table->boolean('estado_trabajo')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

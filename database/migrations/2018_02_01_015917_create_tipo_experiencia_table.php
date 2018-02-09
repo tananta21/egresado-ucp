@@ -14,8 +14,8 @@ class CreateTipoExperienciaTable extends Migration
     {
         Schema::create('tipo_experiencia', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nombre');
-            $table->boolean('is_active');
+            $table->string('nombre')->nullable();
+            $table->boolean('is_active')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

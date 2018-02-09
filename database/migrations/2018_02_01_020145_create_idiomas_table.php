@@ -14,9 +14,9 @@ class CreateIdiomasTable extends Migration
     {
         Schema::create('idiomas', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('egresado_id')->unsigned();
-            $table->integer('nivel_capacidad_id')->unsigned();
-            $table->string('nombre');
+            $table->integer('egresado_id')->unsigned()->nullable();
+            $table->integer('nivel_capacidad_id')->unsigned()->nullable();
+            $table->string('nombre')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

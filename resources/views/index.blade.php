@@ -31,7 +31,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a class="textHeader " href="#">Usuario : {{Auth::user()->nombre}}</a>
+                    <a class="textHeader " href="#">{{Auth::user()->tipoUsuario->nombre}} : {{Auth::user()->nombre}}</a>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle textHeader" data-toggle="dropdown" role="button"

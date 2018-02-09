@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Core\Egresado\EgresadoRepository;
 use App\Core\Escuela\EscuelaRepository;
+use App\Core\Estudio\EstudioRepository;
+use App\Core\ExperienciaLaboral\ExperienciaLaboralRepository;
 use App\Core\Facultad\FacultadRepository;
 use App\Core\ModelUtil\ModelUtilRepository;
 use App\Core\SemestreAcademico\SemestreAcademicoRepository;
@@ -26,6 +28,8 @@ class CurriculumController extends Controller
     protected $repoSemestre;
     protected $repoModelUtil;
     protected $utilHelper;
+    protected $repoExperiencia;
+    protected $repoEstudio;
 
     public function __construct()
     {
@@ -36,6 +40,8 @@ class CurriculumController extends Controller
         $this->repoSemestre = new SemestreAcademicoRepository();
         $this->repoModelUtil = new ModelUtilRepository();
         $this->utilHelper = new UtilHelper();
+        $this->repoExperiencia = new ExperienciaLaboralRepository();
+        $this->repoEstudio = new EstudioRepository();
     }
 
     public function datosPersonales()
@@ -51,8 +57,6 @@ class CurriculumController extends Controller
             session()->flash('alert', 'No tiene los permisos suficientes para realizar esta acción');
             return redirect()->route('app_inicio');
         }
-
-
     }
     public function updateDatosPersonales(Request $request)
     {
@@ -64,15 +68,55 @@ class CurriculumController extends Controller
         $user = $this->repoUser->updatedUser(Auth::user()->id, $egresado);
         session()->flash('msg', 'Datos guardados satisfactoriamente');
         return Redirect::back();
-
     }
 
-
+//    EXPERIENCIA LABORAL ======================================================
     public function listaExperiencia()
     {
-        return view('system.egresado.curriculum.experiencia.lista');
+        $egresado_id = Auth::user()->egresado_id;
+        $items = $this->repoExperiencia->allByEgresado($egresado_id);
+        return view('system.egresado.curriculum.experiencia.lista',
+            compact('items'));
+    }
+    public function nuevaExperiencia()
+    {
+        $tipoExperiencias = $this->repoModelUtil->allTipoExperiencia();
+        return view('system.egresado.curriculum.experiencia.nuevo',
+            compact('tipoExperiencias'));
+    }
+    public function createExperiencia()
+    {
+        $data = Input::all();
+        $egresado_id = Auth::user()->egresado_id;
+        $experiencia = $this->repoExperiencia->createExperiencia($egresado_id, $data);
+        session()->flash('msg', 'Datos guardados satisfactoriamente');
+        return redirect()->route('experiencia_laboral');
     }
 
+//    ESTUDIOS ======================================================
+    public function listaEstudio()
+    {
+        $egresado_id = Auth::user()->egresado_id;
+        $items = $this->repoEstudio->allByEgresado($egresado_id);
+        return view('system.egresado.curriculum.estudios.lista',
+            compact('items'));
+    }
+
+    public function nuevoEstudio()
+    {
+        $nivelEstudio = $this->repoModelUtil->allNivelEstudio();
+        return view('system.egresado.curriculum.estudios.nuevo',
+            compact('nivelEstudio'));
+    }
+
+    public function createEstudio()
+    {
+        $data = Input::all();
+        $egresado_id = Auth::user()->egresado_id;
+        $experiencia = $this->repoEstudio->createEstudio($egresado_id, $data);
+        session()->flash('msg', 'Datos guardados satisfactoriamente');
+        return redirect()->route('egresado_estudio');
+    }
 
 
 

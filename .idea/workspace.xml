@@ -2,43 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c73bd24-a7d4-4e0e-a2b3-1a2bb08be47b" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/Core/ModelUtil/ModelUtilRepository.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/config/global.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/Core/Estudio/EstudioRepository.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/Core/ExperienciaLaboral/ExperienciaLaboralRepository.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/Core/ModelUtil/TipoExperiencia.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/database/seeds/TipoExperienciaSeeder.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/Core/Egresado/EgresadoRepository.php" afterPath="$PROJECT_DIR$/app/Core/Egresado/EgresadoRepository.php" />
-      <change beforePath="$PROJECT_DIR$/app/Core/User/UserRepository.php" afterPath="$PROJECT_DIR$/app/Core/User/UserRepository.php" />
-      <change beforePath="$PROJECT_DIR$/app/Helper/UtilHelper.php" afterPath="$PROJECT_DIR$/app/Helper/UtilHelper.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
+      <change beforePath="$PROJECT_DIR$/app/Core/ModelUtil/ModelUtilRepository.php" afterPath="$PROJECT_DIR$/app/Core/ModelUtil/ModelUtilRepository.php" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CurriculumController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/CurriculumController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EgresadoController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/EgresadoController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/routes/app.php" afterPath="$PROJECT_DIR$/app/Http/routes/app.php" />
       <change beforePath="$PROJECT_DIR$/app/Http/routes/route_curriculum.php" afterPath="$PROJECT_DIR$/app/Http/routes/route_curriculum.php" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" afterPath="$PROJECT_DIR$/app/User.php" />
+      <change beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_01_29_235156_create_semestre_academico_table.php" afterPath="$PROJECT_DIR$/database/migrations/2018_01_29_235156_create_semestre_academico_table.php" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2018_01_31_214034_create_egresados_table.php" afterPath="$PROJECT_DIR$/database/migrations/2018_01_31_214034_create_egresados_table.php" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_01_015844_create_experiencia_laboral_table.php" afterPath="$PROJECT_DIR$/database/migrations/2018_02_01_015844_create_experiencia_laboral_table.php" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_01_015917_create_tipo_experiencia_table.php" afterPath="$PROJECT_DIR$/database/migrations/2018_02_01_015917_create_tipo_experiencia_table.php" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_01_020000_create_estudios_table.php" afterPath="$PROJECT_DIR$/database/migrations/2018_02_01_020000_create_estudios_table.php" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_01_020023_create_nivel_estudio_table.php" afterPath="$PROJECT_DIR$/database/migrations/2018_02_01_020023_create_nivel_estudio_table.php" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_01_020145_create_idiomas_table.php" afterPath="$PROJECT_DIR$/database/migrations/2018_02_01_020145_create_idiomas_table.php" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_01_020306_create_nivel_capacidad_table.php" afterPath="$PROJECT_DIR$/database/migrations/2018_02_01_020306_create_nivel_capacidad_table.php" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_01_020340_create_programas_table.php" afterPath="$PROJECT_DIR$/database/migrations/2018_02_01_020340_create_programas_table.php" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_01_020459_create_referencias_table.php" afterPath="$PROJECT_DIR$/database/migrations/2018_02_01_020459_create_referencias_table.php" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_06_020159_create_estado_civil_table.php" afterPath="$PROJECT_DIR$/database/migrations/2018_02_06_020159_create_estado_civil_table.php" />
       <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
-      <change beforePath="$PROJECT_DIR$/public/dist/atractivos/1517037577.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/dist/atractivos/1517075230.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/dist/atractivos/1517092577.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/dist/atractivos/1517096289.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/dist/atractivos/1517201800.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/dist/atractivos/1517202104.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/dist/atractivos/1517203589.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/dist/atractivos/1517203789.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/dist/atractivos/1517203816.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/dist/atractivos/1517203997.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/dist/atractivos/1517204077.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/dist/atractivos/1517204099.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/dist/atractivos/1517204123.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/dist/atractivos/1517204146.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/login/css/main.css" afterPath="$PROJECT_DIR$/public/login/css/main.css" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/TipoUsuarioSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/TipoUsuarioSeeder.php" />
+      <change beforePath="$PROJECT_DIR$/public/style/voydeviaje.css" afterPath="$PROJECT_DIR$/public/style/voydeviaje.css" />
+      <change beforePath="$PROJECT_DIR$/public/style/voydeviaje.styl" afterPath="$PROJECT_DIR$/public/style/voydeviaje.styl" />
       <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/system/admin/nuevo_egresado.blade.php" afterPath="$PROJECT_DIR$/resources/views/system/admin/nuevo_egresado.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/system/egresado/curriculum/datos_personales.blade.php" afterPath="$PROJECT_DIR$/resources/views/system/egresado/curriculum/datos_personales.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/system/inicio.blade.php" afterPath="$PROJECT_DIR$/resources/views/system/inicio.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/system/menu.blade.php" afterPath="$PROJECT_DIR$/resources/views/system/menu.blade.php" />
+      <change beforePath="$PROJECT_DIR$/resources/views/system/egresado/curriculum/estudios/lista.blade.php" afterPath="$PROJECT_DIR$/resources/views/system/egresado/curriculum/estudios/lista.blade.php" />
+      <change beforePath="$PROJECT_DIR$/resources/views/system/egresado/curriculum/estudios/nuevo.blade.php" afterPath="$PROJECT_DIR$/resources/views/system/egresado/curriculum/estudios/nuevo.blade.php" />
+      <change beforePath="$PROJECT_DIR$/resources/views/system/egresado/curriculum/experiencia/lista.blade.php" afterPath="$PROJECT_DIR$/resources/views/system/egresado/curriculum/experiencia/lista.blade.php" />
+      <change beforePath="$PROJECT_DIR$/resources/views/system/egresado/curriculum/experiencia/nuevo.blade.php" afterPath="$PROJECT_DIR$/resources/views/system/egresado/curriculum/experiencia/nuevo.blade.php" />
+      <change beforePath="$PROJECT_DIR$/resources/views/system/egresado/curriculum/menu_curriculum.blade.php" afterPath="$PROJECT_DIR$/resources/views/system/egresado/curriculum/menu_curriculum.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -51,53 +46,19 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="2018_01_31_214034_create_egresados_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2018_01_31_214034_create_egresados_table.php">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="menu_curriculum.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/system/egresado/curriculum/menu_curriculum.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="28" column="27" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="datos_personales.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/system/egresado/curriculum/datos_personales.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="65" column="39" lean-forward="false" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="39" />
+            <state relative-caret-position="378">
+              <caret line="21" column="63" lean-forward="false" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="63" />
               <folding>
-                <marker date="1517897051714" expanded="true" signature="9:53" ph="..." />
-                <marker date="1517897051714" expanded="true" signature="64:81" ph="..." />
-                <marker date="1517897051714" expanded="true" signature="93:112" ph="..." />
-                <marker date="1517897051714" expanded="true" signature="301:349" ph="..." />
-                <marker date="1517897051714" expanded="true" signature="400:432" ph="..." />
-                <marker date="1517897051714" expanded="true" signature="504:518" ph="..." />
-                <marker date="1517897051714" expanded="true" signature="1495:1511" ph="..." />
-                <marker date="1517897051714" expanded="true" signature="1838:1857" ph="..." />
-                <marker date="1517897051714" expanded="true" signature="2189:2210" ph="..." />
-                <marker date="1517897051714" expanded="true" signature="2544:2569" ph="..." />
-                <marker date="1517897051714" expanded="true" signature="2841:2870" ph="..." />
-                <marker date="1517897051714" expanded="true" signature="2904:2912" ph="..." />
-                <marker date="1517897051714" expanded="true" signature="3004:3012" ph="..." />
-                <marker date="1517897051714" expanded="true" signature="3017:3040" ph="..." />
-                <marker date="1517897051714" expanded="true" signature="3796:3817" ph="..." />
-                <marker date="1517897051714" expanded="true" signature="4149:4173" ph="..." />
-                <marker date="1517897051714" expanded="true" signature="4501:4519" ph="..." />
-                <marker date="1517897051714" expanded="true" signature="4851:4874" ph="..." />
-                <marker date="1517897051714" expanded="true" signature="5315:5346" ph="..." />
-                <marker date="1517897051714" expanded="true" signature="5483:5500" ph="..." />
-                <marker date="1517897051714" expanded="true" signature="5555:5564" ph="..." />
-                <marker date="1517897051714" expanded="true" signature="5570:5583" ph="..." />
-                <marker date="1517897051714" expanded="true" signature="5714:5731" ph="..." />
-                <marker date="1517897051714" expanded="true" signature="5773:5811" ph="..." />
-                <marker date="1517897051714" expanded="true" signature="5879:5888" ph="..." />
-                <marker date="1517897051714" expanded="true" signature="5894:5907" ph="..." />
-                <marker date="1517897051714" expanded="true" signature="6018:6027" ph="..." />
-                <marker date="1517897051714" expanded="true" signature="6033:6046" ph="..." />
-                <marker date="1517897051714" expanded="true" signature="6559:6581" ph="..." />
-                <marker date="1517897051714" expanded="true" signature="6678:6682" ph="..." />
+                <marker date="1518165725859" expanded="true" signature="9:16" ph="..." />
+                <marker date="1518165725859" expanded="true" signature="27:36" ph="..." />
+                <marker date="1518165725859" expanded="true" signature="1738:1763" ph="..." />
+                <marker date="1518165725859" expanded="true" signature="2159:2187" ph="..." />
+                <marker date="1518165725859" expanded="true" signature="2592:2617" ph="..." />
+                <marker date="1518165725859" expanded="true" signature="3224:3241" ph="..." />
               </folding>
             </state>
           </provider>
@@ -110,6 +71,7 @@
       <find>$</find>
       <find>blah</find>
       <find>email</find>
+      <find>Orangehill\Iseed\IseedServiceProvider::class</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -118,57 +80,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/style/system/atractivos/atractivos.styl" />
-        <option value="$PROJECT_DIR$/public/style/egresado/menu.styl" />
-        <option value="$PROJECT_DIR$/public/style/egresado/egresado.styl" />
-        <option value="$PROJECT_DIR$/app/Core/Egresado/Egresado.php" />
-        <option value="$PROJECT_DIR$/app/Core/Facultad/Facultad.php" />
-        <option value="$PROJECT_DIR$/app/Core/Escuela/Escuela.php" />
-        <option value="$PROJECT_DIR$/app/Core/SemestreAcademico/SemestreAcademico.php" />
-        <option value="$PROJECT_DIR$/app/Core/Facultad/FacultadRepository.php" />
-        <option value="$PROJECT_DIR$/app/Core/Escuela/EscuelaRepository.php" />
-        <option value="$PROJECT_DIR$/app/Core/SemestreAcademico/SemestreAcademicoRepository.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes/route_admin.php" />
-        <option value="$PROJECT_DIR$/resources/views/system/admin/lista_egresados.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/system/alumno/menu_curriculum.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/system/alumno/datos_personales.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes/route_alumno.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_015917_create_tipo_experiencia_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_020023_create_nivel_estudio_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_015844_create_experiencia_laboral_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_020306_create_nivel_capacidad_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_020000_create_estudios_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_020145_create_idiomas_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_020340_create_programas_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_020459_create_referencias_table.php" />
-        <option value="$PROJECT_DIR$/resources/views/system/egresado/curriculum/menu_curriculum.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/system/egresado/curriculum/experiencia/lista.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" />
-        <option value="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes/app.php" />
-        <option value="$PROJECT_DIR$/resources/views/index.blade.php" />
         <option value="$PROJECT_DIR$/config/global.php" />
         <option value="$PROJECT_DIR$/resources/views/system/menu.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
         <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EgresadoController.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_02_06_020159_create_estado_civil_table.php" />
         <option value="$PROJECT_DIR$/database/seeds/EstadoCivilSeeder.php" />
         <option value="$PROJECT_DIR$/app/Core/ModelUtil/EstadoCivil.php" />
-        <option value="$PROJECT_DIR$/app/Core/ModelUtil/ModelUtilRepository.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes/route_curriculum.php" />
         <option value="$PROJECT_DIR$/app/Core/User/UserRepository.php" />
         <option value="$PROJECT_DIR$/database/seeds/UserTableSeeder.php" />
         <option value="$PROJECT_DIR$/resources/views/system/admin/nuevo_egresado.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/system/inicio.blade.php" />
-        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/app/Helper/UtilHelper.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/CurriculumController.php" />
         <option value="$PROJECT_DIR$/app/Core/Egresado/EgresadoRepository.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_01_31_214034_create_egresados_table.php" />
         <option value="$PROJECT_DIR$/resources/views/system/egresado/curriculum/datos_personales.blade.php" />
+        <option value="$PROJECT_DIR$/database/seeds/TipoExperienciaSeeder.php" />
+        <option value="$PROJECT_DIR$/app/Core/ModelUtil/TipoExperiencia.php" />
+        <option value="$PROJECT_DIR$/database/seeds/TipoUsuarioSeeder.php" />
+        <option value="$PROJECT_DIR$/app/Core/ModelUtil/TipoUsuario.php" />
+        <option value="$PROJECT_DIR$/app/User.php" />
+        <option value="$PROJECT_DIR$/resources/views/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Core/ExperienciaLaboral/ExperienciaLaboral.php" />
+        <option value="$PROJECT_DIR$/resources/views/system/egresado/curriculum/experiencia/nuevo.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_015917_create_tipo_experiencia_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_01_29_235156_create_semestre_academico_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_01_31_214034_create_egresados_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_015844_create_experiencia_laboral_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_020023_create_nivel_estudio_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_020145_create_idiomas_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_020306_create_nivel_capacidad_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_020340_create_programas_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_020459_create_referencias_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_021639_create_seguimiento_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_02_06_020159_create_estado_civil_table.php" />
+        <option value="$PROJECT_DIR$/public/style/voydeviaje.styl" />
+        <option value="$PROJECT_DIR$/app/Core/Estudio/Estudio.php" />
+        <option value="$PROJECT_DIR$/app/Core/ModelUtil/NivelEstudio.php" />
+        <option value="$PROJECT_DIR$/app/Core/ModelUtil/ModelUtilRepository.php" />
+        <option value="$PROJECT_DIR$/database/seeds/NivelEstudio.php" />
+        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/app/Core/ExperienciaLaboral/ExperienciaLaboralRepository.php" />
+        <option value="$PROJECT_DIR$/resources/views/system/egresado/curriculum/experiencia/lista.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/system/egresado/curriculum/estudios/lista.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_020000_create_estudios_table.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes/route_curriculum.php" />
+        <option value="$PROJECT_DIR$/app/Core/Estudio/EstudioRepository.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/CurriculumController.php" />
+        <option value="$PROJECT_DIR$/resources/views/system/egresado/curriculum/estudios/nuevo.blade.php" />
+        <option value="$PROJECT_DIR$/config/app.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/resources/views/system/egresado/curriculum/menu_curriculum.blade.php" />
       </list>
     </option>
   </component>
@@ -271,7 +233,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -284,11 +245,42 @@
               <item name="egresado" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="egresado" type="b2602c69:ProjectViewProjectNode" />
+              <item name="egresado" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="egresado" type="b2602c69:ProjectViewProjectNode" />
+              <item name="egresado" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="system" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="egresado" type="b2602c69:ProjectViewProjectNode" />
+              <item name="egresado" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="system" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="egresado" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="egresado" type="b2602c69:ProjectViewProjectNode" />
+              <item name="egresado" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="system" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="egresado" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="curriculum" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -298,22 +290,22 @@
     <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.selected.package.stylelint" value="" />
-    <property name="SearchEverywhereHistoryKey" value="datos&#9;FILE&#9;file://C:/xampp/htdocs/egresado/resources/views/system/egresado/curriculum/datos_personales.blade.php&#10;egre&#9;FILE&#9;file://C:/xampp/htdocs/egresado/database/migrations/2018_01_31_214034_create_egresados_table.php&#10;curri&#9;FILE&#9;file://C:/xampp/htdocs/egresado/app/Http/Controllers/CurriculumController.php&#10;egresa&#9;FILE&#9;file://C:/xampp/htdocs/egresado/database/migrations/2018_01_31_214034_create_egresados_table.php&#10;cu&#9;FILE&#9;file://C:/xampp/htdocs/egresado/app/Http/Controllers/CurriculumController.php&#10;inicio&#9;FILE&#9;file://C:/xampp/htdocs/egresado/resources/views/system/inicio.blade.php&#10;rou&#9;FILE&#9;file://C:/xampp/htdocs/egresado/app/Http/routes/route_curriculum.php&#10;app&#9;FILE&#9;file://C:/xampp/htdocs/egresado/app/Http/routes/app.php&#10;inic&#9;FILE&#9;file://C:/xampp/htdocs/egresado/resources/views/system/inicio.blade.php&#10;nuevp&#9;FILE&#9;file://C:/xampp/htdocs/egresado/resources/views/system/admin/nuevo_egresado.blade.php&#10;nuevo&#9;FILE&#9;file://C:/xampp/htdocs/egresado/resources/views/system/admin/nuevo_egresado.blade.php&#10;route&#9;FILE&#9;file://C:/xampp/htdocs/egresado/app/Http/routes/route_curriculum.php&#10;log&#9;FILE&#9;file://C:/xampp/htdocs/egresado/resources/views/auth/login.blade.php&#10;logi&#9;FILE&#9;file://C:/xampp/htdocs/egresado/resources/views/auth/login.blade.php&#10;usert&#9;FILE&#9;file://C:/xampp/htdocs/egresado/database/seeds/UserTableSeeder.php&#10;AuthenticatesUsers&#9;FILE&#9;file://C:/xampp/htdocs/egresado/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php&#10;Cur&#9;FILE&#9;file://C:/xampp/htdocs/egresado/app/Http/Controllers/CurriculumController.php&#10;dato&#9;FILE&#9;file://C:/xampp/htdocs/egresado/resources/views/system/egresado/curriculum/datos_personales.blade.php&#10;menu&#9;FILE&#9;file://C:/xampp/htdocs/egresado/resources/views/system/menu.blade.php&#10;lista&#9;FILE&#9;file://C:/xampp/htdocs/egresado/resources/views/system/admin/lista_egresados.blade.php&#10;lis&#9;FILE&#9;file://C:/xampp/htdocs/egresado/resources/views/system/admin/lista_egresados.blade.php&#10;nuev&#9;FILE&#9;file://C:/xampp/htdocs/egresado/resources/views/system/admin/nuevo_egresado.blade.php&#10;ro&#9;FILE&#9;file://C:/xampp/htdocs/egresado/app/Http/routes/route_admin.php&#10;inde&#9;FILE&#9;file://C:/xampp/htdocs/egresado/resources/views/index.blade.php&#10;ini&#9;FILE&#9;file://C:/xampp/htdocs/egresado/resources/views/system/inicio.blade.php&#10;col&#9;FILE&#9;file://C:/xampp/htdocs/egresado/public/cssStylus/tools/colores.styl&#10;heade&#9;FILE&#9;file://C:/xampp/htdocs/egresado/public/cssStylus/menu/header.styl" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/xampp/htdocs/egresado/composer.json&#10;estudio&#9;FILE&#9;file://C:/xampp/htdocs/egresado/app/Core/Estudio/EstudioRepository.php&#10;nuevo&#9;FILE&#9;file://C:/xampp/htdocs/egresado/resources/views/system/egresado/curriculum/estudios/nuevo.blade.php&#10;estudios&#9;FILE&#9;file://C:/xampp/htdocs/egresado/database/migrations/2018_02_01_020000_create_estudios_table.php&#10;lista&#9;FILE&#9;file://C:/xampp/htdocs/egresado/resources/views/system/egresado/curriculum/estudios/lista.blade.php&#10;cur&#9;FILE&#9;file://C:/xampp/htdocs/egresado/app/Http/Controllers/CurriculumController.php&#10;route&#9;FILE&#9;file://C:/xampp/htdocs/egresado/app/Http/routes/route_curriculum.php&#10;experi&#9;FILE&#9;file://C:/xampp/htdocs/egresado/app/Core/ExperienciaLaboral/ExperienciaLaboralRepository.php&#10;curri&#9;FILE&#9;file://C:/xampp/htdocs/egresado/app/Http/Controllers/CurriculumController.php&#10;curr&#9;FILE&#9;file://C:/xampp/htdocs/egresado/app/Http/Controllers/CurriculumController.php&#10;voy&#9;FILE&#9;file://C:/xampp/htdocs/egresado/public/style/voydeviaje.styl&#10;tipo&#9;FILE&#9;file://C:/xampp/htdocs/egresado/app/Core/ModelUtil/TipoUsuario.php&#10;dato&#9;FILE&#9;file://C:/xampp/htdocs/egresado/resources/views/system/egresado/curriculum/datos_personales.blade.php&#10;da&#9;FILE&#9;file://C:/xampp/htdocs/egresado/resources/views/system/egresado/curriculum/datos_personales.blade.php&#10;nue&#9;FILE&#9;file://C:/xampp/htdocs/egresado/resources/views/system/admin/nuevo_egresado.blade.php&#10;datos&#9;FILE&#9;file://C:/xampp/htdocs/egresado/resources/views/system/egresado/curriculum/datos_personales.blade.php&#10;egre&#9;FILE&#9;file://C:/xampp/htdocs/egresado/database/migrations/2018_01_31_214034_create_egresados_table.php&#10;egresa&#9;FILE&#9;file://C:/xampp/htdocs/egresado/database/migrations/2018_01_31_214034_create_egresados_table.php&#10;cu&#9;FILE&#9;file://C:/xampp/htdocs/egresado/app/Http/Controllers/CurriculumController.php&#10;inicio&#9;FILE&#9;file://C:/xampp/htdocs/egresado/resources/views/system/inicio.blade.php&#10;rou&#9;FILE&#9;file://C:/xampp/htdocs/egresado/app/Http/routes/route_curriculum.php&#10;app&#9;FILE&#9;file://C:/xampp/htdocs/egresado/app/Http/routes/app.php&#10;inic&#9;FILE&#9;file://C:/xampp/htdocs/egresado/resources/views/system/inicio.blade.php&#10;nuevp&#9;FILE&#9;file://C:/xampp/htdocs/egresado/resources/views/system/admin/nuevo_egresado.blade.php&#10;log&#9;FILE&#9;file://C:/xampp/htdocs/egresado/resources/views/auth/login.blade.php&#10;logi&#9;FILE&#9;file://C:/xampp/htdocs/egresado/resources/views/auth/login.blade.php&#10;usert&#9;FILE&#9;file://C:/xampp/htdocs/egresado/database/seeds/UserTableSeeder.php&#10;AuthenticatesUsers&#9;FILE&#9;file://C:/xampp/htdocs/egresado/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php&#10;Cur&#9;FILE&#9;file://C:/xampp/htdocs/egresado/app/Http/Controllers/CurriculumController.php&#10;menu&#9;FILE&#9;file://C:/xampp/htdocs/egresado/resources/views/system/menu.blade.php&#10;lis&#9;FILE&#9;file://C:/xampp/htdocs/egresado/resources/views/system/admin/lista_egresados.blade.php&#10;nuev&#9;FILE&#9;file://C:/xampp/htdocs/egresado/resources/views/system/admin/nuevo_egresado.blade.php&#10;ro&#9;FILE&#9;file://C:/xampp/htdocs/egresado/app/Http/routes/route_admin.php&#10;inde&#9;FILE&#9;file://C:/xampp/htdocs/egresado/resources/views/index.blade.php&#10;ini&#9;FILE&#9;file://C:/xampp/htdocs/egresado/resources/views/system/inicio.blade.php&#10;col&#9;FILE&#9;file://C:/xampp/htdocs/egresado/public/cssStylus/tools/colores.styl&#10;heade&#9;FILE&#9;file://C:/xampp/htdocs/egresado/public/cssStylus/menu/header.styl" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\egresado\app\Core\ModelUtil" />
-      <recent name="C:\xampp\htdocs\egresado\resources\views\system\alumno\curriculum" />
-      <recent name="C:\xampp\htdocs\egresado\resources\views\system\alumno\curriculum\experiencia" />
-      <recent name="C:\xampp\htdocs\egresado\resources\views\system\alumno" />
-      <recent name="C:\xampp\htdocs\egresado\resources\views\system\alumno\experience" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\egresado\config" />
       <recent name="C:\xampp\htdocs\egresado\public" />
       <recent name="C:\xampp\htdocs\egresado\resources\views\auth" />
       <recent name="C:\xampp\htdocs\egresado\app\Http\routes" />
       <recent name="C:\xampp\htdocs\egresado\resources\views\system\alumno\curriculum" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\egresado\app\Core\ModelUtil" />
+      <recent name="C:\xampp\htdocs\egresado\app\Core\Estudio" />
+      <recent name="C:\xampp\htdocs\egresado\app\Core\ExperienciaLaboral" />
+      <recent name="C:\xampp\htdocs\egresado\resources\views\system\alumno\curriculum" />
+      <recent name="C:\xampp\htdocs\egresado\resources\views\system\alumno\curriculum\experiencia" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -350,28 +342,31 @@
       <workItem from="1517377307117" duration="9502000" />
       <workItem from="1517434597729" duration="14611000" />
       <workItem from="1517554953909" duration="230000" />
-      <workItem from="1517867817699" duration="12434000" />
+      <workItem from="1517867817699" duration="16801000" />
+      <workItem from="1518033952796" duration="718000" />
+      <workItem from="1518157330622" duration="8212000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49962000" />
+    <option name="totallyTimeSpent" value="63259000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28517398" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33207262" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31907895" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2598684" sideWeight="0.5060514" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2598684" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2598684" sideWeight="0.49394855" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -391,12 +386,12 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2598684" sideWeight="0.4969743" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28517398" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33207262" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -415,91 +410,42 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_01_29_235156_create_semestre_academico_table.php">
+    <entry file="file://$PROJECT_DIR$/database/seeds/UserTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="20" selection-end-column="34" />
+        <state relative-caret-position="308">
+          <caret line="28" column="43" lean-forward="false" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_015917_create_tipo_experiencia_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_020023_create_nivel_estudio_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="20" column="11" lean-forward="true" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_020000_create_estudios_table.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/routes/app.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="16" column="55" lean-forward="false" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
+          <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_020145_create_idiomas_table.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/system/inicio.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="16" column="55" lean-forward="false" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
+        <state relative-caret-position="126">
+          <caret line="6" column="67" lean-forward="false" selection-start-line="6" selection-start-column="67" selection-end-line="6" selection-end-column="67" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_021639_create_seguimiento_table.php">
+    <entry file="file://$PROJECT_DIR$/app/Helper/UtilHelper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="126">
+          <caret line="20" column="41" lean-forward="false" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_020459_create_referencias_table.php">
+    <entry file="file://$PROJECT_DIR$/app/Core/Egresado/EgresadoRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="16" column="55" lean-forward="false" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
+        <state relative-caret-position="289">
+          <caret line="75" column="46" lean-forward="false" selection-start-line="75" selection-start-column="46" selection-end-line="75" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_020340_create_programas_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="16" column="55" lean-forward="false" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/system/egresado/curriculum/experiencia/nuevo.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/system/egresado/curriculum/estudios/lista.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/system/egresado/curriculum/referencias/lista.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/system/egresado/curriculum/programas/lista.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/system/egresado/curriculum/idiomas/lista.blade.php">
+    <entry file="file://$PROJECT_DIR$/database/seeds/SemestreAcademicoSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -508,175 +454,171 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/system/admin/lista_egresados.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
+        <state relative-caret-position="1381">
           <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="71" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_015844_create_experiencia_laboral_table.php">
+    <entry file="file://$PROJECT_DIR$/public/css/lib/bootstrap/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="25" column="32" lean-forward="true" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+        <state relative-caret-position="194">
+          <caret line="4" column="106544" lean-forward="false" selection-start-line="4" selection-start-column="106544" selection-end-line="4" selection-end-column="106544" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/system/egresado/curriculum/experiencia/lista.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/system/admin/nuevo_egresado.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="77" column="24" lean-forward="false" selection-start-line="77" selection-start-column="24" selection-end-line="77" selection-end-column="24" />
+        <state relative-caret-position="336">
+          <caret line="16" column="20" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="16" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/system/egresado/curriculum/menu_curriculum.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/system/egresado/curriculum/datos_personales.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="32" column="63" lean-forward="false" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="63" />
+        <state relative-caret-position="231">
+          <caret line="62" column="77" lean-forward="false" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="77" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/login/js/main.js">
+    <entry file="file://$PROJECT_DIR$/database/seeds/TipoUsuarioSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="341">
+          <caret line="18" column="33" lean-forward="false" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/Authenticate.php">
+    <entry file="file://$PROJECT_DIR$/app/Core/ModelUtil/TipoExperiencia.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="40" column="56" lean-forward="false" selection-start-line="40" selection-start-column="56" selection-end-line="40" selection-end-column="56" />
+        <state relative-caret-position="168">
+          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php">
+    <entry file="file://$PROJECT_DIR$/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="37" column="30" lean-forward="false" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        <state relative-caret-position="329">
+          <caret line="35" column="25" lean-forward="true" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="43" column="44" lean-forward="false" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
+        <state relative-caret-position="252">
+          <caret line="33" column="87" lean-forward="false" selection-start-line="33" selection-start-column="87" selection-end-line="33" selection-end-column="87" />
           <folding>
-            <marker date="1517869006998" expanded="true" signature="392:400" ph="..." />
-            <marker date="1517869006998" expanded="true" signature="482:490" ph="..." />
-            <marker date="1517869006998" expanded="true" signature="570:578" ph="..." />
-            <marker date="1517869006998" expanded="true" signature="663:671" ph="..." />
-            <marker date="1517869006998" expanded="true" signature="833:841" ph="..." />
-            <marker date="1517869006998" expanded="true" signature="1895:1915" ph="..." />
-            <marker date="1517869006998" expanded="true" signature="2236:2244" ph="..." />
-            <marker date="1517869006998" expanded="true" signature="2797:2810" ph="..." />
-            <marker date="1517869006998" expanded="true" signature="2923:2932" ph="..." />
-            <marker date="1517869006998" expanded="true" signature="3001:3009" ph="..." />
-            <marker date="1517869006998" expanded="true" signature="3067:3075" ph="..." />
-            <marker date="1517869006998" expanded="true" signature="3132:3136" ph="..." />
+            <marker date="1518157942690" expanded="true" signature="392:400" ph="..." />
+            <marker date="1518157942690" expanded="true" signature="482:490" ph="..." />
+            <marker date="1518157942690" expanded="true" signature="570:578" ph="..." />
+            <marker date="1518157942690" expanded="true" signature="663:671" ph="..." />
+            <marker date="1518157942690" expanded="true" signature="833:841" ph="..." />
+            <marker date="1518157942690" expanded="true" signature="1885:1910" ph="..." />
+            <marker date="1518157942690" expanded="true" signature="1885:1918" ph="..." />
+            <marker date="1518157942690" expanded="true" signature="1925:1945" ph="..." />
+            <marker date="1518157942690" expanded="true" signature="2266:2274" ph="..." />
+            <marker date="1518157942690" expanded="true" signature="2827:2840" ph="..." />
+            <marker date="1518157942690" expanded="true" signature="2953:2962" ph="..." />
+            <marker date="1518157942690" expanded="true" signature="3031:3039" ph="..." />
+            <marker date="1518157942690" expanded="true" signature="3097:3105" ph="..." />
+            <marker date="1518157942690" expanded="true" signature="3162:3166" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/global.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/system/menu.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="22" column="70" lean-forward="false" selection-start-line="22" selection-start-column="70" selection-end-line="22" selection-end-column="70" />
-          <folding>
-            <marker date="1517869211696" expanded="true" signature="146:165" ph="..." />
-            <marker date="1517869211696" expanded="true" signature="248:272" ph="..." />
-            <marker date="1517869211696" expanded="true" signature="397:460" ph="..." />
-            <marker date="1517869211696" expanded="true" signature="525:550" ph="..." />
-            <marker date="1517869211696" expanded="true" signature="773:833" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes/route_alumno.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="35" column="42" lean-forward="true" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="62" column="28" lean-forward="true" selection-start-line="62" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
-          <folding>
-            <marker date="1517870995310" expanded="true" signature="538:546" ph="..." />
-            <marker date="1517870995310" expanded="true" signature="754:762" ph="..." />
-            <marker date="1517870995310" expanded="true" signature="981:989" ph="..." />
-            <marker date="1517870995310" expanded="true" signature="1206:1214" ph="..." />
-            <marker date="1517870995310" expanded="true" signature="1410:1418" ph="..." />
-            <marker date="1517870995310" expanded="true" signature="1628:1636" ph="..." />
-            <marker date="1517870995310" expanded="true" signature="1846:1854" ph="..." />
-            <marker date="1517870995310" expanded="true" signature="2054:2062" ph="..." />
-            <marker date="1517870995310" expanded="true" signature="2274:2282" ph="..." />
-            <marker date="1517870995310" expanded="true" signature="2357:2365" ph="..." />
-            <marker date="1517870995310" expanded="true" signature="2758:2772" ph="..." />
-            <marker date="1517870995310" expanded="true" signature="3822:3836" ph="..." />
-            <marker date="1517870995310" expanded="true" signature="3867:3891" ph="..." />
-            <marker date="1517870995310" expanded="true" signature="4106:4112" ph="..." />
-            <marker date="1517870995310" expanded="true" signature="4833:4841" ph="..." />
-            <marker date="1517870995310" expanded="true" signature="5013:5021" ph="..." />
-            <marker date="1517870995310" expanded="true" signature="5198:5206" ph="..." />
-            <marker date="1517870995310" expanded="true" signature="5271:5279" ph="..." />
-            <marker date="1517870995310" expanded="true" signature="5454:5462" ph="..." />
-            <marker date="1517870995310" expanded="true" signature="5630:5638" ph="..." />
-            <marker date="1517870995310" expanded="true" signature="5710:5718" ph="..." />
-            <marker date="1517870995310" expanded="true" signature="5898:5906" ph="..." />
-            <marker date="1517870995310" expanded="true" signature="6082:6090" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="114" column="7" lean-forward="true" selection-start-line="114" selection-start-column="7" selection-end-line="114" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes/route_admin.php">
+    <entry file="file://$PROJECT_DIR$/app/Core/ModelUtil/TipoUsuario.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
-          <caret line="8" column="37" lean-forward="false" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/TipoUsuarioSeeder.php">
+    <entry file="file://$PROJECT_DIR$/app/Core/Escuela/EscuelaRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="13" column="8" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="21" selection-end-column="0" />
+        <state relative-caret-position="336">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_01_29_235038_create_escuela_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-189">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_01_29_235156_create_semestre_academico_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="18" column="53" lean-forward="false" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_01_31_214034_create_egresados_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="17" column="67" lean-forward="false" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_015844_create_experiencia_laboral_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="17" column="75" lean-forward="false" selection-start-line="17" selection-start-column="75" selection-end-line="17" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_015917_create_tipo_experiencia_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="17" column="53" lean-forward="false" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_020023_create_nivel_estudio_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="17" column="53" lean-forward="false" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_020306_create_nivel_capacidad_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="17" column="53" lean-forward="false" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_020145_create_idiomas_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="18" column="49" lean-forward="false" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_020340_create_programas_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="17" column="74" lean-forward="false" selection-start-line="17" selection-start-column="74" selection-end-line="17" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_020459_create_referencias_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="14" column="35" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -689,26 +631,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_020306_create_nivel_capacidad_table.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_021639_create_seguimiento_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="16" column="11" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="19" selection-end-column="34" />
+        <state relative-caret-position="294">
+          <caret line="15" column="37" lean-forward="true" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_06_020159_create_estado_civil_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="19" column="34" lean-forward="false" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+        <state relative-caret-position="318">
+          <caret line="17" column="53" lean-forward="false" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Core/Egresado/Egresado.php">
+    <entry file="file://$PROJECT_DIR$/database/seeds/TipoExperienciaSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="27" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/style/voydeviaje.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="63" lean-forward="false" selection-start-line="9" selection-start-column="63" selection-end-line="9" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Core/ExperienciaLaboral/ExperienciaLaboral.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="45" />
           <folding />
         </state>
       </provider>
@@ -716,189 +674,207 @@
     <entry file="file://$PROJECT_DIR$/app/Core/ModelUtil/EstadoCivil.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
-          <caret line="2" column="28" lean-forward="false" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Core/ModelUtil/ModelUtilRepository.php">
+    <entry file="file://$PROJECT_DIR$/app/Core/ModelUtil/NivelEstudio.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="168">
+          <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/dist/egresados/1517884048.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EgresadoController.php">
+    <entry file="file://$PROJECT_DIR$/app/Core/Estudio/Estudio.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="51" column="52" lean-forward="true" selection-start-line="50" selection-start-column="7" selection-end-line="51" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Core/User/UserRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="44" column="31" lean-forward="false" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/UserTableSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="28" column="43" lean-forward="false" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/system/admin/nuevo_egresado.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="4" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="7" selection-end-column="10" />
-          <folding>
-            <marker date="1517895272338" expanded="true" signature="9:16" ph="..." />
-            <marker date="1517895272338" expanded="true" signature="27:36" ph="..." />
-            <marker date="1517895272338" expanded="true" signature="47:66" ph="..." />
-            <marker date="1517895272338" expanded="true" signature="255:303" ph="..." />
-            <marker date="1517895272338" expanded="true" signature="354:377" ph="..." />
-            <marker date="1517895272338" expanded="true" signature="419:433" ph="..." />
-            <marker date="1517895272338" expanded="true" signature="636:660" ph="..." />
-            <marker date="1517895272338" expanded="true" signature="1034:1058" ph="..." />
-            <marker date="1517895272338" expanded="true" signature="3736:3753" ph="..." />
-            <marker date="1517895272338" expanded="true" signature="3804:3813" ph="..." />
-            <marker date="1517895272338" expanded="true" signature="3819:3832" ph="..." />
-            <marker date="1517895272338" expanded="true" signature="4474:4492" ph="..." />
-            <marker date="1517895272338" expanded="true" signature="4543:4552" ph="..." />
-            <marker date="1517895272338" expanded="true" signature="4558:4573" ph="..." />
-            <marker date="1517895272338" expanded="true" signature="4920:4928" ph="..." />
-            <marker date="1517895272338" expanded="true" signature="5085:5089" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/system/inicio.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="67" lean-forward="false" selection-start-line="6" selection-start-column="67" selection-end-line="6" selection-end-column="67" />
-          <folding>
-            <marker date="1517895868366" expanded="true" signature="9:16" ph="..." />
-            <marker date="1517895868366" expanded="true" signature="27:36" ph="..." />
-            <marker date="1517895868366" expanded="true" signature="48:69" ph="..." />
-            <marker date="1517895868366" expanded="true" signature="237:289" ph="..." />
-            <marker date="1517895868366" expanded="true" signature="915:923" ph="..." />
-            <marker date="1517895868366" expanded="true" signature="1103:1111" ph="..." />
-            <marker date="1517895868366" expanded="true" signature="1291:1299" ph="..." />
-            <marker date="1517895868366" expanded="true" signature="2089:2093" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes/route_curriculum.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="40" lean-forward="true" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="40" />
+        <state relative-caret-position="168">
+          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/seeds/EstadoCivilSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+        <state relative-caret-position="210">
+          <caret line="16" column="11" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="16" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/NivelEstudio.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="18" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="18" column="38" lean-forward="false" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+        <state relative-caret-position="331">
+          <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Helper/UtilHelper.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/system/egresado/curriculum/experiencia/lista.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="20" column="41" lean-forward="false" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+        <state relative-caret-position="415">
+          <caret line="31" column="44" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="61" selection-end-column="5" />
+          <folding>
+            <marker date="1518162177165" expanded="true" signature="9:53" ph="..." />
+            <marker date="1518162177165" expanded="true" signature="64:81" ph="..." />
+            <marker date="1518162177165" expanded="true" signature="93:112" ph="..." />
+            <marker date="1518162177165" expanded="true" signature="301:349" ph="..." />
+            <marker date="1518162177165" expanded="true" signature="732:766" ph="..." />
+            <marker date="1518162177165" expanded="true" signature="1272:1289" ph="..." />
+            <marker date="1518162177165" expanded="true" signature="1508:1522" ph="..." />
+            <marker date="1518162177165" expanded="true" signature="1562:1577" ph="..." />
+            <marker date="1518162177165" expanded="true" signature="1643:1649" ph="..." />
+            <marker date="1518162177165" expanded="true" signature="1692:1706" ph="..." />
+            <marker date="1518162177165" expanded="true" signature="2186:2190" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/system/egresado/curriculum/experiencia/nuevo.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="83" column="18" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="102" selection-end-column="5" />
+          <folding>
+            <marker date="1518159106104" expanded="true" signature="9:53" ph="..." />
+            <marker date="1518159106104" expanded="true" signature="64:81" ph="..." />
+            <marker date="1518159106104" expanded="true" signature="93:112" ph="..." />
+            <marker date="1518159106104" expanded="true" signature="301:349" ph="..." />
+            <marker date="1518159106104" expanded="true" signature="400:435" ph="..." />
+            <marker date="1518159106104" expanded="true" signature="477:491" ph="..." />
+            <marker date="1518159106104" expanded="true" signature="694:722" ph="..." />
+            <marker date="1518159106104" expanded="true" signature="1696:1722" ph="..." />
+            <marker date="1518159106104" expanded="true" signature="1765:1774" ph="..." />
+            <marker date="1518159106104" expanded="true" signature="1780:1793" ph="..." />
+            <marker date="1518159106104" expanded="true" signature="4838:4842" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Core/ModelUtil/ModelUtilRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="36" column="20" lean-forward="false" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Core/Egresado/EgresadoRepository.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/system/egresado/curriculum/estudios/lista.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="75" column="46" lean-forward="false" selection-start-line="75" selection-start-column="46" selection-end-line="75" selection-end-column="46" />
+        <state relative-caret-position="371">
+          <caret line="62" column="20" lean-forward="false" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="20" />
+          <folding>
+            <marker date="1518162591975" expanded="true" signature="9:53" ph="..." />
+            <marker date="1518162591975" expanded="true" signature="64:81" ph="..." />
+            <marker date="1518162591975" expanded="true" signature="93:112" ph="..." />
+            <marker date="1518162591975" expanded="true" signature="301:349" ph="..." />
+            <marker date="1518162591975" expanded="true" signature="718:749" ph="..." />
+            <marker date="1518162591975" expanded="true" signature="1328:1345" ph="..." />
+            <marker date="1518162591975" expanded="true" signature="1564:1578" ph="..." />
+            <marker date="1518162591975" expanded="true" signature="1618:1633" ph="..." />
+            <marker date="1518162591975" expanded="true" signature="1699:1705" ph="..." />
+            <marker date="1518162591975" expanded="true" signature="1748:1771" ph="..." />
+            <marker date="1518162591975" expanded="true" signature="1813:1827" ph="..." />
+            <marker date="1518162591975" expanded="true" signature="1869:1887" ph="..." />
+            <marker date="1518162591975" expanded="true" signature="2367:2371" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Core/ExperienciaLaboral/ExperienciaLaboralRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="51" column="5" lean-forward="true" selection-start-line="34" selection-start-column="4" selection-end-line="51" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Core/Estudio/EstudioRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="28" column="33" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_020000_create_estudios_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/system/egresado/curriculum/estudios/nuevo.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="55" lean-forward="false" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="55" />
+          <folding>
+            <marker date="1518163305121" expanded="true" signature="9:53" ph="..." />
+            <marker date="1518163305121" expanded="true" signature="64:81" ph="..." />
+            <marker date="1518163305121" expanded="true" signature="103:135" ph="..." />
+            <marker date="1518163305121" expanded="true" signature="177:191" ph="..." />
+            <marker date="1518163305121" expanded="true" signature="394:419" ph="..." />
+            <marker date="1518163305121" expanded="true" signature="781:806" ph="..." />
+            <marker date="1518163305121" expanded="true" signature="1400:1422" ph="..." />
+            <marker date="1518163305121" expanded="true" signature="1465:1474" ph="..." />
+            <marker date="1518163305121" expanded="true" signature="1480:1493" ph="..." />
+            <marker date="1518163305121" expanded="true" signature="3544:3548" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CurriculumController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="44" column="47" lean-forward="false" selection-start-line="44" selection-start-column="47" selection-end-line="44" selection-end-column="47" />
+        <state relative-caret-position="560">
+          <caret line="119" column="0" lean-forward="true" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_01_31_214034_create_egresados_table.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/routes/route_curriculum.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="28" column="27" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="27" />
+        <state relative-caret-position="266">
+          <caret line="33" column="29" lean-forward="false" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/system/egresado/curriculum/datos_personales.blade.php">
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="146" column="0" lean-forward="true" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="65" column="39" lean-forward="false" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="39" />
+          <caret line="8" column="36" lean-forward="true" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/system/egresado/curriculum/menu_curriculum.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="63" lean-forward="false" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="63" />
           <folding>
-            <marker date="1517897051714" expanded="true" signature="9:53" ph="..." />
-            <marker date="1517897051714" expanded="true" signature="64:81" ph="..." />
-            <marker date="1517897051714" expanded="true" signature="93:112" ph="..." />
-            <marker date="1517897051714" expanded="true" signature="301:349" ph="..." />
-            <marker date="1517897051714" expanded="true" signature="400:432" ph="..." />
-            <marker date="1517897051714" expanded="true" signature="504:518" ph="..." />
-            <marker date="1517897051714" expanded="true" signature="1495:1511" ph="..." />
-            <marker date="1517897051714" expanded="true" signature="1838:1857" ph="..." />
-            <marker date="1517897051714" expanded="true" signature="2189:2210" ph="..." />
-            <marker date="1517897051714" expanded="true" signature="2544:2569" ph="..." />
-            <marker date="1517897051714" expanded="true" signature="2841:2870" ph="..." />
-            <marker date="1517897051714" expanded="true" signature="2904:2912" ph="..." />
-            <marker date="1517897051714" expanded="true" signature="3004:3012" ph="..." />
-            <marker date="1517897051714" expanded="true" signature="3017:3040" ph="..." />
-            <marker date="1517897051714" expanded="true" signature="3796:3817" ph="..." />
-            <marker date="1517897051714" expanded="true" signature="4149:4173" ph="..." />
-            <marker date="1517897051714" expanded="true" signature="4501:4519" ph="..." />
-            <marker date="1517897051714" expanded="true" signature="4851:4874" ph="..." />
-            <marker date="1517897051714" expanded="true" signature="5315:5346" ph="..." />
-            <marker date="1517897051714" expanded="true" signature="5483:5500" ph="..." />
-            <marker date="1517897051714" expanded="true" signature="5555:5564" ph="..." />
-            <marker date="1517897051714" expanded="true" signature="5570:5583" ph="..." />
-            <marker date="1517897051714" expanded="true" signature="5714:5731" ph="..." />
-            <marker date="1517897051714" expanded="true" signature="5773:5811" ph="..." />
-            <marker date="1517897051714" expanded="true" signature="5879:5888" ph="..." />
-            <marker date="1517897051714" expanded="true" signature="5894:5907" ph="..." />
-            <marker date="1517897051714" expanded="true" signature="6018:6027" ph="..." />
-            <marker date="1517897051714" expanded="true" signature="6033:6046" ph="..." />
-            <marker date="1517897051714" expanded="true" signature="6559:6581" ph="..." />
-            <marker date="1517897051714" expanded="true" signature="6678:6682" ph="..." />
+            <marker date="1518165725859" expanded="true" signature="9:16" ph="..." />
+            <marker date="1518165725859" expanded="true" signature="27:36" ph="..." />
+            <marker date="1518165725859" expanded="true" signature="1738:1763" ph="..." />
+            <marker date="1518165725859" expanded="true" signature="2159:2187" ph="..." />
+            <marker date="1518165725859" expanded="true" signature="2592:2617" ph="..." />
+            <marker date="1518165725859" expanded="true" signature="3224:3241" ph="..." />
           </folding>
         </state>
       </provider>

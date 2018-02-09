@@ -14,8 +14,8 @@ class CreateProgramasTable extends Migration
     {
         Schema::create('programas', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('egresado_id')->unsigned();
-            $table->integer('nivel_capacidad_id')->unsigned();
+            $table->integer('egresado_id')->unsigned()->nullable();
+            $table->integer('nivel_capacidad_id')->unsigned()->nullable();
             $table->string('nombre');
             $table->timestamps();
             $table->softDeletes();

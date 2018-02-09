@@ -10,12 +10,12 @@
 
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding_lr_0">
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
-            <h5 class="bold">Lista de recomendaciones</h5>
+            <h5 class="bold">Lista de experiencias laborales</h5>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pull-right text-right">
-            <button class="btn btn-primary reco__btnAdd" data-toggle="modal" data-target="#myModal">
-                <i class="fa fa-plus"></i> Nueva recomendación
-            </button>
+            <a class="btn btn-primary reco__btnAdd" href="{{route('experiencia_laboral_nuevo')}}">
+                <i class="fa fa-plus"></i> Agregar experiencia
+            </a>
         </div>
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 reco__boxTable">
@@ -23,53 +23,34 @@
                 <thead>
                 <tr>
                     <th>#</th>
-                    <th>Descripción de la recomendacion</th>
+                    <th>Nombre empresa</th>
                     <th class="text-center">Acción</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <th>1</th>
-                    <td>nombre</td>
-                    <td class="text-center">
-                        <a href=""
-                           class="btn btn-cancelar">
-                            <i class="fa fa-trash"></i>
-                        </a>
-                    </td>
-                </tr>
+                @if($items->isEmpty())
+                    <tr class="text-center">
+                        <td colspan="3">No se encontraron registros</td>
+                    </tr>
+                @else
+                    <span style="display: none">{{{ '' != $i = 1 }}}</span>
+                    @foreach($items as $item)
+                        <tr>
+                            <th>{{{ $i++ }}}</th>
+                            <td>{{$item->empresa}}</td>
+                            <td class="text-center">
+                                <a href=""
+                                   class="btn btn-cancelar">
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    @endforeach
+                @endif
 
                 </tbody>
             </table>
         </div>
-
-
-        <div class="modal fade" id="myModal" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title bold">Registrar nueva recomendación</h4>
-                    </div>
-                    <div class="modal-body">
-                        <form action="" method="post" role="form">
-                            {!! csrf_field() !!}
-                            <div class="form-group">
-                                <label>Descripción:</label>
-                                <textarea class="form-control" rows="4" name="nombre" required></textarea>
-                            </div>
-
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                <button type="submit" class="btn btn-primary">Guardar</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
     </div>
 
 @endsection

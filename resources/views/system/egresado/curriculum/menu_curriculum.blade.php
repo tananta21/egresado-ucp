@@ -19,7 +19,7 @@
                                     <ul class="nav navbar-nav">
                                         <li class="text-center">
                                             <h5 class="bold" style="color: #0B0318">
-                                                Menu Principal
+                                                Menu Currículum
                                             </h5>
                                         </li>
                                         <li role="separator" class="divider"></li>
@@ -33,9 +33,18 @@
                                         <li class="experiencias">
                                             <a href="{{route('experiencia_laboral')}}">
                                                 <i class="fa fa-pencil-square iconMenuLateral" aria-hidden="true"></i>
-                                                Experiencias
+                                                Experiencia Laboral
                                             </a>
                                         </li>
+
+                                        <li class="estudios">
+                                            <a href="{{route('egresado_estudio')}}">
+                                                <i class="fa fa-book iconMenuLateral" aria-hidden="true"></i>
+                                                Estudios
+                                            </a>
+                                        </li>
+
+
 
                                     </ul>
                                 </div>

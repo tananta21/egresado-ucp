@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class TipoUsuarioSeeder extends Seeder
+class NivelEstudio extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,15 +11,15 @@ class TipoUsuarioSeeder extends Seeder
      */
     public function run()
     {
-        \DB::table('tipo_usuarios')->insert([
-            'nombre' => 'Administrador',
-            'is_active' => true,
-        ]);
-        \DB::table('tipo_usuarios')->insert([
-            'nombre' => 'Egresado',
+        \DB::table('nivel_estudio')->insert([
+            'nombre' => 'Maestría',
             'is_active' => true,
         ]);
 
+        \DB::table('nivel_estudio')->insert([
+            'nombre' => 'Doctorado',
+            'is_active' => true,
+        ]);
 
     }
 }
