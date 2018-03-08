@@ -17,12 +17,12 @@
                 <a href="">Seguimiento</a>
             </li>
         @endif
-        <li class="">
-            <a href="">Reportes</a>
-        </li>
         @if(Auth::user()->tipo_usuario_id == config('global.user_admin'))
             <li class="">
-                <a href="">Administración</a>
+                <a href="">Reportes</a>
+            </li>
+            <li class="administracion">
+                <a href="{{route('admin_inicio')}}">Administración</a>
             </li>
         @endif
     </ul>

@@ -6,7 +6,6 @@
     "type": "project",
     "require": {
         "php": ">=5.5.9",
-//        "orangehill/iseed": "2.2",
         "laravel/framework": "5.1.*"
     },
     "require-dev": {

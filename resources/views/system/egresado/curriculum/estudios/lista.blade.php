@@ -39,14 +39,14 @@
                     @foreach($items as $item)
                         <tr>
                             <th>{{{ $i++ }}}</th>
-                            <td>{{$item->nivel_estudio_id}}</td>
+                            <td>{{$item->nivelEstudio->nombre}}</td>
                             <td>{{$item->carrera}}</td>
                             <td>{{$item->institucion}}</td>
                             <td class="text-center">
-                                <a href=""
-                                   class="btn btn-cancelar">
-                                    <i class="fa fa-trash"></i>
-                                </a>
+                                {{--<a href=""--}}
+                                   {{--class="btn btn-cancelar">--}}
+                                    {{--<i class="fa fa-trash"></i>--}}
+                                {{--</a>--}}
                             </td>
                         </tr>
                     @endforeach

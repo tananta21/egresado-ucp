@@ -7,14 +7,14 @@ use App\Core\Escuela\EscuelaRepository;
 use App\Core\Estudio\EstudioRepository;
 use App\Core\ExperienciaLaboral\ExperienciaLaboralRepository;
 use App\Core\Facultad\FacultadRepository;
+use App\Core\Idioma\IdiomaRepository;
 use App\Core\ModelUtil\ModelUtilRepository;
+use App\Core\Programa\ProgramaRepository;
+use App\Core\Referencia\ReferenciaRepository;
 use App\Core\SemestreAcademico\SemestreAcademicoRepository;
 use App\Core\User\UserRepository;
 use App\Helper\UtilHelper;
 use Illuminate\Http\Request;
-
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
@@ -30,6 +30,9 @@ class CurriculumController extends Controller
     protected $utilHelper;
     protected $repoExperiencia;
     protected $repoEstudio;
+    protected $repoIdioma;
+    protected $repoPrograma;
+    protected $repoReferencia;
 
     public function __construct()
     {
@@ -42,80 +45,244 @@ class CurriculumController extends Controller
         $this->utilHelper = new UtilHelper();
         $this->repoExperiencia = new ExperienciaLaboralRepository();
         $this->repoEstudio = new EstudioRepository();
+        $this->repoIdioma = new IdiomaRepository();
+        $this->repoPrograma = new ProgramaRepository();
+        $this->repoReferencia = new ReferenciaRepository();
     }
 
     public function datosPersonales()
     {
-        if (Auth::user()->tipo_usuario_id == config('global.user_egresado')){
+        if (Auth::user()->tipo_usuario_id == config('global.user_egresado')) {
             $egresado_id = Auth::user()->egresado_id;
             $egresado = $this->repoEgresado->find($egresado_id);
             $estados = $this->repoModelUtil->allEstadoCivil();
             return view('system.egresado.curriculum.datos_personales',
                 compact('egresado', 'estados'));
-        }
-        else{
+        } else {
             session()->flash('alert', 'No tiene los permisos suficientes para realizar esta acción');
             return redirect()->route('app_inicio');
         }
     }
+
     public function updateDatosPersonales(Request $request)
     {
-        $egresado_id = Auth::user()->egresado_id;
-        $data = Input::all();
-        $image = $request->file('image');
-        $url_imagen =$this->utilHelper->saveImageAtractivo($image);
-        $egresado = $this->repoEgresado->updatedEgresado($egresado_id, $data, $url_imagen);
-        $user = $this->repoUser->updatedUser(Auth::user()->id, $egresado);
-        session()->flash('msg', 'Datos guardados satisfactoriamente');
-        return Redirect::back();
+        if (Auth::user()->tipo_usuario_id == config('global.user_egresado')) {
+            $egresado_id = Auth::user()->egresado_id;
+            $data = Input::all();
+            $image = $request->file('image');
+            $url_imagen = $this->utilHelper->saveImageAtractivo($image);
+            $egresado = $this->repoEgresado->updatedEgresado($egresado_id, $data, $url_imagen);
+            $user = $this->repoUser->updatedUser(Auth::user()->id, $egresado);
+            session()->flash('msg', 'Datos guardados satisfactoriamente');
+            return Redirect::back();
+        } else {
+            session()->flash('alert', 'No tiene los permisos suficientes para realizar esta acción');
+            return redirect()->route('app_inicio');
+        }
     }
 
 //    EXPERIENCIA LABORAL ======================================================
     public function listaExperiencia()
     {
-        $egresado_id = Auth::user()->egresado_id;
-        $items = $this->repoExperiencia->allByEgresado($egresado_id);
-        return view('system.egresado.curriculum.experiencia.lista',
-            compact('items'));
+        if (Auth::user()->tipo_usuario_id == config('global.user_egresado')) {
+            $egresado_id = Auth::user()->egresado_id;
+            $items = $this->repoExperiencia->allByEgresado($egresado_id);
+            return view('system.egresado.curriculum.experiencia.lista',
+                compact('items'));
+        } else {
+            session()->flash('alert', 'No tiene los permisos suficientes para realizar esta acción');
+            return redirect()->route('app_inicio');
+        }
+
     }
+
     public function nuevaExperiencia()
     {
-        $tipoExperiencias = $this->repoModelUtil->allTipoExperiencia();
-        return view('system.egresado.curriculum.experiencia.nuevo',
-            compact('tipoExperiencias'));
+        if (Auth::user()->tipo_usuario_id == config('global.user_egresado')) {
+            $tipoExperiencias = $this->repoModelUtil->allTipoExperiencia();
+            return view('system.egresado.curriculum.experiencia.nuevo',
+                compact('tipoExperiencias'));
+        } else {
+            session()->flash('alert', 'No tiene los permisos suficientes para realizar esta acción');
+            return redirect()->route('app_inicio');
+        }
     }
+
     public function createExperiencia()
     {
-        $data = Input::all();
-        $egresado_id = Auth::user()->egresado_id;
-        $experiencia = $this->repoExperiencia->createExperiencia($egresado_id, $data);
-        session()->flash('msg', 'Datos guardados satisfactoriamente');
-        return redirect()->route('experiencia_laboral');
+        if (Auth::user()->tipo_usuario_id == config('global.user_egresado')) {
+            $data = Input::all();
+            $egresado_id = Auth::user()->egresado_id;
+            $experiencia = $this->repoExperiencia->createExperiencia($egresado_id, $data);
+            session()->flash('msg', 'Datos guardados satisfactoriamente');
+            return redirect()->route('experiencia_laboral');
+        } else {
+            session()->flash('alert', 'No tiene los permisos suficientes para realizar esta acción');
+            return redirect()->route('app_inicio');
+        }
     }
 
 //    ESTUDIOS ======================================================
     public function listaEstudio()
     {
-        $egresado_id = Auth::user()->egresado_id;
-        $items = $this->repoEstudio->allByEgresado($egresado_id);
-        return view('system.egresado.curriculum.estudios.lista',
-            compact('items'));
+        if (Auth::user()->tipo_usuario_id == config('global.user_egresado')) {
+            $egresado_id = Auth::user()->egresado_id;
+            $items = $this->repoEstudio->allByEgresado($egresado_id);
+            return view('system.egresado.curriculum.estudios.lista',
+                compact('items'));
+        } else {
+            session()->flash('alert', 'No tiene los permisos suficientes para realizar esta acción');
+            return redirect()->route('app_inicio');
+        }
     }
 
     public function nuevoEstudio()
     {
-        $nivelEstudio = $this->repoModelUtil->allNivelEstudio();
-        return view('system.egresado.curriculum.estudios.nuevo',
-            compact('nivelEstudio'));
+        if (Auth::user()->tipo_usuario_id == config('global.user_egresado')) {
+            $nivelEstudio = $this->repoModelUtil->allNivelEstudio();
+            return view('system.egresado.curriculum.estudios.nuevo',
+                compact('nivelEstudio'));
+        } else {
+            session()->flash('alert', 'No tiene los permisos suficientes para realizar esta acción');
+            return redirect()->route('app_inicio');
+        }
     }
 
     public function createEstudio()
     {
-        $data = Input::all();
-        $egresado_id = Auth::user()->egresado_id;
-        $experiencia = $this->repoEstudio->createEstudio($egresado_id, $data);
-        session()->flash('msg', 'Datos guardados satisfactoriamente');
-        return redirect()->route('egresado_estudio');
+        if (Auth::user()->tipo_usuario_id == config('global.user_egresado')) {
+            $data = Input::all();
+            $egresado_id = Auth::user()->egresado_id;
+            $experiencia = $this->repoEstudio->createEstudio($egresado_id, $data);
+            session()->flash('msg', 'Datos guardados satisfactoriamente');
+            return redirect()->route('egresado_estudio');
+        } else {
+            session()->flash('alert', 'No tiene los permisos suficientes para realizar esta acción');
+            return redirect()->route('app_inicio');
+        }
+    }
+
+//    IDIOMAS ======================================================
+    public function listaIdiomas()
+    {
+        if (Auth::user()->tipo_usuario_id == config('global.user_egresado')) {
+            $egresado_id = Auth::user()->egresado_id;
+            $items = $this->repoIdioma->allByEgresado($egresado_id);
+            $nivelCapacidad = $this->repoModelUtil->allNivelCapacidad();
+            return view('system.egresado.curriculum.idiomas.lista',
+                compact('items', 'nivelCapacidad'));
+        } else {
+            session()->flash('alert', 'No tiene los permisos suficientes para realizar esta acción');
+            return redirect()->route('app_inicio');
+        }
+    }
+
+    public function createIdioma()
+    {
+        if (Auth::user()->tipo_usuario_id == config('global.user_egresado')) {
+            $data = Input::all();
+            $egresado_id = Auth::user()->egresado_id;
+            $idioma = $this->repoIdioma->createIdioma($egresado_id, $data);
+            session()->flash('msg', 'Datos guardados satisfactoriamente');
+            return redirect()->route('egresado_idioma');
+        } else {
+            session()->flash('alert', 'No tiene los permisos suficientes para realizar esta acción');
+            return redirect()->route('app_inicio');
+        }
+    }
+
+    public function deleteIdioma($id)
+    {
+        if (Auth::user()->tipo_usuario_id == config('global.user_egresado')) {
+            $idioma = $this->repoIdioma->deleted($id);
+            session()->flash('msg', 'Removido satisfactoriamente');
+            return redirect()->route('egresado_idioma');
+        } else {
+            session()->flash('alert', 'No tiene los permisos suficientes para realizar esta acción');
+            return redirect()->route('app_inicio');
+        }
+    }
+
+
+//    PROGRAMAS ======================================================
+    public function listaProgramas()
+    {
+        if (Auth::user()->tipo_usuario_id == config('global.user_egresado')) {
+            $egresado_id = Auth::user()->egresado_id;
+            $items = $this->repoPrograma->allByEgresado($egresado_id);
+            $nivelCapacidad = $this->repoModelUtil->allNivelCapacidad();
+            return view('system.egresado.curriculum.programas.lista',
+                compact('items', 'nivelCapacidad'));
+        } else {
+            session()->flash('alert', 'No tiene los permisos suficientes para realizar esta acción');
+            return redirect()->route('app_inicio');
+        }
+    }
+
+    public function createPrograma()
+    {
+        if (Auth::user()->tipo_usuario_id == config('global.user_egresado')) {
+            $data = Input::all();
+            $egresado_id = Auth::user()->egresado_id;
+            $idioma = $this->repoPrograma->createPrograma($egresado_id, $data);
+            session()->flash('msg', 'Datos guardados satisfactoriamente');
+            return redirect()->route('egresado_programa');
+        } else {
+            session()->flash('alert', 'No tiene los permisos suficientes para realizar esta acción');
+            return redirect()->route('app_inicio');
+        }
+    }
+
+    public function deletePrograma($id)
+    {
+        if (Auth::user()->tipo_usuario_id == config('global.user_egresado')) {
+            $idioma = $this->repoPrograma->deleted($id);
+            session()->flash('msg', 'Removido satisfactoriamente');
+            return redirect()->route('egresado_programa');
+        } else {
+            session()->flash('alert', 'No tiene los permisos suficientes para realizar esta acción');
+            return redirect()->route('app_inicio');
+        }
+    }
+
+//    REFERENCIAS ======================================================
+    public function listaReferencias()
+    {
+        if (Auth::user()->tipo_usuario_id == config('global.user_egresado')) {
+            $egresado_id = Auth::user()->egresado_id;
+            $items = $this->repoReferencia->allByEgresado($egresado_id);
+            $nivelCapacidad = $this->repoModelUtil->allNivelCapacidad();
+            return view('system.egresado.curriculum.referencias.lista',
+                compact('items', 'nivelCapacidad'));
+        } else {
+            session()->flash('alert', 'No tiene los permisos suficientes para realizar esta acción');
+            return redirect()->route('app_inicio');
+        }
+    }
+
+    public function createReferencia()
+    {
+        if (Auth::user()->tipo_usuario_id == config('global.user_egresado')) {
+            $data = Input::all();
+            $egresado_id = Auth::user()->egresado_id;
+            $idioma = $this->repoReferencia->createReferencia($egresado_id, $data);
+            session()->flash('msg', 'Datos guardados satisfactoriamente');
+            return redirect()->route('egresado_referencia');
+        } else {
+            session()->flash('alert', 'No tiene los permisos suficientes para realizar esta acción');
+            return redirect()->route('app_inicio');
+        }
+    }
+    public function editarReferencia($slug, $id)
+    {
+        if (Auth::user()->tipo_usuario_id == config('global.user_egresado')) {
+            $referencia = $this->repoReferencia->find($id);
+            return view('system.egresado.curriculum.referencias.editar',
+                compact('referencia'));
+        } else {
+            session()->flash('alert', 'No tiene los permisos suficientes para realizar esta acción');
+            return redirect()->route('app_inicio');
+        }
     }
 
 
@@ -138,7 +305,7 @@ class CurriculumController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -149,7 +316,7 @@ class CurriculumController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -160,7 +327,7 @@ class CurriculumController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -171,8 +338,8 @@ class CurriculumController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -183,7 +350,7 @@ class CurriculumController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

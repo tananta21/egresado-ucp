@@ -312,6 +312,10 @@ input[type='text'] {
   border-bottom: 4px solid #00bfff;
   font-weight: bold;
 }
+.active_menu_header > a {
+  border-bottom: 2px solid #ff4500 !important;
+  padding-bottom: 2px !important;
+}
 .egresado__body {
   margin-top: 30px;
   margin-bottom: 100px;

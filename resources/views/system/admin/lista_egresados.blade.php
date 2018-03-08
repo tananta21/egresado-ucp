@@ -7,12 +7,6 @@
         </div>
     @endif
     <div class="row">
-        {{--<div class="col-md-3">--}}
-            {{--<label>Tipo Búsqueda</label>--}}
-            {{--<select class="form-control input_select" id="sel1">--}}
-                {{--<option>Cascadas</option>--}}
-            {{--</select>--}}
-        {{--</div>--}}
         <div class="col-md-9">
             <input type="text" class="form-control" placeholder="Buscar egresado">
         </div>
@@ -21,11 +15,12 @@
                 <i class="fa fa-search"></i>
             </a>
         </div>
-
-        <div class="col-md-2">
-            <a href="{{route('nuevo_egresado')}}" class="btn btn-guardar width_100">
-                <i class="fa fa-plus"></i> Nuevo egresado</a>
-        </div>
+        @if(Auth::user()->tipo_usuario_id == config('global.user_admin'))
+            <div class="col-md-2">
+                <a href="{{route('nuevo_egresado')}}" class="btn btn-guardar width_100">
+                    <i class="fa fa-plus"></i> Nuevo egresado</a>
+            </div>
+        @endif
     </div>
     <div class="row atractivos__list">
         @if($egresados->isEmpty())

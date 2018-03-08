@@ -16,12 +16,20 @@ class ModelUtilRepository implements BaseRepositoryInterface
     protected $estadoCivil;
     protected $tipoExperiencia;
     protected $nivelEstudio;
+    protected $nivelCapacidad;
+    protected $disponibilidad;
+    protected $carreraOferta;
+    protected $programaOferta;
 
     public function __construct()
     {
         $this->estadoCivil = new EstadoCivil();
         $this->tipoExperiencia = new TipoExperiencia();
         $this->nivelEstudio = new NivelEstudio();
+        $this->nivelCapacidad = new NivelCapacidad();
+        $this->disponibilidad = new DisponibilidadTrabajo();
+        $this->carreraOferta = new CarreraOferta();
+        $this->programaOferta = new ProgramaOferta();
     }
 
     public function allEstadoCivil(){
@@ -38,6 +46,44 @@ class ModelUtilRepository implements BaseRepositoryInterface
 
         return $this->nivelEstudio->all();
     }
+    public function allNivelCapacidad(){
+
+        return $this->nivelCapacidad->all();
+    }
+
+    public function allDisponibilidad(){
+
+        return $this->disponibilidad->all();
+    }
+
+    public function allCarreraOferta($oferta){
+        return $this->carreraOferta->where('oferta_laboral_id', $oferta)->get();
+    }
+    public function allProgramaOferta($oferta){
+        return $this->programaOferta->where('oferta_laboral_id', $oferta)->get();
+    }
+
+
+    public function createCarreraOferta($oferta, $data){
+
+        $new =  $this->carreraOferta;
+        $new->oferta_laboral_id = $oferta;
+        $new->escuela_id = $data['escuela_id'];
+        $new->save();
+    }
+
+    public function createProgramaOferta($oferta, $data){
+
+        $new =  $this->programaOferta;
+        $new->oferta_laboral_id = $oferta;
+        $new->programa_id = $data['programa_id'];
+        $new->nivel_capacidad_id = $data['nivel_capacidad_id'];
+        $new->save();
+    }
+
+
+
+
 
 
 

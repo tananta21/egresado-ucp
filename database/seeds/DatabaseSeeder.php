@@ -16,9 +16,12 @@ class DatabaseSeeder extends Seeder
 
 //         $this->call('UserTableSeeder');
         $this->call('TipoUsuarioSeeder');
+        $this->call('DisponibilidadTrabajoSeeder');
+        $this->call('ProgramasSeeder');
         $this->call('EstadoCivilSeeder');
         $this->call('TipoExperienciaSeeder');
         $this->call('NivelEstudio');
+        $this->call('NivelCapacidad');
         $this->call('FacultadSeeder');
         $this->call('EscuelaSeeder');
         $this->call('SemestreAcademicoSeeder');

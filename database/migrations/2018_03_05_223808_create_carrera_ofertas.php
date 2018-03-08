@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProgramasTable extends Migration
+class CreateCarreraOfertas extends Migration
 {
     /**
      * Run the migrations.
@@ -12,9 +12,10 @@ class CreateProgramasTable extends Migration
      */
     public function up()
     {
-        Schema::create('programas', function (Blueprint $table) {
+        Schema::create('carreras_oferta', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nombre')->nullable();
+            $table->integer('oferta_laboral_id')->unsigned()->nullable();
+            $table->integer('escuela_id')->unsigned()->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
@@ -27,6 +28,6 @@ class CreateProgramasTable extends Migration
      */
     public function down()
     {
-        Schema::drop('programas');
+        Schema::drop('carreras_oferta');
     }
 }

@@ -43,9 +43,30 @@
                                                 Estudios
                                             </a>
                                         </li>
-
-
-
+                                        <li class="idiomas">
+                                            <a href="{{route('egresado_idioma')}}">
+                                                <i class="fa fa-language iconMenuLateral" aria-hidden="true"></i>
+                                                Idiomas
+                                            </a>
+                                        </li>
+                                        <li class="programas">
+                                            <a href="{{route('egresado_programa')}}">
+                                                <i class="fa fa-laptop iconMenuLateral" aria-hidden="true"></i>
+                                                Programas
+                                            </a>
+                                        </li>
+                                        <li class="referencias">
+                                            <a href="{{route('egresado_referencia')}}">
+                                                <i class="fa fa-users iconMenuLateral" aria-hidden="true"></i>
+                                                Referencias
+                                            </a>
+                                        </li>
+                                        <li class="perfil_publico">
+                                            <a href="">
+                                                <i class="fa fa-eye iconMenuLateral" aria-hidden="true"></i>
+                                                Perfil Público
+                                            </a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>

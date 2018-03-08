@@ -10,15 +10,18 @@ namespace App\Core\User;
 
 
 use App\Core\Contracts\BaseRepositoryInterface;
+use App\Helper\UtilHelper;
 use App\User;
 
 class UserRepository implements BaseRepositoryInterface
 {
     protected $user;
+    protected $utilHelper;
 
     public function __construct()
     {
         $this->user = new User();
+        $this->utilHelper = new UtilHelper();
     }
 
     public function all()
@@ -31,6 +34,7 @@ class UserRepository implements BaseRepositoryInterface
         $nuevo = $this->user;
         $nuevo->tipo_usuario_id = config('global.user_egresado');
         $nuevo->egresado_id = $attributes['id'];
+        $nuevo->slug = $this->utilHelper->createSlug($attributes['nombre']);
         $nuevo->codigo = $attributes['codigo'];
         $nuevo->nombre = $attributes['nombre'];
         $nuevo->apellido = $attributes['apellido'];
@@ -45,6 +49,7 @@ class UserRepository implements BaseRepositoryInterface
     public function updatedUser($id, $attributes)
     {
         $user = $this->user->findOrFail($id);
+        $user->slug = $this->utilHelper->createSlug($attributes['nombre']);
         $user->nombre = $attributes['nombre'];
         $user->apellido = $attributes['apellido'];
         $user->email = $attributes['email'];

@@ -50,6 +50,7 @@ class EgresadoRepository implements BaseRepositoryInterface
     {
 
         $egresado = $this->egresado->findOrFail($id);
+        $egresado->slug = $this->utilHelper->createSlug($attributes['nombre']);
         $egresado->nombre = $attributes['nombre'];
         $egresado->apellido = $attributes['apellido'];
         $egresado->dni = $attributes['dni'];

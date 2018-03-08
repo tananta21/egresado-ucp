@@ -14,18 +14,10 @@ class UserTableSeeder extends Seeder
         \DB::table('users')->insert([
             'tipo_usuario_id' => 1,
             'codigo' => 2101,
+            'slug' => str_slug(substr("kevin anthony",0, 20).'-'.time()),
             'nombre' => 'kevin anthony',
             'apellido' => 'tananta del aguila',
             'email' => 'kevintananta96@gmail.com',
-            'password' =>  Hash::make('2101'),
-            'is_active' => true,
-        ]);
-        \DB::table('users')->insert([
-            'tipo_usuario_id' => 2,
-            'codigo' => 2102,
-            'nombre' => 'egresado',
-            'apellido' => 'tananta del aguila',
-            'email' => 'egresado@gmail.com',
             'password' =>  Hash::make('2101'),
             'is_active' => true,
         ]);
