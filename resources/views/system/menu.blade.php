@@ -6,10 +6,11 @@
         <li class="egresados">
             <a href="{{route('lista_egresados')}}">Egresados</a>
         </li>
-        <li class="">
-            <a href="">Ofertas Laborales</a>
-        </li>
+
         @if(Auth::user()->tipo_usuario_id == config('global.user_egresado'))
+            <li class="ofertas_laborales">
+                <a href="{{route('egresado_ofertas_laborales')}}">Ofertas Laborales</a>
+            </li>
             <li class="curriculum">
                 <a href="{{route('datos_personales')}}">Currículum</a>
             </li>

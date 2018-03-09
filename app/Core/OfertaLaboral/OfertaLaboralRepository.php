@@ -25,6 +25,22 @@ class OfertaLaboralRepository implements BaseRepositoryInterface
         return $this->oferta->all();
     }
 
+    public function allByEgresado($egresado)
+    {
+        $query = \DB::select('SELECT
+                                oferta_laboral.id,
+                                oferta_laboral.nombre_empresa,
+                                oferta_laboral.cargo,
+                                oferta_laboral.salario,
+                                (SELECT is_active from postulante_oferta_laboral
+                                WHERE postulante_oferta_laboral.oferta_laboral_id = oferta_laboral.id AND egresado_id = '.$egresado.' ) as postulacion
+                            FROM
+                                oferta_laboral');
+        return $query;
+    }
+
+
+
     public function createOfertaLaboral($data)
     {
         $new = $this->oferta;

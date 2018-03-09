@@ -1,18 +1,19 @@
-@extends('system.admin.menu_admin')
-@section("content_detalle")
+@extends('index')
+@section('content')
 
-    @if (Session::has('msg'))
-        <div class="alert alert-success alert-dismissable">
+    @if (Session::has('alert'))
+        <div class="alert alert-danger alert-dismissable">
             <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
-            <strong>Excelente! </strong>{!! Session::has('msg') ? Session::get("msg") : '' !!}.
+            <strong>{!! Session::has('alert') ? Session::get("alert") : '' !!} !!</strong>.
         </div>
     @endif
+
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding_lr_0">
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
-            <a class="egresado__nuevo__linkBack" href="{{route('admin_oferta_laboral_list')}}">
+            <a class="egresado__nuevo__linkBack" href="{{route('egresado_ofertas_laborales')}}">
                 <h5 class="egresado__nuevo__textBack bold">
                     <i class="fa fa-angle-double-left egresado__nuevo__iconBack" aria-hidden="true"></i> Volver a la
-                    lista de ofertas
+                    Lista de ofertas laborales
                 </h5>
             </a>
         </div>
@@ -172,12 +173,9 @@
     </div>
 
 
-
-
 @endsection
 @section("js")
     <script>
-        $(".administracion").addClass("active");
-        $(".admin_oferta_laboral_list").addClass("active");
+        $(".ofertas_laborales").addClass("active");
     </script>
 @stop

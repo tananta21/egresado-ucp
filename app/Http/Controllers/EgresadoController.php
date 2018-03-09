@@ -5,9 +5,12 @@ namespace App\Http\Controllers;
 use App\Core\Egresado\EgresadoRepository;
 use App\Core\Escuela\EscuelaRepository;
 use App\Core\Facultad\FacultadRepository;
+use App\Core\ModelUtil\ModelUtilRepository;
+use App\Core\OfertaLaboral\OfertaLaboralRepository;
 use App\Core\SemestreAcademico\SemestreAcademicoRepository;
 use App\Core\User\UserRepository;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 
 class EgresadoController extends Controller
@@ -17,6 +20,8 @@ class EgresadoController extends Controller
     protected $repoFacultad;
     protected $repoEscuela;
     protected $repoSemestre;
+    protected $repoOfertaLaboral;
+    protected $repoModelUtil;
 
     public function __construct()
     {
@@ -25,6 +30,8 @@ class EgresadoController extends Controller
         $this->repoFacultad = new FacultadRepository();
         $this->repoEscuela = new EscuelaRepository();
         $this->repoSemestre = new SemestreAcademicoRepository();
+        $this->repoOfertaLaboral = new  OfertaLaboralRepository();
+        $this->repoModelUtil = new  ModelUtilRepository();
     }
 
     public function index()
@@ -50,6 +57,24 @@ class EgresadoController extends Controller
         $user = $this->repoUser->crearUsuario($egresado, $url_imagen);
         session()->flash('msg', 'El egresado ha sido registrado satisfactoriamente');
         return redirect()->route('lista_egresados');
+
+    }
+//    LISTAR OFERTAS LABORALES PARA EL EGRESADO
+
+    public function ofertasLaborales(){
+        $egresado_id = Auth::user()->egresado_id;
+        $ofertas = $this->repoOfertaLaboral->allByEgresado($egresado_id);
+        return view('system.egresado.ofertas_laborales.lista', compact('ofertas'));
+    }
+
+    public function ofertaLaboralResumen($id)
+    {
+        $oferta = $this->repoOfertaLaboral->find($id);
+        $carreras = $this->repoModelUtil->allCarreraOferta($id);
+        $programasByOferta = $this->repoModelUtil->allProgramaOferta($id);
+        return view('system.egresado.ofertas_laborales.resumen_oferta', compact(
+            'oferta','carreras','programasByOferta'
+        ));
 
     }
 
