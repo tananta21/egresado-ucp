@@ -7,11 +7,13 @@ use App\Core\Escuela\EscuelaRepository;
 use App\Core\Facultad\FacultadRepository;
 use App\Core\ModelUtil\ModelUtilRepository;
 use App\Core\OfertaLaboral\OfertaLaboralRepository;
+use App\Core\PostulanteOferta\PostulanteOfertaLaboralRepository;
 use App\Core\SemestreAcademico\SemestreAcademicoRepository;
 use App\Core\User\UserRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Redirect;
 
 class EgresadoController extends Controller
 {
@@ -22,6 +24,7 @@ class EgresadoController extends Controller
     protected $repoSemestre;
     protected $repoOfertaLaboral;
     protected $repoModelUtil;
+    protected $repoPostulanteOferta;
 
     public function __construct()
     {
@@ -32,6 +35,7 @@ class EgresadoController extends Controller
         $this->repoSemestre = new SemestreAcademicoRepository();
         $this->repoOfertaLaboral = new  OfertaLaboralRepository();
         $this->repoModelUtil = new  ModelUtilRepository();
+        $this->repoPostulanteOferta = new  PostulanteOfertaLaboralRepository();
     }
 
     public function index()
@@ -77,6 +81,15 @@ class EgresadoController extends Controller
         ));
 
     }
+    public function ofertaLaboralSendCurriculum($id)
+    {
+        $egresado_id = Auth::user()->egresado_id;
+        $send_curriculum = $this->repoPostulanteOferta->createPostulanteOferta($egresado_id,$id);
+        session()->flash('msg', 'se ha enviado tu curriculum satisfactoriamente!!');
+        return Redirect::back();
+//        return redirect()->action('EgresadoController@ofertasLaborales');
+    }
+
 
 
     public function create()

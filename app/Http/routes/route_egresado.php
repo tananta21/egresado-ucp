@@ -11,4 +11,11 @@ Route::get('/egresado/ofertas_laborales/resumen/{id}', [
     'uses' => 'EgresadoController@ofertaLaboralResumen'
 ]);
 
+Route::get('/egresado/ofertas_laborales/send_curriculum/{id}', [
+    'as' => 'egresado_ofertas_laborales_send_curriculum',
+    'uses' => 'EgresadoController@ofertaLaboralSendCurriculum'
+]);
+
+
+
 

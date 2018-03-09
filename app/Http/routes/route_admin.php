@@ -62,6 +62,11 @@ Route::get('/admin/oferta_laboral/resumen/{id}', [
     'uses' => 'AdministracionController@ofertaLaboralResumen'
 ]);
 
+// Postulantes oferta laboral
+Route::get('/admin/oferta_laboral/postulantes/{id}', [
+    'as' => 'admin_oferta_laboral_postulantes',
+    'uses' => 'AdministracionController@ofertaLaboralPostulantes'
+]);
 
 
 

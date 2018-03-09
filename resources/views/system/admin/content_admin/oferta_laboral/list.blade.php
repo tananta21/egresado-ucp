@@ -63,10 +63,17 @@
                                         </li>
                                         <li role="separator" class="divider"></li>
                                         <li>
+                                            <a href="{{route('admin_oferta_laboral_postulantes',['id'=>$item->id])}}">
+                                                <i class="fa fa-users"></i> Postulantes
+                                            </a>
+                                        </li>
+                                        <li role="separator" class="divider"></li>
+                                        <li>
                                             <a href="{{route('admin_oferta_laboral_resumen',['id'=>$item->id])}}">
                                                 <i class="fa fa-eye"></i> Ver oferta laboral
                                             </a>
                                         </li>
+
                                     </ul>
                                 </div>
                             </td>

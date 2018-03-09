@@ -7,6 +7,12 @@
             <strong>{!! Session::has('alert') ? Session::get("alert") : '' !!} !!</strong>.
         </div>
     @endif
+    @if (Session::has('msg'))
+        <div class="alert alert-success alert-dismissable">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+            <strong>Excelente! </strong>{!! Session::has('msg') ? Session::get("msg") : '' !!}.
+        </div>
+    @endif
 
     <div>
         <h5 class="atractivos__labelInfoGeneral">
@@ -40,9 +46,12 @@
                             <td>S/. {{$item->salario}}</td>
                             <td class="text-center">
                                 @if($item->postulacion == 0 || $item->postulacion == '')
-                                    <label for="" class="label label-success">Enviar Currículum</label>
+                                    <a href="{{route('egresado_ofertas_laborales_send_curriculum',['id'=>$item->id])}}" style="font-size: 14px; cursor: pointer;text-decoration: none">
+                                        <label style="font-size: 14px; cursor: pointer;" for="" class="label label-success"><i class="fa fa-file-word-o"></i>  Enviar Currículum</label>
+                                    </a>
+
                                 @else
-                                    <label for="" class="label label-danger">Currículum enviado</label>
+                                    <label style="font-size: 14px" for="" class="label label-primary">Currículum enviado</label>
                                 @endif
 
                             </td>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Core\Escuela\EscuelaRepository;
 use App\Core\ModelUtil\ModelUtilRepository;
 use App\Core\OfertaLaboral\OfertaLaboralRepository;
+use App\Core\PostulanteOferta\PostulanteOfertaLaboralRepository;
 use App\Core\Programa\ProgramaRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
@@ -16,6 +17,7 @@ class AdministracionController extends Controller
     protected $repoModelUtil;
     protected $repoEscuela;
     protected $repoPrograma;
+    protected $repoPostulanteOferta;
 
     public function __construct()
     {
@@ -23,6 +25,7 @@ class AdministracionController extends Controller
         $this->repoModelUtil = new  ModelUtilRepository();
         $this->repoEscuela = new EscuelaRepository();
         $this->repoPrograma = new ProgramaRepository();
+        $this->repoPostulanteOferta = new PostulanteOfertaLaboralRepository();
     }
 
     public function index()
@@ -91,6 +94,15 @@ class AdministracionController extends Controller
         $programasByOferta = $this->repoModelUtil->allProgramaOferta($id);
         return view('system.admin.content_admin.oferta_laboral.resumen_oferta', compact(
             'oferta','carreras','programasByOferta'
+        ));
+
+    }
+
+    public function ofertaLaboralPostulantes($id)
+    {
+        $postulantes = $this->repoPostulanteOferta->allPostulantesByOferta($id);
+        return view('system.admin.content_admin.oferta_laboral.postulantes', compact(
+            'postulantes'
         ));
 
     }
