@@ -78,7 +78,7 @@ Route::post('/curriculum/programas/create', [
 
 Route::get('/curriculum/programa/delete/{id}', [
     'as' => 'egresado_programa_delete',
-    'uses' => 'CurriculumController@deletePrograma'
+    'uses' => 'CurriculumController@deleteDetallePrograma'
 ]);
 
 //REFERENCIAS ==============================================================

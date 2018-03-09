@@ -38,7 +38,7 @@
                     @foreach($items as $item)
                         <tr>
                             <th>{{{ $i++ }}}</th>
-                            <td>{{$item->nombre}}</td>
+                            <td>{{$item->programa->nombre}}</td>
                             <td>{{$item->nivelCapacidad->nombre}}</td>
                             <td class="text-center">
                                 <a href="{{route('egresado_programa_delete',['id'=>$item->id])}}"
@@ -65,6 +65,16 @@
                         <form action="{{route('egresado_programa_create')}}" method="post" role="form">
                             {!! csrf_field() !!}
                             <div class="form-group">
+                                <label>Programas:</label>
+                                <select required="" class="form-control input_select" name="programa_id">
+                                    <option value="">Seleccione un programa</option>
+                                    @foreach($programas as $item)
+                                        <option value="{{$item->id}}">{{$item->nombre}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Nivel de aprendizaje:</label>
                                 <select required="" class="form-control input_select" name="nivel_capacidad_id">
                                     <option value="">Seleccione nivel de aprendizaje</option>
                                     @foreach($nivelCapacidad as $item)
@@ -72,12 +82,6 @@
                                     @endforeach
                                 </select>
                             </div>
-                            <div class="form-group">
-                                <label>Nombre Programa:</label>
-                                <input type="text" class="form-control" placeholder="Ingrese nombre del programa"
-                                       name="nombre" required>
-                            </div>
-
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                                 <button type="submit" class="btn btn-primary">Guardar</button>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Core\DetallePrograma\DetalleProgramaRepository;
 use App\Core\Egresado\EgresadoRepository;
 use App\Core\Escuela\EscuelaRepository;
 use App\Core\Estudio\EstudioRepository;
@@ -33,6 +34,7 @@ class CurriculumController extends Controller
     protected $repoIdioma;
     protected $repoPrograma;
     protected $repoReferencia;
+    protected $repoDetallePrograma;
 
     public function __construct()
     {
@@ -48,6 +50,7 @@ class CurriculumController extends Controller
         $this->repoIdioma = new IdiomaRepository();
         $this->repoPrograma = new ProgramaRepository();
         $this->repoReferencia = new ReferenciaRepository();
+        $this->repoDetallePrograma = new DetalleProgramaRepository();
     }
 
     public function datosPersonales()
@@ -209,10 +212,11 @@ class CurriculumController extends Controller
     {
         if (Auth::user()->tipo_usuario_id == config('global.user_egresado')) {
             $egresado_id = Auth::user()->egresado_id;
-            $items = $this->repoPrograma->allByEgresado($egresado_id);
+            $programas = $this->repoPrograma->allProgramas();
             $nivelCapacidad = $this->repoModelUtil->allNivelCapacidad();
+            $items = $this->repoDetallePrograma->allByEgresado($egresado_id);
             return view('system.egresado.curriculum.programas.lista',
-                compact('items', 'nivelCapacidad'));
+                compact('items', 'nivelCapacidad','programas'));
         } else {
             session()->flash('alert', 'No tiene los permisos suficientes para realizar esta acción');
             return redirect()->route('app_inicio');
@@ -224,7 +228,7 @@ class CurriculumController extends Controller
         if (Auth::user()->tipo_usuario_id == config('global.user_egresado')) {
             $data = Input::all();
             $egresado_id = Auth::user()->egresado_id;
-            $idioma = $this->repoPrograma->createPrograma($egresado_id, $data);
+            $idioma = $this->repoDetallePrograma->createPrograma($egresado_id, $data);
             session()->flash('msg', 'Datos guardados satisfactoriamente');
             return redirect()->route('egresado_programa');
         } else {
@@ -233,10 +237,10 @@ class CurriculumController extends Controller
         }
     }
 
-    public function deletePrograma($id)
+    public function deleteDetallePrograma($id)
     {
         if (Auth::user()->tipo_usuario_id == config('global.user_egresado')) {
-            $idioma = $this->repoPrograma->deleted($id);
+            $idioma = $this->repoDetallePrograma->deleted($id);
             session()->flash('msg', 'Removido satisfactoriamente');
             return redirect()->route('egresado_programa');
         } else {

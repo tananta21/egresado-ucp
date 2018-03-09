@@ -16,4 +16,9 @@ class NivelCapacidad extends Model
     {
         return $this->hasMany('App\Core\ModelUtil\ProgramaOferta');
     }
+
+    public function detallePrograma()
+    {
+        return $this->hasMany('App\Core\DetallePrograma\DetallePrograma');
+    }
 }
