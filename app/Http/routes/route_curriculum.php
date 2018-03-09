@@ -99,6 +99,13 @@ Route::get('/curriculum/referencias/editar/{slug}/{id}', [
 ]);
 
 
+//CURRICULUM PUBLICO ==============================================================
+
+Route::get('/curriculum/publico', [
+    'as' => 'egresado_curriculum_publico',
+    'uses' => 'CurriculumController@curiculumPublico'
+]);
+
 
 
 

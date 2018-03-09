@@ -289,6 +289,23 @@ class CurriculumController extends Controller
         }
     }
 
+//    curriculu publico ==================================================
+
+    public function curiculumPublico()
+    {
+        if (Auth::user()->tipo_usuario_id == config('global.user_egresado')) {
+            $egresado_id = Auth::user()->egresado_id;
+            $egresado = $this->repoEgresado->find($egresado_id);
+            $idiomas = $this->repoIdioma->allByEgresado($egresado_id);
+            $estudios = $this->repoEstudio->allByEgresado($egresado_id);
+            return view('system.egresado.curriculum.curriculum_publico',
+                compact('egresado','idiomas','estudios'));
+        } else {
+            session()->flash('alert', 'No tiene los permisos suficientes para realizar esta acción');
+            return redirect()->route('app_inicio');
+        }
+    }
+
 
 
     public function index()

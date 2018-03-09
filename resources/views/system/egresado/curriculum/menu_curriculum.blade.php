@@ -62,7 +62,7 @@
                                             </a>
                                         </li>
                                         <li class="perfil_publico">
-                                            <a href="">
+                                            <a href="{{route('egresado_curriculum_publico')}}">
                                                 <i class="fa fa-eye iconMenuLateral" aria-hidden="true"></i>
                                                 Perfil Público
                                             </a>
