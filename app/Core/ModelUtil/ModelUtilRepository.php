@@ -15,6 +15,7 @@ class ModelUtilRepository implements BaseRepositoryInterface
 {
     protected $estadoCivil;
     protected $tipoExperiencia;
+    protected $tipoCapacitacion;
     protected $nivelEstudio;
     protected $nivelCapacidad;
     protected $disponibilidad;
@@ -25,6 +26,7 @@ class ModelUtilRepository implements BaseRepositoryInterface
     {
         $this->estadoCivil = new EstadoCivil();
         $this->tipoExperiencia = new TipoExperiencia();
+        $this->tipoCapacitacion = new TipoCapacitacion();
         $this->nivelEstudio = new NivelEstudio();
         $this->nivelCapacidad = new NivelCapacidad();
         $this->disponibilidad = new DisponibilidadTrabajo();
@@ -40,6 +42,11 @@ class ModelUtilRepository implements BaseRepositoryInterface
     public function allTipoExperiencia(){
 
         return $this->tipoExperiencia->all();
+    }
+
+    public function allTipoCapacitacion(){
+
+        return $this->tipoCapacitacion->all();
     }
 
     public function allNivelEstudio(){

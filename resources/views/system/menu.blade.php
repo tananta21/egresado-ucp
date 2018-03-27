@@ -8,6 +8,9 @@
         </li>
 
         @if(Auth::user()->tipo_usuario_id == config('global.user_egresado'))
+            <li class="capacitaciones">
+                <a href="{{route('egresado_capacitaciones')}}">Cursos y Talleres</a>
+            </li>
             <li class="ofertas_laborales">
                 <a href="{{route('egresado_ofertas_laborales')}}">Ofertas Laborales</a>
             </li>

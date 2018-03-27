@@ -104,6 +104,21 @@
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 atractivos__form__boxFormInfoGeneral">
         <h5 class="atractivos__labelInfoGeneral">PROGRAMAS</h5>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding_lr_0">
+            @if($programas->isEmpty())
+                <span>No se encontraron registros</span>
+            @else
+                <span style="display: none">{{{ '' != $i = 1 }}}</span>
+                @foreach($programas as $item)
+                    <div class="row">
+                        <div class="col-lg-1 col-md-1 col-sm-1">
+                            {{{ $i++ }}}
+                        </div>
+                        <div class="col-lg-11 col-md-11 col-sm-11">
+                            {{$item->programa->nombre}} <strong>({{$item->nivelCapacidad->nombre}})</strong>
+                        </div>
+                    </div>
+                @endforeach
+            @endif
         </div>
     </div>
 

@@ -20,17 +20,22 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
                 <div class="item active">
-                    <img src="{{url('/')}}/img/portfolio/fullsize/1.jpg"
+                    <img src="{{url('/')}}/img/slider/1.jpg"
+                         class="egresado__slider__img">
+                </div>
+
+
+                <div class="item">
+                    <img src="{{url('/')}}/img/slider/2.jpg"
                          class="egresado__slider__img">
                 </div>
 
                 <div class="item">
-                    <img src="{{url('/')}}/img/portfolio/fullsize/2.jpg"
+                    <img src="{{url('/')}}/img/slider/3.jpg"
                          class="egresado__slider__img">
                 </div>
-
                 <div class="item">
-                    <img src="{{url('/')}}/img/portfolio/fullsize/3.jpg"
+                    <img src="{{url('/')}}/img/slider/4.jpg"
                          class="egresado__slider__img">
                 </div>
             </div>
@@ -45,7 +50,15 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-        <h4>Aca se mostrara el cntenido de inicio del sistema de egresados de la universidad cientifica del peu</h4>
+        <div style="padding-top: 20px">
+            <h5 style="line-height: 22px; font-size: 15px">¡Hola familia UCP!, la aplicación SE-UCP: te da la más cordial bienvenida a su página.
+                <br>
+                Es una aplicación que facilita el registro, actualización y administración de los egresados de la Universidad, asi como también registro de la hoja de vida del egresado,reportes y estadísticas, permitiendo promover la interacción permanente entre el egresado, la Institución de educación superior."
+
+                Además se espera con el tiempo seguir mejorando el sistema de tal manera que cumplan con los siguientes componentes: ofertas laborales, noticias y eventos.
+
+                Entonces lo que pretendemos es aprovechar el uso de las tecnologías web y el cyberespacio de Internet, dando a los alumnos de la Universidad Científica del Perú de Tarapoto un servicio solidario que se centra en los contenidos o curriculos que es la esencia que los estudiantes deben adquirir y facilitar en esta forma la adquisición de su propia producción curricular histórica y actualizada.</h5>
+        </div>
     </div>
 
 @endsection

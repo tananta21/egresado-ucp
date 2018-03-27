@@ -21,7 +21,7 @@ Route::get('/admin/inicio', [
     'uses' => 'AdministracionController@index'
 ]);
 
-//OFERTA LABORAL
+//OFERTA LABORAL ===================================================================================
 Route::get('/admin/oferta_laboral/list', [
     'as' => 'admin_oferta_laboral_list',
     'uses' => 'AdministracionController@ofertaLaboralList'
@@ -71,4 +71,27 @@ Route::get('/admin/oferta_laboral/postulantes/{id}', [
 
 
 
+//CAPACITACIONES  ===================================================================================
+Route::get('/admin/capacitacion/list', [
+    'as' => 'admin_capacitacion_list',
+    'uses' => 'AdministracionController@capacitacionList'
+]);
+
+Route::post('/admin/capacitacion/create', [
+    'as' => 'admin_capacitacion_create',
+    'uses' => 'AdministracionController@capacitacionCreate'
+]);
+
+//detalles capacitacion
+
+Route::get('/admin/capacitacion/detalle/{id}', [
+    'as' => 'admin_capacitacion_detalle',
+    'uses' => 'AdministracionController@capacitacionDetalle'
+]);
+
+//updates detalles capacitacion
+Route::post('/admin/capacitacion/detalle/update/{id}', [
+    'as' => 'admin_capacitacion_detalle_update',
+    'uses' => 'AdministracionController@capacitacionDetalleUpdate'
+]);
 

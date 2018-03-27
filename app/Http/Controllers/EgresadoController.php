@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Core\Capacitacion\CapacitacionRepository;
 use App\Core\Egresado\EgresadoRepository;
 use App\Core\Escuela\EscuelaRepository;
 use App\Core\Facultad\FacultadRepository;
@@ -25,6 +26,7 @@ class EgresadoController extends Controller
     protected $repoOfertaLaboral;
     protected $repoModelUtil;
     protected $repoPostulanteOferta;
+    protected $repoCapacitacion;
 
     public function __construct()
     {
@@ -36,6 +38,7 @@ class EgresadoController extends Controller
         $this->repoOfertaLaboral = new  OfertaLaboralRepository();
         $this->repoModelUtil = new  ModelUtilRepository();
         $this->repoPostulanteOferta = new  PostulanteOfertaLaboralRepository();
+        $this->repoCapacitacion = new CapacitacionRepository();
     }
 
     public function index()
@@ -88,6 +91,22 @@ class EgresadoController extends Controller
         session()->flash('msg', 'se ha enviado tu curriculum satisfactoriamente!!');
         return Redirect::back();
 //        return redirect()->action('EgresadoController@ofertasLaborales');
+    }
+
+//    LISTAR CAPACITACIONES PARA EL  EGRESAO
+
+    public function capacitaciones(){
+        $ofertas = $this->repoCapacitacion->all();
+        return view('system.egresado.capacitacion.lista', compact('ofertas'));
+    }
+
+    public function capacitacionesResumen($id)
+    {
+        $capacitacion = $this->repoCapacitacion->find($id);
+        return view('system.egresado.capacitacion.resumen', compact(
+            'capacitacion'
+        ));
+
     }
 
 

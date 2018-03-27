@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Core\Capacitacion\CapacitacionRepository;
 use App\Core\Escuela\EscuelaRepository;
 use App\Core\ModelUtil\ModelUtilRepository;
 use App\Core\OfertaLaboral\OfertaLaboralRepository;
@@ -18,6 +19,7 @@ class AdministracionController extends Controller
     protected $repoEscuela;
     protected $repoPrograma;
     protected $repoPostulanteOferta;
+    protected $repoCapacitacion;
 
     public function __construct()
     {
@@ -26,6 +28,7 @@ class AdministracionController extends Controller
         $this->repoEscuela = new EscuelaRepository();
         $this->repoPrograma = new ProgramaRepository();
         $this->repoPostulanteOferta = new PostulanteOfertaLaboralRepository();
+        $this->repoCapacitacion = new CapacitacionRepository();
     }
 
     public function index()
@@ -33,7 +36,7 @@ class AdministracionController extends Controller
         return view('system.admin.content_admin.inicio_admin');
     }
 
-    //oferta laboral
+    //OFERTA LABORAL ========================================================================================================
 
     public function ofertaLaboralList()
     {
@@ -106,6 +109,44 @@ class AdministracionController extends Controller
         ));
 
     }
+
+//    CAPACITACIONES ==============================================================================================================
+
+    public function capacitacionList()
+    {
+        $capacitaciones = $this->repoCapacitacion->all();
+        $tipoCapacitacion = $this->repoModelUtil->allTipoCapacitacion();
+        return view('system.admin.content_admin.capacitacion.list', compact(
+            'capacitaciones','tipoCapacitacion'
+        ));
+    }
+
+    public function capacitacionCreate()
+    {
+        $data = Input::all();
+        $capacitacion = $this->repoCapacitacion->createCapacitacion($data);
+        session()->flash('msg', 'Registro guardado satisfactoriamente!!');
+        return Redirect::back();
+    }
+
+    public function capacitacionDetalle($id)
+    {
+        $capacitacion = $this->repoCapacitacion->find($id);
+        $tipoCapacitacion = $this->repoModelUtil->allTipoCapacitacion();
+        return view('system.admin.content_admin.capacitacion.detalle', compact(
+            'capacitacion','tipoCapacitacion'
+        ));
+    }
+
+    public function capacitacionDetalleUpdate($id){
+        $data = Input::all();
+        $capacitacion = $this->repoCapacitacion->updated($id,$data);
+        session()->flash('msg', 'Datos actualizados correctamente!!');
+        return Redirect::back();
+
+    }
+
+
 
 
 

@@ -298,8 +298,9 @@ class CurriculumController extends Controller
             $egresado = $this->repoEgresado->find($egresado_id);
             $idiomas = $this->repoIdioma->allByEgresado($egresado_id);
             $estudios = $this->repoEstudio->allByEgresado($egresado_id);
+            $programas = $this->repoDetallePrograma->allByEgresado($egresado_id);
             return view('system.egresado.curriculum.curriculum_publico',
-                compact('egresado','idiomas','estudios'));
+                compact('egresado','idiomas','estudios','programas'));
         } else {
             session()->flash('alert', 'No tiene los permisos suficientes para realizar esta acción');
             return redirect()->route('app_inicio');

@@ -36,6 +36,13 @@
                                                 Ofertas Laborales
                                             </a>
                                         </li>
+                                        <li class="admin_capacitacion_list">
+                                            <a href="{{route('admin_capacitacion_list')}}">
+                                                <i class="fa fa-file-o iconMenuLateral" aria-hidden="true"></i>
+                                                Capacitaciones
+                                            </a>
+                                        </li>
+
 
                                     </ul>
                                 </div>
