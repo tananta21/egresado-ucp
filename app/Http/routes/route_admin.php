@@ -95,3 +95,9 @@ Route::post('/admin/capacitacion/detalle/update/{id}', [
     'uses' => 'AdministracionController@capacitacionDetalleUpdate'
 ]);
 
+// Postulantes capacitaión
+Route::get('/admin/capacitacion/postulantes/{id}', [
+    'as' => 'admin_capacitacion_postulantes',
+    'uses' => 'AdministracionController@capacitacionPostulantes'
+]);
+

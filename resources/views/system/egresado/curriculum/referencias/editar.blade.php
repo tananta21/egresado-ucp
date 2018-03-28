@@ -7,11 +7,11 @@
             <strong>Excelente! </strong>{!! Session::has('msg') ? Session::get("msg") : '' !!}.
         </div>
     @endif
-    <form action="{{route('experiencia_laboral_create')}}" method="post" role="form">
+    <form action="{{route('egresado_referencia_update',['id'=>$referencia['id']])}}" method="post" role="form">
         {!! csrf_field() !!}
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding_lr_0">
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
-                <a class="egresado__nuevo__linkBack" href="{{route('experiencia_laboral')}}">
+                <a class="egresado__nuevo__linkBack" href="{{route('egresado_referencia')}}">
                     <h5 class="egresado__nuevo__textBack bold">
                         <i class="fa fa-angle-double-left egresado__nuevo__iconBack" aria-hidden="true"></i>
                         Volver
@@ -26,14 +26,14 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 atractivos__form__boxFormInfoGeneral">
             <h5 class="atractivos__labelInfoGeneral">Editar referencia laboral</h5>
             <div class="form-group">
-                <label>Nombre empresa:</label>
-                <input type="text" class="form-control" placeholder="Ingrese el nombre de la empresa"
-                       name="empresa" required value="{{$referencia['empresa']}}">
-            </div>
-            <div class="form-group">
                 <label>Nombres y apellidos:</label>
                 <input type="text" class="form-control" placeholder="Ingrese nombres y apellidos de la referencia"
                        name="nombre" required value="{{$referencia['nombre']}}">
+            </div>
+            <div class="form-group">
+                <label>Nombre empresa:</label>
+                <input type="text" class="form-control" placeholder="Ingrese el nombre de la empresa"
+                       name="empresa" required value="{{$referencia['empresa']}}">
             </div>
             <div class="form-group">
                 <label>Puesto:</label>

@@ -288,6 +288,19 @@ class CurriculumController extends Controller
             return redirect()->route('app_inicio');
         }
     }
+    public function updateReferencia($id)
+    {
+        if (Auth::user()->tipo_usuario_id == config('global.user_egresado')) {
+            $data = Input::all();
+            $idioma = $this->repoReferencia->createReferencia($id, $data);
+            session()->flash('msg', 'Datos guardados satisfactoriamente');
+            return redirect()->route('egresado_referencia');
+        } else {
+            session()->flash('alert', 'No tiene los permisos suficientes para realizar esta acción');
+            return redirect()->route('app_inicio');
+        }
+    }
+
 
 //    curriculu publico ==================================================
 

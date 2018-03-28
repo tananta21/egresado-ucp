@@ -98,6 +98,10 @@ Route::get('/curriculum/referencias/editar/{slug}/{id}', [
     'uses' => 'CurriculumController@editarReferencia'
 ]);
 
+Route::post('/curriculum/referencias/update/{id}', [
+    'as' => 'egresado_referencia_update',
+    'uses' => 'CurriculumController@createReferencia'
+]);
 
 //CURRICULUM PUBLICO ==============================================================
 

@@ -8,6 +8,7 @@ use App\Core\Escuela\EscuelaRepository;
 use App\Core\Facultad\FacultadRepository;
 use App\Core\ModelUtil\ModelUtilRepository;
 use App\Core\OfertaLaboral\OfertaLaboralRepository;
+use App\Core\PostulanteCapacitacion\PostulanteCapacitacionRepository;
 use App\Core\PostulanteOferta\PostulanteOfertaLaboralRepository;
 use App\Core\SemestreAcademico\SemestreAcademicoRepository;
 use App\Core\User\UserRepository;
@@ -27,6 +28,7 @@ class EgresadoController extends Controller
     protected $repoModelUtil;
     protected $repoPostulanteOferta;
     protected $repoCapacitacion;
+    protected $repoPostulanteCapacitacion;
 
     public function __construct()
     {
@@ -39,6 +41,7 @@ class EgresadoController extends Controller
         $this->repoModelUtil = new  ModelUtilRepository();
         $this->repoPostulanteOferta = new  PostulanteOfertaLaboralRepository();
         $this->repoCapacitacion = new CapacitacionRepository();
+        $this->repoPostulanteCapacitacion = new PostulanteCapacitacionRepository();
     }
 
     public function index()
@@ -97,7 +100,9 @@ class EgresadoController extends Controller
 
     public function capacitaciones(){
         $ofertas = $this->repoCapacitacion->all();
-        return view('system.egresado.capacitacion.lista', compact('ofertas'));
+        $instituciones = $this->repoModelUtil->allInstitucion();
+        return view('system.egresado.capacitacion.lista',
+            compact('ofertas','instituciones'));
     }
 
     public function capacitacionesResumen($id)
@@ -107,6 +112,32 @@ class EgresadoController extends Controller
             'capacitacion'
         ));
 
+    }
+
+    public function capacitacionesFormInscripcion($id)
+    {
+        $capacitacion = $this->repoCapacitacion->find($id);
+        $instituciones = $this->repoModelUtil->allInstitucion();
+        return view('system.egresado.capacitacion.inscripcion', compact(
+            'capacitacion','instituciones'
+        ));
+
+    }
+
+    public function capacitacionesRegister($id){
+        $data = Input::all();
+        try{
+            $postulante = $this->repoPostulanteCapacitacion->createPostulante($id,$data);
+            session()->flash('msg', 'Se ha registrado correctamente!!');
+            return redirect()->action('EgresadoController@capacitaciones');
+        }
+        catch (\Exception $e){
+            session()->flash('alert',
+                'Ya se encuentra registrado el N° de documento '. Input::get('nro_documento'));
+//            echo $e->getMessage();
+//            $this->utilHelper->msgError();
+            return Redirect::back();
+        }
     }
 
 

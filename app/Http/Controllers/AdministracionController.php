@@ -6,6 +6,7 @@ use App\Core\Capacitacion\CapacitacionRepository;
 use App\Core\Escuela\EscuelaRepository;
 use App\Core\ModelUtil\ModelUtilRepository;
 use App\Core\OfertaLaboral\OfertaLaboralRepository;
+use App\Core\PostulanteCapacitacion\PostulanteCapacitacionRepository;
 use App\Core\PostulanteOferta\PostulanteOfertaLaboralRepository;
 use App\Core\Programa\ProgramaRepository;
 use Illuminate\Http\Request;
@@ -20,6 +21,7 @@ class AdministracionController extends Controller
     protected $repoPrograma;
     protected $repoPostulanteOferta;
     protected $repoCapacitacion;
+    protected $repoPostulanteCapacitacion;
 
     public function __construct()
     {
@@ -29,6 +31,7 @@ class AdministracionController extends Controller
         $this->repoPrograma = new ProgramaRepository();
         $this->repoPostulanteOferta = new PostulanteOfertaLaboralRepository();
         $this->repoCapacitacion = new CapacitacionRepository();
+        $this->repoPostulanteCapacitacion = new PostulanteCapacitacionRepository();
     }
 
     public function index()
@@ -143,6 +146,14 @@ class AdministracionController extends Controller
         $capacitacion = $this->repoCapacitacion->updated($id,$data);
         session()->flash('msg', 'Datos actualizados correctamente!!');
         return Redirect::back();
+
+    }
+    public function capacitacionPostulantes($id)
+    {
+        $postulantes = $this->repoPostulanteCapacitacion->all();
+        return view('system.admin.content_admin.capacitacion.postulantes',
+            compact('postulantes'
+        ));
 
     }
 

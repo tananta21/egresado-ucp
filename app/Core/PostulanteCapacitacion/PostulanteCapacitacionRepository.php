@@ -22,7 +22,22 @@ class PostulanteCapacitacionRepository implements BaseRepositoryInterface
 
     public function all()
     {
-        // TODO: Implement all() method.
+        return $this->postulante->all();
+    }
+
+    public function createPostulante($id,$data)
+    {
+        $new = $this->postulante;
+        $new->capacitacion_id = $id;
+        $new->institucion_id = $data['institucion_id'];
+        $new->nro_documento = $data['nro_documento'];
+        $new->nombre = $data['nombre'];
+        $new->apellido = $data['apellido'];
+        $new->correo = $data['correo'];
+        $new->telefono = $data['telefono'];
+        $new->is_active = true;
+        $new->save();
+
     }
 
     public function create(array $attributes)

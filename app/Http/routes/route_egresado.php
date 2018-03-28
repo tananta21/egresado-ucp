@@ -18,7 +18,6 @@ Route::get('/egresado/ofertas_laborales/send_curriculum/{id}', [
 
 //rutas respecto a las capacitaciones ==================================
 
-
 Route::get('/egresado/capacitaciones', [
     'as' => 'egresado_capacitaciones',
     'uses' => 'EgresadoController@capacitaciones'
@@ -28,4 +27,14 @@ Route::get('/egresado/capacitaciones/resumen/{id}', [
     'as' => 'egresado_capacitaciones_resumen',
     'uses' => 'EgresadoController@capacitacionesResumen'
 ]);
+Route::get('/egresado/capacitaciones/form_inscripcion/{id}', [
+    'as' => 'egresado_capacitaciones_form_inscripcion',
+    'uses' => 'EgresadoController@capacitacionesFormInscripcion'
+]);
+
+Route::post('/egresado/capacitaciones/register/{id}', [
+    'as' => 'egresado_capacitaciones_register',
+    'uses' => 'EgresadoController@capacitacionesRegister'
+]);
+
 

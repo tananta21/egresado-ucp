@@ -63,11 +63,10 @@
                                         </li>
                                         <li role="separator" class="divider"></li>
                                         <li>
-                                            <a href="{{route('admin_oferta_laboral_postulantes',['id'=>$item->id])}}">
+                                            <a href="{{route('admin_capacitacion_postulantes',['id'=>$item->id])}}">
                                                 <i class="fa fa-users"></i> Inscritos
                                             </a>
                                         </li>
-                                        <li role="separator" class="divider"></li>
                                     </ul>
                                 </div>
                             </td>

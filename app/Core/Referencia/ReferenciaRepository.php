@@ -51,7 +51,15 @@ class ReferenciaRepository implements BaseRepositoryInterface
 
     public function updated($id, array $attributes)
     {
-        // TODO: Implement updated() method.
+        $item = $this->referencia->find($id);
+        $item->empresa = $attributes['empresa'];
+        $item->nombre = $attributes['nombre'];
+        $item->puesto = $attributes['puesto'];
+        $item->telefono = $attributes['telefono'];
+        $item->email = $attributes['email'];
+        $item->save();
+        return $item;
+
     }
 
     public function find($id)

@@ -15,7 +15,8 @@ class CreatePostulanteCapacitacion extends Migration
         Schema::create('postulante_capacitacion', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('institucion_id')->unsigned()->nullable();
-            $table->integer('nro_documento')->nullable()->unique();
+            $table->integer('capacitacion_id')->unsigned()->nullable();
+            $table->integer('nro_documento')->unique();
             $table->string('nombre')->nullable();
             $table->string('apellido')->nullable();
             $table->string('telefono')->nullable();
