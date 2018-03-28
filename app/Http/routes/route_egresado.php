@@ -38,3 +38,16 @@ Route::post('/egresado/capacitaciones/register/{id}', [
 ]);
 
 
+//  SEGUIMIENTO DE EGRESADOS
+
+Route::get('/egresado/seguimiento/situacion_laboral', [
+    'as' => 'egresado_situacion_laboral',
+    'uses' => 'SeguimientoController@situacionLaboral'
+]);
+
+Route::post('/egresado/seguimiento/situacion_laboral/update', [
+    'as' => 'egresado_update_situacion_laboral',
+    'uses' => 'SeguimientoController@updateSituacionLaboral'
+]);
+
+

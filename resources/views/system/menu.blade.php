@@ -17,8 +17,8 @@
             <li class="curriculum">
                 <a href="{{route('datos_personales')}}">Currículum</a>
             </li>
-            <li class="">
-                <a href="">Seguimiento</a>
+            <li class="seguimiento">
+                <a href="{{route('egresado_situacion_laboral')}}">Seguimiento</a>
             </li>
         @endif
         @if(Auth::user()->tipo_usuario_id == config('global.user_admin'))

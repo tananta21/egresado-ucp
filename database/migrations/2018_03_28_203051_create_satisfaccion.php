@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSeguimientoTable extends Migration
+class CreateSatisfaccion extends Migration
 {
     /**
      * Run the migrations.
@@ -12,7 +12,7 @@ class CreateSeguimientoTable extends Migration
      */
     public function up()
     {
-        Schema::create('seguimiento', function (Blueprint $table) {
+        Schema::create('satisfaccion', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
         });
@@ -25,6 +25,6 @@ class CreateSeguimientoTable extends Migration
      */
     public function down()
     {
-        Schema::drop('seguimiento');
+        Schema::drop('satisfaccion');
     }
 }
