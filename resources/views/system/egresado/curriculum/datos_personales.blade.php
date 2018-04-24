@@ -64,7 +64,7 @@
                 <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12 padding_l_0">
                     <label>Telefono fijo:</label>
                     <input type="number" class="form-control" placeholder="Ingrese su teléfono fijo"
-                           name="tel_fijo" value="{{$egresado['tel_fijo']}}" >
+                           name="tel_fijo" value="{{$egresado['tel_fijo']}}">
                 </div>
                 <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12 padding_r_0">
                     <label>Telefono celular:</label>
@@ -85,22 +85,15 @@
                     <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding_lr_0">
                         Estado civil:</label>
                     <div class="col-lg-12 col-md-12 padding_lr_0">
-                        <select class="form-control input_select" name="estado_civil">
-
-                            @if($egresado['estado_civil'] == '')
-                                <option selected value="">Seleccione su estado civil</option>
-                                @foreach($estados as $item)
+                        <select class="form-control input_select" name="estado_civil" required>
+                            <option selected value="">Seleccione su estado civil</option>
+                            @foreach($estados as $item)
+                                @if($egresado['estado_civil'] ==$item->id )
+                                    <option selected value="{{$item->id}}">{{$item->nombre}}</option>
+                                @else
                                     <option value="{{$item->id}}">{{$item->nombre}}</option>
-                                @endforeach
-                            @else
-                                @foreach($estados as $item)
-                                    @if($egresado['estado_civil'] ==$item->id )
-                                        <option selected value="{{$item->id}}">{{$item->nombre}}</option>
-                                    @else
-                                        <option value="{{$item->id}}">{{$item->nombre}}</option>
-                                    @endif
-                                @endforeach
-                            @endif
+                                @endif
+                            @endforeach
                         </select>
                     </div>
                 </div>

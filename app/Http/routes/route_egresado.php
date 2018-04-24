@@ -51,3 +51,7 @@ Route::post('/egresado/seguimiento/situacion_laboral/update', [
 ]);
 
 
+Route::post('/egresado/seguimiento/situacion_laboral/update', [
+    'as' => 'egresado_update_situacion_laboral',
+    'uses' => 'SeguimientoController@updateSituacionLaboral'
+]);

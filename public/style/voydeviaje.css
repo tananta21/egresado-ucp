@@ -266,6 +266,15 @@ input[type='text'] {
 .btn-cancelar:hover {
   background-color: #a7212d;
 }
+#box_not_work {
+  position: absolute;
+  top: 0rem;
+  z-index: 100;
+  background: #fff;
+  bottom: 0rem;
+  width: 100%;
+  margin-top: 45px;
+}
 .menuHorizontal {
   display: inline-block;
   text-align: center;

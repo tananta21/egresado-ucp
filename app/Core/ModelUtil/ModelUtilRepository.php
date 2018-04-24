@@ -22,6 +22,9 @@ class ModelUtilRepository implements BaseRepositoryInterface
     protected $carreraOferta;
     protected $programaOferta;
     protected $institucion;
+    protected $satisfaccion;
+    protected $sectorTrabajo;
+    protected $situacionLaboral;
 
     public function __construct()
     {
@@ -34,6 +37,9 @@ class ModelUtilRepository implements BaseRepositoryInterface
         $this->carreraOferta = new CarreraOferta();
         $this->programaOferta = new ProgramaOferta();
         $this->institucion = new Institucion();
+        $this->satisfaccion = new Satisfaccion();
+        $this->sectorTrabajo = new SectorTrabajo();
+        $this->situacionLaboral= new SituacionLaboral();
     }
 
     public function allEstadoCivil(){
@@ -76,6 +82,17 @@ class ModelUtilRepository implements BaseRepositoryInterface
         return $this->institucion->all();
     }
 
+    public function allSatisfaccion(){
+        return $this->satisfaccion->all();
+    }
+
+    public function allSectorTrabajo(){
+        return $this->sectorTrabajo->all();
+    }
+
+    public function allSituacionLaboral(){
+        return $this->situacionLaboral->all();
+    }
 
     public function createCarreraOferta($oferta, $data){
 

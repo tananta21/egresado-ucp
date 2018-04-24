@@ -14,7 +14,9 @@ class CreateSatisfaccion extends Migration
     {
         Schema::create('satisfaccion', function (Blueprint $table) {
             $table->increments('id');
+            $table->text('nombre')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

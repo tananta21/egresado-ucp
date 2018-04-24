@@ -25,6 +25,83 @@ class SeguimientoEgresadoRepository implements BaseRepositoryInterface
         // TODO: Implement all() method.
     }
 
+    public function createSeguimientoIsWork($egresado_id, array $attributes)
+    {
+        $new = $this->seguimiento;
+        $new->egresado_id = $egresado_id;
+        $new->area_laboral_id = $attributes['area_laboral_id'];
+        $new->situacion_laboral_id = $attributes['situacion_laboral_id'];
+        $new->disponibilidad_id = $attributes['disponibilidad_id'];
+        $new->sector_trabajo_id = $attributes['sector_trabajo_id'];
+        $new->satisfaccion_id = $attributes['satisfaccion_id'];
+        $new->empresa = $attributes['empresa'];
+        $new->rubro = $attributes['rubro'];
+        $new->cargo = $attributes['cargo'];
+        $new->telefono = $attributes['telefono'];
+        $new->pagina_web = $attributes['pagina_web'];
+        $new->is_work = $attributes['is_work'];
+        $new->save();
+        return $new;
+    }
+
+    public function createSeguimientoIsNotWork($egresado_id, array $attributes)
+    {
+        $new = $this->seguimiento;
+        $new->egresado_id = $egresado_id;
+        $new->area_laboral_id = '';
+        $new->situacion_laboral_id = '';
+        $new->disponibilidad_id = '';
+        $new->sector_trabajo_id = '';
+        $new->satisfaccion_id = '';
+        $new->empresa = '';
+        $new->rubro = '';
+        $new->cargo = '';
+        $new->telefono = '';
+        $new->pagina_web = '';
+        $new->is_work = $attributes['is_work'];
+        $new->save();
+        return $new;
+    }
+
+    public function updateSeguimientoIsWork($item, $egresado_id, array $attributes)
+    {
+        $update = $this->seguimiento->find($item[0]->id);
+        $update->egresado_id = $egresado_id;
+        $update->area_laboral_id = $attributes['area_laboral_id'];
+        $update->situacion_laboral_id = $attributes['situacion_laboral_id'];
+        $update->disponibilidad_id = $attributes['disponibilidad_id'];
+        $update->sector_trabajo_id = $attributes['sector_trabajo_id'];
+        $update->satisfaccion_id = $attributes['satisfaccion_id'];
+        $update->empresa = $attributes['empresa'];
+        $update->rubro = $attributes['rubro'];
+        $update->cargo = $attributes['cargo'];
+        $update->telefono = $attributes['telefono'];
+        $update->pagina_web = $attributes['pagina_web'];
+        $update->is_work = $attributes['is_work'];
+        $update->save();
+        return $update;
+    }
+
+    public function updateSeguimientoIsNotWork($item, $egresado_id, array $attributes)
+    {
+        $update = $this->seguimiento->find($item[0]->id);
+        $update->egresado_id = $egresado_id;
+        $update->area_laboral_id = '';
+        $update->situacion_laboral_id = '';
+        $update->disponibilidad_id = '';
+        $update->sector_trabajo_id = '';
+        $update->satisfaccion_id = '';
+        $update->empresa = '';
+        $update->rubro = '';
+        $update->cargo = '';
+        $update->telefono = '';
+        $update->pagina_web = '';
+        $update->is_work = $attributes['is_work'];
+        $update->save();
+        return $update;
+    }
+
+
     public function create(array $attributes)
     {
         // TODO: Implement create() method.
@@ -37,8 +114,9 @@ class SeguimientoEgresadoRepository implements BaseRepositoryInterface
 
     public function findByEgresado($egresado_id)
     {
-        return $this->seguimiento->where('egresado_id',$egresado_id)->get();
+        return $this->seguimiento->where('egresado_id', $egresado_id)->get();
     }
+
     public function find($id)
     {
         // TODO: Implement find() method.

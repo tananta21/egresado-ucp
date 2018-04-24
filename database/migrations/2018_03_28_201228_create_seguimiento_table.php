@@ -16,6 +16,7 @@ class CreateSeguimientoTable extends Migration
             $table->increments('id');
             $table->boolean('is_work')->nullable();
             $table->boolean('egresado_id')->unsigned()->nullable();
+            $table->boolean('area_laboral_id')->unsigned()->nullable();
             $table->boolean('situacion_laboral_id')->unsigned()->nullable();
             $table->integer('disponibilidad_id')->unsigned()->nullable();
             $table->integer('sector_trabajo_id')->unsigned()->nullable();

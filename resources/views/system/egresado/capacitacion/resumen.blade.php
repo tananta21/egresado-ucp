@@ -13,7 +13,7 @@
             <a class="egresado__nuevo__linkBack" href="{{route('egresado_capacitaciones')}}">
                 <h5 class="egresado__nuevo__textBack bold">
                     <i class="fa fa-angle-double-left egresado__nuevo__iconBack" aria-hidden="true"></i> Volver a la
-                   lista de cursos
+                    lista de cursos
                 </h5>
             </a>
         </div>
@@ -36,19 +36,39 @@
             <div class="col-lg-8 col-md-8 col-sm-6">
                 <div>
                     <h3 class="capacitacion__detail__subTittle">Inversión económica :</h3>
-                    <p style="color: #004C97; font-weight: bold; font-size: 23px" class="capacitacion__detail__text">S/.{{$capacitacion->precio}}</p>
+                    <p style="color: #004C97; font-weight: bold; font-size: 23px" class="capacitacion__detail__text">
+                        S/.{{$capacitacion->precio}}</p>
                 </div>
                 <div>
                     <h3 class="capacitacion__detail__subTittle">Objetivo General :</h3>
-                    <p class="capacitacion__detail__text">{{$capacitacion->objetivo}}</p>
+                    <p class="capacitacion__detail__text">
+                        @if($capacitacion->objetivo == '')
+                            Sin especificar
+                        @else
+                            {{$capacitacion->objetivo}}
+                        @endif
+
+                    </p>
                 </div>
                 <div>
                     <h3 class="capacitacion__detail__subTittle">Metodología :</h3>
-                    <p class="capacitacion__detail__text">{{$capacitacion->metodologia}}</p>
+                    <p class="capacitacion__detail__text">
+                        @if($capacitacion->metodologia == '')
+                            Sin especificar
+                        @else
+                            {{$capacitacion->metodologia}}
+                        @endif
+                    </p>
                 </div>
                 <div>
                     <h3 class="capacitacion__detail__subTittle">Dirigido a :</h3>
-                    <p class="capacitacion__detail__text">{{$capacitacion->dirigido}}</p>
+                    <p class="capacitacion__detail__text">
+                        @if($capacitacion->dirigido == '')
+                            Sin especificar
+                        @else
+                            {{$capacitacion->dirigido}}
+                        @endif
+                    </p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6 capacitacion__detail__itemRight">

@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Core\AreaLaboral\AreaLaboralRepository;
+use App\Core\Egresado\EgresadoRepository;
+use App\Core\ModelUtil\ModelUtilRepository;
 use App\Core\SeguimientoEgresado\SeguimientoEgresadoRepository;
 use Illuminate\Http\Request;
 
@@ -13,25 +16,35 @@ use Illuminate\Support\Facades\Input;
 class SeguimientoController extends Controller
 {
     protected $repoSeguimiento;
+    protected $repoArealaboral;
+    protected $repoEgresado;
+    protected $repoModelUtil;
 
     public function __construct()
     {
         $this->repoSeguimiento = new SeguimientoEgresadoRepository();
+        $this->repoArealaboral = new AreaLaboralRepository();
+        $this->repoEgresado = new EgresadoRepository();
+        $this->repoModelUtil = new ModelUtilRepository();
     }
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
 
     public function situacionLaboral(){
         $egresado_id = Auth::user()->egresado_id;
-        $record = $this->repoSeguimiento->findByEgresado($egresado_id);
-        if($record->isEmpty()){
-            return view('system.egresado.seguimiento.situacion_laboral.lista');
+        $egresado = $this->repoEgresado->find($egresado_id);
+        $seguimiento = $this->repoSeguimiento->findByEgresado($egresado_id);
+        $area_laboral = $this->repoArealaboral->allByEscuela($egresado->escuela_id);
+        $disponibilidad = $this->repoModelUtil->allDisponibilidad();
+        $sector_trabajo = $this->repoModelUtil->allSectorTrabajo();
+        $situacion_laboral = $this->repoModelUtil->allSituacionLaboral();
+        $satisfaccion = $this->repoModelUtil->allSatisfaccion();
+        if($seguimiento->isEmpty()){
+            return view('system.egresado.seguimiento.situacion_laboral.lista',
+                compact('area_laboral','disponibilidad','sector_trabajo','situacion_laboral','satisfaccion'));
         }
         else{
+            return view('system.egresado.seguimiento.situacion_laboral.update',
+                compact('seguimiento','area_laboral','disponibilidad','sector_trabajo','situacion_laboral','satisfaccion'));
 
         }
     }
@@ -42,17 +55,33 @@ class SeguimientoController extends Controller
         $record = $this->repoSeguimiento->findByEgresado($egresado_id);
         if($record->isEmpty()){
             if(Input::get('is_work') == 1){
-                $new = $this->repoSeguimiento->create();
+                $new = $this->repoSeguimiento->createSeguimientoIsWork($egresado_id,$data);
+                $seguimiento = $this->repoSeguimiento->findByEgresado($new->egresado_id);
+                session()->flash('msg', 'Se actualizaron tus datos satisfactoriamente');
+                return redirect()->action('SeguimientoController@situacionLaboral');
             }
             else if(Input::get('is_work') == 0){
-
+                $new = $this->repoSeguimiento->createSeguimientoIsNotWork($egresado_id,$data);
+                $seguimiento = $this->repoSeguimiento->findByEgresado($new->egresado_id);
+                session()->flash('msg', 'Se actualizaron tus datos satisfactoriamente');
+                return redirect()->action('SeguimientoController@situacionLaboral');
             }
         }
         else{
+            if(Input::get('is_work') == 1) {
+                $this->repoSeguimiento->updateSeguimientoIsWork($record, $egresado_id, $data);
+                session()->flash('msg', 'Se actualizaron tus datos satisfactoriamente');
+                return redirect()->action('SeguimientoController@situacionLaboral');
+            }
+            else if(Input::get('is_work') == 0){
+                $this->repoSeguimiento->updateSeguimientoIsNotWork($record, $egresado_id, $data);
+                session()->flash('msg', 'Se actualizaron tus datos satisfactoriamente');
+                return redirect()->action('SeguimientoController@situacionLaboral');
+
+            }
+
 
         }
-
-
     }
 
     public function index()

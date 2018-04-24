@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSectorTrabajo extends Migration
+class CreateAreasLaborales extends Migration
 {
     /**
      * Run the migrations.
@@ -12,8 +12,9 @@ class CreateSectorTrabajo extends Migration
      */
     public function up()
     {
-        Schema::create('sector_trabajo', function (Blueprint $table) {
+        Schema::create('areas_laborales', function (Blueprint $table) {
             $table->increments('id');
+            $table->boolean('escuela_id')->unsigned()->nullable();
             $table->text('nombre')->nullable();
             $table->timestamps();
             $table->softDeletes();
@@ -27,6 +28,6 @@ class CreateSectorTrabajo extends Migration
      */
     public function down()
     {
-        Schema::drop('sector_trabajo');
+        Schema::drop('areas_laborales');
     }
 }
