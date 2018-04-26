@@ -11,6 +11,39 @@ class AreasLaborales extends Seeder
      */
     public function run()
     {
+        //AREAS LABORALES PARA INGENIERIA CIVIL
+
+        \DB::table('areas_laborales')->insert([
+            'escuela_id' => 1,
+            'nombre' => 'Obras de regulación, captación, abastecimiento y tratamiento de aguas',
+        ]);
+        \DB::table('areas_laborales')->insert([
+            'escuela_id' => 1,
+            'nombre' => 'Obras de riego y sus correspondientes obras de desagüe y drenaje',
+        ]);
+        \DB::table('areas_laborales')->insert([
+            'escuela_id' => 1,
+            'nombre' => 'Instalaciones hidromecánicas',
+        ]);
+        \DB::table('areas_laborales')->insert([
+            'escuela_id' => 1,
+            'nombre' => 'Obras de corrección y regulación fluvial',
+        ]);
+        \DB::table('areas_laborales')->insert([
+            'escuela_id' => 1,
+            'nombre' => 'Trabajos topográficos y geodésicos',
+        ]);
+        \DB::table('areas_laborales')->insert([
+            'escuela_id' => 1,
+            'nombre' => 'Lotificaciones urbanas y subdivisiones por el régimen de propiedad horizontal',
+        ]);
+        \DB::table('areas_laborales')->insert([
+            'escuela_id' => 1,
+            'nombre' => 'Otros',
+        ]);
+
+
+
         //AREAS LABORALES PARA INGENIERIA DE SISTEMAS DE INFORMACION
 
         \DB::table('areas_laborales')->insert([

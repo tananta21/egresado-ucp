@@ -26,6 +26,7 @@ Route::group(['prefix' => '/', 'middleware' => 'auth'], function () {
     require_once app_path() .'/Http/routes/route_admin.php';
     require_once app_path() .'/Http/routes/route_egresado.php';
     require_once app_path() .'/Http/routes/route_curriculum.php';
+    require_once app_path() .'/Http/routes/route_report.php';
 
 
 });

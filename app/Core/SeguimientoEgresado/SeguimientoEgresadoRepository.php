@@ -102,6 +102,25 @@ class SeguimientoEgresadoRepository implements BaseRepositoryInterface
     }
 
 
+    public function apiSituacionLaboral($escuela_id)
+    {
+        $query = \DB::select('
+                        SELECT
+                            seguimiento_egresado.is_work,
+                            COUNT(*) AS cantidad
+                        FROM
+                            seguimiento_egresado
+                        INNER JOIN egresados ON seguimiento_egresado.egresado_id = egresados.id
+                        WHERE
+                            egresados.escuela_id = '.$escuela_id.'
+                        GROUP BY
+                            seguimiento_egresado.is_work
+                        ORDER BY seguimiento_egresado.is_work asc        
+                                ');
+        return $query;
+    }
+
+
     public function create(array $attributes)
     {
         // TODO: Implement create() method.

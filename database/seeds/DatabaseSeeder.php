@@ -28,6 +28,10 @@ class DatabaseSeeder extends Seeder
         $this->call('EscuelaSeeder');
         $this->call('SemestreAcademicoSeeder');
         $this->call('UserTableSeeder');
+        $this->call('AreasLaborales');
+        $this->call('Satisfaccion');
+        $this->call('SectorTrabajo');
+        $this->call('SituacionLaboral');
 
         Model::reguard();
     }

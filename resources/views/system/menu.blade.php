@@ -22,11 +22,11 @@
             </li>
         @endif
         @if(Auth::user()->tipo_usuario_id == config('global.user_admin'))
-            <li class="">
-                <a href="">Reportes</a>
-            </li>
             <li class="administracion">
                 <a href="{{route('admin_inicio')}}">Administración</a>
+            </li>
+            <li class="reportes">
+                <a href="{{route('report_inicio')}}">Reportes</a>
             </li>
         @endif
     </ul>

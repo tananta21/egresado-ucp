@@ -63,6 +63,10 @@
 <script src="{{url('/')}}/js/libs/jquery/jquery.min.js"></script>
 <script src="{{url('/')}}/js/libs/bootstrap/bootstrap.min.js"></script>
 
+<script src="{{url('/')}}/js/highchart/highcharts.js"></script>
+<script src="{{url('/')}}/js/highchart/highcharts-more.js"></script>
+<script src="{{url('/')}}/js/highchart/exporting.js"></script>
+
 @yield("js")
 @show
 </body>
