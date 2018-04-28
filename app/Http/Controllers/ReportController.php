@@ -32,10 +32,39 @@ class ReportController extends Controller
         return view('system.admin.report.indice_laboral.situacion_laboral',
             compact('escuelas'));
     }
+    public function sectorTrabajo()
+    {
+        $escuelas = $this->repoEscuela->all();
+        return view('system.admin.report.indice_laboral.sector_trabajo',
+            compact('escuelas'));
+    }
+
+    public function gradoSatisfaccion()
+    {
+        $escuelas = $this->repoEscuela->all();
+        return view('system.admin.report.indice_laboral.grado_satisfaccion',
+            compact('escuelas'));
+    }
+
+
+//    METODOS DE APIS PARA GENERAR LOS GRAFICOS ===============================================
     public function apiSituacionLaboral()
     {
         $escuela_id = Input::get('escuela_id');
         $query = $this->repoSeguimiento->apiSituacionLaboral($escuela_id);
+        $datos = array($query);
+        if (empty($datos)) {
+            return 0;
+        } else {
+            return response()->json($datos);
+        }
+
+    }
+
+    public function apiSectorTrabajo()
+    {
+        $escuela_id = Input::get('escuela_id');
+        $query = $this->repoSeguimiento->apiSectorTrabajo($escuela_id);
         $datos = array($query);
         if (empty($datos)) {
             return 0;

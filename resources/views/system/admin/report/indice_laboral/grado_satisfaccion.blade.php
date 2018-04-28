@@ -2,7 +2,7 @@
 @section("content_report")
     <div class="col-md-12 col-sm-12">
         <h4 class="report__tittle">
-            <strong>Situación laboral de egresados, categorizado por escuelas.</strong>
+            <strong>Grado de satisfacción en el ambiente laboral, categorizado por escuelas.</strong>
         </h4>
     </div>
     <div class="col-md-12 col-sm-12 anulPadding">
@@ -131,6 +131,6 @@
     <script>
         $(".reportes").addClass("active");
         $(".indice_laboral").addClass("active");
-        $(".situacion_laboral").addClass("active");
+        $(".grado_satisfaccion").addClass("active");
     </script>
 @stop

@@ -2,7 +2,7 @@
 @section("content_report")
     <div class="col-md-12 col-sm-12">
         <h4 class="report__tittle">
-            <strong>Situación laboral de egresados, categorizado por escuelas.</strong>
+            <strong>Sector en el que se desempeñan laboralmente los egresados, categorizado por escuelas.</strong>
         </h4>
     </div>
     <div class="col-md-12 col-sm-12 anulPadding">
@@ -35,7 +35,7 @@
 @endsection
 @section("js")
     <script>
-        var url = '{{route("api_report_situacion_laboral")}}';
+        var url = '{{route("api_report_sector_trabajo")}}';
         $('#consult').click(function () {
             $("#loading").css("display","block");
             var escuela_id = $("#escuela_id").val();
@@ -63,17 +63,18 @@
                         else {
                             $("#resultEmptytext").css("display", "none");
                             for (i = 0; i < data[0].length; i++) {
-                                if (data[0][i].is_work == false) {
+                                if (data[0][i].sector_trabajo_id == 1) {
                                     circular.push(
-                                        {name: 'Egresados sin trabajo', y: parseFloat(data[0][i].cantidad)}
+                                        {name: 'Sector Público', y: parseFloat(data[0][i].cantidad)}
                                     );
                                 }
-                                else if (data[0][i].is_work == true) {
+                                else if (data[0][i].sector_trabajo_id == 2) {
                                     circular.push(
-                                        {name: 'Egresados laborando', y: parseFloat(data[0][i].cantidad)}
+                                        {name: 'Sector Privado', y: parseFloat(data[0][i].cantidad)}
                                     );
                                 }
                                 num_egresados = num_egresados + (parseFloat(data[0][i].cantidad));
+
                             }
                             $("#textResumen").css("display", "block");
                             $("#cantidad").text(num_egresados);
@@ -100,7 +101,7 @@
                     type: 'pie'
                 },
                 title: {
-                    text: 'SITUACIÓN LABORAL'
+                    text: 'SECTOR DE TRABAJO EN EL QUE DESEMPEÑAN LOS EGRESADOS'
                 },
                 tooltip: {
                     pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -131,6 +132,6 @@
     <script>
         $(".reportes").addClass("active");
         $(".indice_laboral").addClass("active");
-        $(".situacion_laboral").addClass("active");
+        $(".sector_trabajo").addClass("active");
     </script>
 @stop

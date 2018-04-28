@@ -120,6 +120,25 @@ class SeguimientoEgresadoRepository implements BaseRepositoryInterface
         return $query;
     }
 
+    public function apiSectorTrabajo($escuela_id)
+    {
+        $is_work_true = config('global.is_work_true');
+        $query = \DB::select('
+                       SELECT
+                            seguimiento_egresado.sector_trabajo_id,
+                            COUNT(*) AS cantidad
+                        FROM
+                            seguimiento_egresado
+                        INNER JOIN egresados ON seguimiento_egresado.egresado_id = egresados.id
+                        WHERE
+                            egresados.escuela_id = '.$escuela_id.' 
+                            and seguimiento_egresado.is_work = '.$is_work_true.'
+                        GROUP BY
+                            seguimiento_egresado.sector_trabajo_id      
+                                ');
+        return $query;
+    }
+
 
     public function create(array $attributes)
     {
