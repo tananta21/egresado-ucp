@@ -139,6 +139,43 @@ class SeguimientoEgresadoRepository implements BaseRepositoryInterface
         return $query;
     }
 
+    public function apiGradoSatisfaccion($escuela_id)
+    {
+        $query = \DB::select('
+                       SELECT
+                        satisfaccion.id,
+                            satisfaccion.nombre,
+                            ( SELECT COUNT(*) FROM seguimiento_egresado 
+                                INNER JOIN egresados ON seguimiento_egresado.egresado_id = egresados.id			
+                                WHERE 
+                                    seguimiento_egresado.satisfaccion_id = satisfaccion.id and egresados.escuela_id = '.$escuela_id.' ) as cantidad
+                        FROM
+                            satisfaccion
+                        ORDER BY satisfaccion.id  
+                                ');
+        return $query;
+    }
+    public function apiAreaLaboral($escuela_id)
+    {
+        $query = \DB::select('
+                       SELECT
+                            areas_laborales.id,
+                            areas_laborales.nombre,
+                            (
+                            SELECT COUNT(*) from seguimiento_egresado 
+                            INNER JOIN egresados ON seguimiento_egresado.egresado_id = egresados.id			
+                                WHERE 
+                                    seguimiento_egresado.area_laboral_id = areas_laborales.id and egresados.escuela_id = '.$escuela_id.' ) as cantidad
+                        FROM
+                            areas_laborales
+                        WHERE 
+	                        areas_laborales.escuela_id  = '.$escuela_id.'
+                        
+                                ');
+        return $query;
+    }
+
+
 
     public function create(array $attributes)
     {

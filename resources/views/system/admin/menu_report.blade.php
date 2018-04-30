@@ -36,6 +36,13 @@
                                                 Índice laboral de egresados
                                             </a>
                                         </li>
+                                        <li class="area_laboral">
+                                            <a href="{{route('report_area_laboral')}}">
+                                                <i class="fa fa-bar-chart iconMenuLateral" aria-hidden="true"></i>
+                                                Área laboral
+                                            </a>
+                                        </li>
+
                                     </ul>
                                 </div>
                             </div>

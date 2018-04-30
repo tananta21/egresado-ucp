@@ -1,8 +1,8 @@
-@extends('system.admin.report.indice_laboral.base')
-@section("content_report")
+@extends('system.admin.menu_report')
+@section("content_detalle")
     <div class="col-md-12 col-sm-12">
         <h4 class="report__tittle">
-            <strong>Grado de satisfacción en el ambiente laboral, categorizado por escuelas.</strong>
+            <strong>Áreas laborales, categorizado por escuelas.</strong>
         </h4>
     </div>
     <div class="col-md-12 col-sm-12 anulPadding">
@@ -36,11 +36,12 @@
 @endsection
 @section("js")
     <script>
-        var url = '{{route("api_report_grado_satisfaccion")}}';
+        var url = '{{route("api_report_area_laboral")}}';
         $('#consult').click(function () {
             $("#loading").css("display", "block");
             var escuela_id = $("#escuela_id").val();
             if (escuela_id != '') {
+                var categories = new Array();
                 var circular = new Array();
                 var num_egresados = 0;
                 $.ajax({
@@ -63,22 +64,15 @@
                         }
                         else {
                             $("#resultEmptytext").css("display", "none");
-                            for (j = 0; j < data[0].length; j++) {
-                                num_egresados = num_egresados + (parseFloat(data[0][j].cantidad));
-                            }
                             for (i = 0; i < data[0].length; i++) {
-                                circular.push(
-                                    {
-                                        name: data[0][i].nombre,
-                                        y: parseFloat((data[0][i].cantidad/num_egresados)*100),
-                                        drilldown: data[0][i].nombre,
-                                    }
-                                );
+                                categories.push(data[0][i].nombre);
+                                circular.push(data[0][i].cantidad);
+
+                                num_egresados = num_egresados + (parseFloat(data[0][i].cantidad));
                             }
                             $("#textResumen").css("display", "block");
                             $("#cantidad").text(num_egresados);
-                            window.onload = graficar(circular);
-
+                            window.onload = graficar(categories, circular);
                         }
 
                     }
@@ -91,51 +85,50 @@
 
         })
 
-        function graficar(data) {
-            Highcharts.chart('containerGrafico', {
-                chart: {
-                    type: 'column'
-                },
+        function graficar(categories, datos) {
+            var chart = Highcharts.chart('containerGrafico', {
                 title: {
-                    text: 'Grado de satisfacción'
+                    text: ''
                 },
+
                 subtitle: {
-                    text: '¿Cómo se sienten los egresados en su trabajo?'
+                    text: 'Plano'
                 },
+
                 xAxis: {
-                    type: 'category'
+                    categories: categories
                 },
                 yAxis: {
+
                     title: {
-                        text: 'Porcentaje de aprobación'
-                    }
+                        text: 'Número de egresados'
+                    },
 
                 },
-                legend: {
-                    enabled: false
-                },
-                plotOptions: {
-                    series: {
-                        borderWidth: 0,
-                        dataLabels: {
-                            enabled: true,
-                            format: '{point.y:.1f}%'
-                        }
-                    }
-                },
 
-                tooltip: {
-                    headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
-                    pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
-                },
 
-                "series": [
-                    {
-                        "name": "Browsers",
-                        "colorByPoint": true,
-                        "data": data
-                    }
-                ]
+                series: [{
+                    name: 'N° egresados laborando',
+                    type: 'column',
+                    colorByPoint: true,
+                    data: datos,
+                    showInLegend: false
+                }]
+
+            });
+
+            window.onload = girar(chart);
+        }
+
+        function girar(chart) {
+            chart.update({
+                chart: {
+                    inverted: true,
+                    polar: false
+                },
+                subtitle: {
+                    text: 'Áreas en el que se desempeñan los egresados del : '+$("#escuela_id").find('option:selected').text()
+                }
             });
         }
 
@@ -143,7 +136,6 @@
 
     <script>
         $(".reportes").addClass("active");
-        $(".indice_laboral").addClass("active");
-        $(".grado_satisfaccion").addClass("active");
+        $(".area_laboral").addClass("active");
     </script>
 @stop

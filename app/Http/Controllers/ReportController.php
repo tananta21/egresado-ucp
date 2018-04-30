@@ -46,6 +46,13 @@ class ReportController extends Controller
             compact('escuelas'));
     }
 
+    public function areaLaboral()
+    {
+        $escuelas = $this->repoEscuela->all();
+        return view('system.admin.report.area_laboral.area_laboral',
+            compact('escuelas'));
+    }
+
 
 //    METODOS DE APIS PARA GENERAR LOS GRAFICOS ===============================================
     public function apiSituacionLaboral()
@@ -73,6 +80,31 @@ class ReportController extends Controller
         }
 
     }
+    public function apiGradoSatisfaccion()
+    {
+        $escuela_id = Input::get('escuela_id');
+        $query = $this->repoSeguimiento->apiGradoSatisfaccion($escuela_id);
+        $datos = array($query);
+        if (empty($datos)) {
+            return 0;
+        } else {
+            return response()->json($datos);
+        }
+
+    }
+    public function apiAreaLaboral()
+    {
+        $escuela_id = Input::get('escuela_id');
+        $query = $this->repoSeguimiento->apiAreaLaboral($escuela_id);
+        $datos = array($query);
+        if (empty($datos)) {
+            return 0;
+        } else {
+            return response()->json($datos);
+        }
+
+    }
+
 
 
 
