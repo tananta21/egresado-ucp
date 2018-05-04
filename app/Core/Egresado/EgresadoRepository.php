@@ -25,7 +25,7 @@ class EgresadoRepository implements BaseRepositoryInterface
 
     public function all()
     {
-        return $this->egresado->all();
+        return $this->egresado->all()->paginate(15);
     }
 
     public function crearEgresado($attributes, $url_imagen){
